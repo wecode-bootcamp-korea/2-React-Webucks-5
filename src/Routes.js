@@ -16,7 +16,6 @@ import LoginMinjaeLee from './pages/minjaelee/Login/Login';
 import ListMinjaeLee from './pages/minjaelee/List/List';
 import DetailMinjaeLee from './pages/minjaelee/Detail/Detail';
 
-
 // 이욱창님 컴포넌트
 import LoginWookChangLee from './pages/wookchanglee/Login/Login';
 import ListWookChangLee from './pages/wookchanglee/List/List';
