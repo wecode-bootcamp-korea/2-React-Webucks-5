@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React, { Component } from 'react';
-import TopNav from '../../../components/Nav/Nav';
+import Review from './Review/Review';
+import Nav from '../../../components/Nav/Nav';
 import Footer from '../../../components/Footer/Footer';
 import './detail.scss';
 
@@ -13,8 +14,7 @@ class Detail extends Component {
   render() {
     return (
       <div className="Detail body__container">
-        <TopNav></TopNav>
-
+        <Nav />
         <section className="description section">
           <h1>콜드 브루</h1>
           <p className="menu-history">
@@ -90,69 +90,7 @@ class Detail extends Component {
                     알레르기 유발 요인 : 대두 / 우유
                   </p>
                 </div>
-                <div className="content-box__review">
-                  <h2>리뷰</h2>
-                  <div className="content-box__review--wrap">
-                    <div className="content-box__review--list">
-                      <div className="content-box__review--core">
-                        <p className="content-box__review--username">
-                          coffee_lover
-                        </p>
-                        <p className="content-box__review--string">
-                          너무 맛있어요!
-                        </p>
-                      </div>
-                      <div className="content-box__review--option">
-                        <div className="content-box__review--like">
-                          <i className="far fa-heart"></i>
-                        </div>
-                        <div className="content-box__review--delete">❌</div>
-                      </div>
-                    </div>
-                    <div className="content-box__review--list">
-                      <div className="content-box__review--core">
-                        <p className="content-box__review--username">CHOCO7</p>
-                        <p className="content-box__review--string">
-                          오늘도 마시러갑니다.
-                        </p>
-                      </div>
-                      <div className="content-box__review--option">
-                        <div className="content-box__review--like">
-                          <i className="far fa-heart"></i>
-                        </div>
-                        <div className="content-box__review--delete">❌</div>
-                      </div>
-                    </div>
-                    <div className="content-box__review--list">
-                      <div className="content-box__review--core">
-                        <p className="content-box__review--username">
-                          legned_dev
-                        </p>
-                        <p className="content-box__review--string">
-                          전실이다 진짜 진짜 전설이다.
-                        </p>
-                      </div>
-                      <div className="content-box__review--option">
-                        <div className="content-box__review--like">
-                          <i className="far fa-heart"></i>
-                        </div>
-                        <div className="content-box__review--delete">❌</div>
-                      </div>
-                    </div>
-                  </div>
-                  <form className="content-box__review--inputBox">
-                    <input
-                      className="content-box__review--id"
-                      type="text"
-                      placeholder="아이디"
-                    />
-                    <input
-                      className="content-box__review--content"
-                      type="text"
-                      placeholder="리뷰를 입력해주세요."
-                    />
-                  </form>
-                </div>
+                <Review />
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { Component } from 'react';
-import TopNav from '../../../components/Nav/Nav';
+import Nav from '../../../components/Nav/Nav';
 import Footer from '../../../components/Footer/Footer';
 import CoffeeCard from './CoffeeCard/CoffeeCard';
 import COFFEELIST_DATA from './listMockData';
@@ -14,7 +14,7 @@ class List extends Component {
   render() {
     return (
       <div className="List body__container">
-        <TopNav></TopNav>
+        <Nav />
         <section className="product-list">
           <div className="product-list__header section">
             <h2 className="product-list__title">콜드 브루 커피</h2>
