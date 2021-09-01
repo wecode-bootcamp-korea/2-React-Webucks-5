@@ -1,0 +1,33 @@
+// .typeContainer {
+//   // no CSS needed yet
+// }
+
+.List {
+  width: 1100px;
+  margin: 0 auto 100px;
+  // background-color: red;
+  font-family: nbg, '맑은 고딕', HelveticaNeue, DroidSans, sans-serif, Helvetica;
+  font-size: 12px;
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 0 17px;
+    background-color: #f6f5ef;
+    .title {
+      margin-right: 30px;
+      font-size: 16px;
+    }
+    .subtitle {
+      font-size: 13px;
+    }
+  }
+  .listContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+}

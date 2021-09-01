@@ -1,0 +1,77 @@
+.Login {
+  height: 100vh;
+  padding-top: 15vh;
+  background-color: #eeefef;
+  font-family: nbg, '맑은 고딕', HelveticaNeue, DroidSans, sans-serif, Helvetica;
+  font-size: 12px;
+  .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 370px;
+    width: 300px;
+    margin: 0 auto;
+    padding: 37px;
+    background-color: #fff;
+    border: 2px solid #dddddd;
+    border-radius: 4px;
+    .logo {
+      width: 150px;
+    }
+    #loginForm {
+      width: 100%;
+      padding-top: 30px;
+      // background-color: red;
+      input {
+        width: 100%;
+        margin-bottom: 13px;
+        padding: 8px 6px;
+        background-color: #f7f7f7;
+        border: 2px solid #dddddd;
+        border-radius: 4px;
+        font-size: 12px; //repetitive
+        &:focus {
+          border: 2px solid grey;
+          outline: none !important;
+        }
+        &.valid:focus {
+          //애매해
+          border: 2px solid green;
+        }
+      }
+      .pwInputWrap {
+        position: relative;
+        #showHideText {
+          position: absolute;
+          top: 12px;
+          right: 10px;
+          color: #757575;
+          cursor: pointer;
+        }
+        #showHideText.invisible {
+          display: none;
+        }
+      }
+      .loginBtn {
+        width: 100%;
+        padding: 7px 0;
+        border: none;
+        border-radius: 7px;
+        background-color: #aed3ea;
+        color: #ecf5fa;
+        &.active {
+          background-color: #62adec;
+          cursor: pointer;
+        }
+      }
+    }
+    .forgotPw {
+      position: absolute;
+      bottom: 45px;
+      align-self: center;
+      color: #8dadc2;
+      cursor: pointer;
+    }
+  }
+}

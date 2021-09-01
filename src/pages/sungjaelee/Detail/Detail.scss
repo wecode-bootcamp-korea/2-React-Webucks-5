@@ -1,0 +1,189 @@
+// .productContainer {
+//   // no CSS needed yet
+// }
+
+.Detail {
+  font-family: nbg, '맑은 고딕', HelveticaNeue, DroidSans, sans-serif, Helvetica;
+  font-size: 12px;
+  .container {
+    width: 1100px;
+    margin: 0 auto 100px;
+    // background-color: blue;
+  }
+  .topCategoryContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 50px;
+    margin-bottom: 20px;
+    // background-color: yellow;
+    .categoryTitle {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .directory {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      color: #959595;
+    }
+  }
+
+  .mainInfoContainer {
+    // background-color: lightblue;
+    display: flex;
+    margin-bottom: 60px;
+    .imageContainer {
+      margin-right: 20px;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .detailsContainer {
+      // background-color: blue;
+      position: relative;
+      flex-grow: 1;
+      width: 55%;
+      .likeBtn {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 10px;
+        top: 10px;
+        color: #dddddd;
+        cursor: pointer;
+        &.fas {
+          color: red;
+        }
+        &.far:hover {
+          color: grey;
+        }
+      }
+      .title {
+        padding: 0 0 20px;
+        border-bottom: 2px solid black;
+        font-size: 16px;
+        font-weight: bold;
+        .english {
+          font-size: 12px;
+          font-weight: normal;
+        }
+      }
+      .description {
+        padding: 20px 0;
+        border-bottom: 2px solid #efefef;
+      }
+    }
+  }
+
+  .nutritionContainer {
+    // background-color: green;
+    .nutritionHeaderContainer {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 10px;
+      border-bottom: 2px solid #efefef;
+    }
+    .nutritionInfoContainer {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 70px;
+      padding: 20px 0;
+      box-sizing: content-box;
+      .label {
+        display: flex;
+        justify-content: space-between;
+        height: 20px;
+        padding: 0 10px;
+        &:first-child,
+        &:nth-child(2),
+        &:nth-child(3) {
+          border-right: 0.5px dotted #efefef;
+        }
+      }
+    }
+    .allergyInfo {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #efefef;
+    }
+  }
+
+  .reviewsContainer {
+    // background-color: red;
+    .reviewsHeader {
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #efefef;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .reviewContainer {
+      display: flex;
+      align-items: center;
+      padding: 3px 0;
+      .reviewerId {
+        margin-right: 5px;
+        font-weight: bold;
+      }
+      .review {
+        display: block;
+        line-height: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .commentLikeBtn {
+        margin-left: 10px;
+        color: #dddddd;
+        &:hover {
+          color: grey;
+          cursor: pointer;
+        }
+        &.fas {
+          color: red;
+        }
+      }
+      .commentDeleteBtn {
+        margin-left: 10px;
+        color: #dddddd;
+        &:hover {
+          color: grey;
+          cursor: pointer;
+        }
+      }
+    }
+    #addedReview {
+      // not applied without javascript?
+      padding: 3px 0;
+    }
+
+    #newReviewForm {
+      margin-top: 10px;
+      #newReview {
+        width: 100%;
+        padding: 7px;
+        background-color: #efefef;
+        border: none;
+        font-size: 12px; //repetive
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0px;
+    background-color: #333333;
+    color: white;
+    .options {
+      margin-top: 10px;
+      p {
+        padding: 5px 0;
+      }
+    }
+  }
+}
