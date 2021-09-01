@@ -86,8 +86,6 @@ class Review extends React.Component {
             onKeyPress={this.submitReview}
           />
         </form>
-        <div>{this.state.tempUsername}</div>
-        <div>{this.state.tempReviewContent}</div>
       </div>
     );
   }
