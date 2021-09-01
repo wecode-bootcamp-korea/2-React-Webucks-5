@@ -1,11 +1,10 @@
-import React ,{Component} from 'react'
+import React  from 'react'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-}
-from 'react-router-dom';
-
+}from 'react-router-dom';
+import Home from './components/Home/Home';
 // 김민재님 컴포넌트
 import LoginMinjaeKim from './pages/minjaekim/Login/Login';
 import ListMinjaeKim from './pages/minjaekim/List/List';
@@ -37,6 +36,8 @@ class Routes extends React.Component {
     return(
       <Router>
         <Switch>
+            <Route exact path='/' component={Home} />
+
             <Route exact path='/login-minjaekim' component={LoginMinjaeKim} />
             <Route exact path='/list-minjaekim' component={ListMinjaeKim} />
             <Route exact path='/detail-minjaekim' component={DetailMinjaeKim} />
