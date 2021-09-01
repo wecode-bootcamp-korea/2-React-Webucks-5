@@ -1,0 +1,355 @@
+* {
+  box-sizing: border-box;
+}
+
+.Detail {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+  top: -8px;
+  left: -8px;
+
+  .Nav {
+    // 합의한 공용 Nav 컴포넌트의 세부 레이아웃을 알맞게 조정
+    .menuGroup.right img {
+      margin: 8px auto auto 4px;
+    }
+
+    a {
+      color: #333;
+      font-family: Avenir, Arial, georgia;
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+  }
+
+  nav {
+    // 합의한 공용 Nav 컴포넌트에 의한 레이아웃 변동을 알맞게 조정
+    // &::before {
+    //   content: '';
+    //   margin-top: 150px;
+    // }
+
+    width: 1060px;
+    text-align: right;
+
+    margin: 75px auto 30px auto;
+
+    position: relative;
+
+    h2 {
+      display: none;
+    }
+
+    #nav-title {
+      position: absolute;
+      top: -60px;
+      left: 0;
+    }
+
+    a {
+      color: #222;
+      font-family: Avenir, Arial, georgia;
+      font-size: 16px;
+      text-decoration: none;
+      opacity: 0.6;
+
+      margin: 0 3px;
+    }
+  }
+
+  main {
+    width: 1060px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  aside {
+    h3 {
+      display: none;
+    }
+
+    img {
+      width: 450px;
+    }
+  }
+
+  section {
+    width: 580px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  div.section {
+    width: 580px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .section-info {
+    width: 580px;
+
+    position: relative;
+
+    &:nth-child(1) {
+      padding-bottom: 20px;
+      border-bottom: 2px solid #333;
+      margin: 0 auto 20px 0;
+    }
+
+    h3 {
+      color: #222;
+      font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif,
+        Helvetica;
+      font-size: 24px;
+      font-weight: bold;
+
+      margin: 0;
+    }
+
+    .fa-heart {
+      position: absolute;
+      top: 0;
+      right: 10px;
+
+      cursor: pointer;
+    }
+
+    .fa-heart.far {
+      opacity: 0.2;
+
+      z-index: 1;
+    }
+
+    .fa-heart.fas {
+      display: none;
+    }
+
+    .fa-heart.fas.active {
+      display: inline;
+
+      z-index: 2;
+    }
+
+    h4 {
+      color: #666;
+      font-family: 'Arial';
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 1;
+
+      margin: 4px 0 0 0;
+    }
+
+    p {
+      color: #444;
+      font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif,
+        Helvetica;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.6;
+      min-height: 40px;
+
+      margin: 0 auto 20px 0;
+    }
+  }
+
+  .section-spec {
+    width: 580px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &:nth-child(1) {
+      padding: 20px 0;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      margin: 0 auto 20px 0;
+    }
+
+    h5 {
+      color: #222;
+      font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif,
+        Helvetica;
+      font-size: 18px;
+      font-weight: 500;
+
+      padding: 0 10px;
+      margin: 0;
+    }
+
+    p {
+      color: #222;
+      font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif,
+        Helvetica;
+      font-size: 16px;
+      font-weight: 500;
+
+      padding: 0 10px;
+      margin: 0;
+    }
+
+    div {
+      margin: 0 0 20px 0;
+
+      &:nth-child(1) {
+        border-right: 1px dashed #ccc;
+      }
+    }
+
+    dl {
+      width: 290px;
+
+      color: #444;
+      font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif,
+        Helvetica;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.4;
+
+      padding: 0 10px;
+      margin-top: 0;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &:nth-child(3) {
+      width: 580px;
+      height: 50px;
+      background-color: #efefef;
+
+      color: #444;
+      font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif,
+        Helvetica;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.4;
+
+      padding: 0 5px;
+      margin: 0 auto 30px 0;
+    }
+  }
+
+  .section-review {
+    width: 580px;
+
+    margin-top: 12px;
+
+    h5 {
+      color: #222;
+      font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif,
+        Helvetica;
+      font-size: 21px;
+      font-weight: bold;
+
+      padding-bottom: 8px;
+      border-bottom: 1px solid #ccc;
+      margin: 0;
+    }
+
+    dl {
+      color: #222;
+      font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif,
+        Helvetica;
+      font-size: 14px;
+
+      padding: 0;
+      margin: 4px 0 0 0;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    dt {
+      font-weight: bold;
+    }
+
+    dd {
+      margin: 1px auto 0 4px;
+    }
+
+    input {
+      width: 580px;
+      height: 40px;
+      background-color: #efefef;
+
+      padding-left: 10px;
+      border: 0;
+      margin: 15px 0 60px 0;
+    }
+  }
+
+  footer {
+    width: 100%;
+    background-color: #333;
+
+    color: white;
+
+    padding: 32px 200px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  dl.footer {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    a {
+      color: white;
+      font-family: arial, HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+      font-size: 14px;
+      text-decoration: none;
+
+      margin-top: 8px;
+
+      display: block;
+    }
+  }
+
+  .footer-menu {
+    margin-bottom: 4px;
+  }
+
+  .footer-list {
+    position: relative;
+    left: -40px;
+  }
+}
