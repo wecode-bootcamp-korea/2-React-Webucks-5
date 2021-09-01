@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
+
 // 김민재님 컴포넌트
 import LoginMinjaeKim from './pages/minjaekim/Login/Login';
 import ListMinjaeKim from './pages/minjaekim/List/List';
