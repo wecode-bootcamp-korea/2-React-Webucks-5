@@ -1,0 +1,28 @@
+@import '../../styles/variable';
+.Footer {
+  .inner {
+    margin-top: 100px;
+    background-color: #333;
+    width: 100vw;
+  }
+
+  .footer-list-wrap {
+    display: flex;
+    justify-content: space-around;
+    max-width: $mainWidth;
+    margin: 0 auto;
+    color: #fff;
+  }
+
+  .footer-list-wrap a {
+    color: #fff;
+  }
+
+  @media (max-width: 1200px) {
+    .footer-list-wrap {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
