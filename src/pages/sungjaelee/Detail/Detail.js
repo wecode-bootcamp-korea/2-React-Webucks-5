@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 // import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -12,14 +12,52 @@ import './Detail.scss';
 class Detail extends Component {
   constructor() {
     super();
+    this.myRef = createRef();
     this.state = {
       isLiked: false,
+      // newReview: null,
+      // postedReview: null,
+      userId: 'hansybaby',
+      reviewInput: '',
+      newReviews: [],
     };
     this.handleProductLike = this.handleProductLike.bind(this);
+    // this.handleWriteReview = this.handleWriteReview.bind(this);
+    // this.handlePostReview = this.handlePostReview.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleProductLike() {
     this.setState({ isLiked: !this.state.isLiked });
+  }
+
+  // handleWriteReview(e) {
+  //   this.setState({ newReview: e.target.value }, () =>
+  //     console.log('newReview', this.state.newReview)
+  //   );
+  // }
+
+  // handlePostReview(e) {
+  //   // console.log('new review posted!');
+  //   this.setState({ postedReview: this.state.newReview }, () =>
+  //     console.log('postedReview', this.state.postedReview)
+  //   );
+  //   // this.setState({ postedReview: null });
+  // }
+
+  handleInputChange(e) {
+    this.setState({ reviewInput: e.target.value });
+  }
+
+  handleSubmit(e) {
+    console.log('NEW REVIEW POSTED', this.state.reviewInput);
+    this.setState({
+      newReviews: [...this.state.newReviews, this.state.reviewInput],
+      reviewInput: '',
+    });
+    e.preventDefault();
+    this.myRef.current.blur();
   }
 
   getIconClasses() {
@@ -30,8 +68,15 @@ class Detail extends Component {
   }
 
   render() {
-    const { isLiked } = this.state;
-
+    const {
+      isLiked,
+      // newReview, postedReview,
+      userId,
+      reviewInput,
+      newReviews,
+    } = this.state;
+    console.log('reviewInput', reviewInput);
+    console.log('newReviews', newReviews);
     return (
       <div className="Detail">
         <div className="container">
@@ -130,12 +175,37 @@ class Detail extends Component {
                     </p>
                     <i className="commentLikeBtn far fa-heart"></i>
                   </div>
+                  {/* {postedReview && (
+                    <div className="reviewContainer">
+                      <span className="reviewerId">{userId}</span>
+                      <p className="review">{postedReview}</p>
+                      <i className="commentLikeBtn far fa-heart"></i>
+                    </div>
+                  )} */}
+                  {newReviews.map((review, i) => {
+                    return (
+                      <div className="reviewContainer" key={i}>
+                        <span className="reviewerId">{userId}</span>
+                        <p className="review">{review}</p>
+                        <i className="commentLikeBtn far fa-heart"></i>
+                      </div>
+                    );
+                  })}
                   {/* <!-- review form --> */}
-                  <form id="newReviewForm" action="#" autoComplete="off">
+                  <form
+                    id="newReviewForm"
+                    // onSubmit={this.handlePostReview}
+                    onSubmit={this.handleSubmit}
+                    autoComplete="off"
+                  >
                     <input
                       id="newReview"
                       type="text"
                       placeholder="리뷰를 입력해주세요."
+                      ref={this.myRef}
+                      value={this.state.reviewInput}
+                      // onChange={this.handleWriteReview}
+                      onChange={this.handleInputChange}
                     />
                   </form>
                 </div>
