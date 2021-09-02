@@ -1,12 +1,37 @@
 import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as faHeartO } from '@fortawesome/free-regular-svg-icons';
+// import {} from '@fortawesome/fontawesome-svg-core';
 
 import Nav from '../../../components/Nav/Nav';
 
 import './Detail.scss';
 
 class Detail extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isLiked: false,
+    };
+    this.handleProductLike = this.handleProductLike.bind(this);
+  }
+
+  handleProductLike() {
+    this.setState({ isLiked: !this.state.isLiked });
+  }
+
+  getIconClasses() {
+    const { isLiked } = this.state;
+    let iconClasses = 'likeBtn ';
+    iconClasses += isLiked ? 'fas' : 'far';
+    return iconClasses;
+  }
+
   render() {
+    const { isLiked } = this.state;
+
     return (
       <div className="Detail">
         <div className="container">
@@ -37,7 +62,12 @@ class Detail extends Component {
                     <span className="english">Nitro Vanilla Cream</span>
                   </h3>
                   {/* <i className="likeBtn far fa-heart fa-lg"></i> */}
-                  <span className="likeBtn">❤️</span>
+                  <FontAwesomeIcon
+                    className={this.getIconClasses()}
+                    icon={isLiked ? faHeart : faHeartO}
+                    size="lg"
+                    onClick={this.handleProductLike}
+                  />
                   <p className="description">
                     부드러운 목넘김의 나이트로 커피와 바닐라 크림의 매력을
                     한번에 느껴보세요!

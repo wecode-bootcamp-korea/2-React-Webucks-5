@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {} from '@fortawesome/free-solid-svg-icons';
+// import {} from '@fortawesome/fontawesome-svg-core';
 
 import './CoffeeCard.scss';
 
@@ -23,7 +26,8 @@ class CoffeeCard extends Component {
         </div>
         <div className="nameContainer">
           <p className="name">{name}</p>
-          <span>❤️</span>
+          {/* <span>❤️</span> */}
+          <FontAwesomeIcon icon="coffee" size={40} />
           {/* <i className="likeBtn far fa-heart"></i> */}
         </div>
       </li>
