@@ -2,6 +2,7 @@ import React from 'react';
 import './EachReview.scss';
 
 class EachReview extends React.Component {
+  state = { isHeartFilled: false };
   render() {
     return (
       <div className="EachReview">
@@ -11,7 +12,16 @@ class EachReview extends React.Component {
         </div>
         <div className="option">
           <div className="like">
-            <i className="far fa-heart"></i>
+            <i
+              className={
+                this.state.isHeartFilled ? 'fas fa-heart' : 'far fa-heart'
+              }
+              onClick={() =>
+                this.setState({
+                  isHeartFilled: !this.state.isHeartFilled,
+                })
+              }
+            ></i>
           </div>
           <div
             className="delete"

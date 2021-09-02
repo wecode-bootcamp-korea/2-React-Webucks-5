@@ -27,6 +27,7 @@ class Review extends React.Component {
       tempReviewContent: '',
     };
   }
+
   usernameRef = React.createRef();
   contentRef = React.createRef();
 
