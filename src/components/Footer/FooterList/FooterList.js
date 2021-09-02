@@ -10,7 +10,9 @@ class FooterList extends React.Component {
         {this.props.list.map((el, idx) => {
           return (
             <a href="#">
-              <p className="footer-list__item">{el}</p>
+              <p className="footer-list__item" key={this.props.id}>
+                {el}
+              </p>
             </a>
           );
         })}

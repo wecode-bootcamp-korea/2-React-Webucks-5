@@ -15,7 +15,7 @@ class Footer extends React.Component {
         <div className="inner">
           <div className="footer-list-wrap">
             {this.state.footerListData.map(el => {
-              return <FooterList title={el.title} list={el.list} />;
+              return <FooterList title={el.title} list={el.list} key={el.id} />;
             })}
           </div>
         </div>

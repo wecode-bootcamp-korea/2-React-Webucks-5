@@ -31,7 +31,13 @@ class List extends Component {
           <div className="product-list__product">
             {this.state.coffeLIistData.coldBrewCoffeeCards.map(
               (coffee, idx) => {
-                return <CoffeeCard img={coffee.img} title={coffee.title} />;
+                return (
+                  <CoffeeCard
+                    img={coffee.img}
+                    title={coffee.title}
+                    key={coffee.id}
+                  />
+                );
               }
             )}
           </div>
@@ -52,7 +58,13 @@ class List extends Component {
 
           <div className="product-list__product">
             {this.state.coffeLIistData.brewedCoffeeCards.map((coffee, idx) => {
-              return <CoffeeCard img={coffee.img} title={coffee.title} />;
+              return (
+                <CoffeeCard
+                  img={coffee.img}
+                  title={coffee.title}
+                  key={coffee.id}
+                />
+              );
             })}
           </div>
         </section>

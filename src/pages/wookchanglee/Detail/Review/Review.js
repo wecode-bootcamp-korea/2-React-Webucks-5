@@ -10,14 +10,17 @@ class Review extends React.Component {
         {
           username: 'coffee_lover',
           reviewContent: '진짜 진자 너무 너무 맛있어요!',
+          id: 'riviewNum1',
         },
         {
           username: 'myloveIstCoffee',
           reviewContent: '오늘도 내일도 모레도 먹을거에요',
+          id: 'reviewNum2',
         },
         {
           username: 'legend_dev',
           reviewContent: '전설이라는 말은 이때를 위해 존재한것',
+          id: 'reviewNum3',
         },
       ],
       tempUsername: '',
@@ -47,7 +50,11 @@ class Review extends React.Component {
         this.setState({ review: newarr });
         this.usernameRef.current.value = '';
         this.contentRef.current.value = '';
-        this.setState({ tempReviewContent: '', tempUsername: '' });
+        this.setState({
+          tempReviewContent: '',
+          tempUsername: '',
+          id: 'reviewNum' + newarr.length,
+        });
       } else {
         alert('빈칸은 입력할 수 없습니다🥲');
       }
@@ -64,6 +71,7 @@ class Review extends React.Component {
               <EachReview
                 username={el.username}
                 reviewContent={el.reviewContent}
+                key={el.id}
               />
             );
           })}
