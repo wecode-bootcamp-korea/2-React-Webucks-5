@@ -22,7 +22,7 @@ const LIST_COLDBREW_DATA = [
   },
   {
     img: 'https://image.istarbucks.co.kr/upload/store/skuimg/2021/03/[9200000003509]_20210322093452399.jpg',
-    name: ' 바닐라 크림 콜드 브루',
+    name: '바닐라 크림 콜드 브루',
     id: 5,
   },
   {
