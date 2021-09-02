@@ -36,6 +36,12 @@ class Review extends React.Component {
       : this.setState({ tempReviewContent: e.target.value });
   };
 
+  deleteReveiw = id => {
+    let newarr = [...this.state.review];
+    newarr = newarr.filter(el => el.id !== id);
+    this.setState({ review: newarr });
+  };
+
   submitReview = e => {
     if (e.key === 'Enter') {
       if (
@@ -72,6 +78,8 @@ class Review extends React.Component {
                 username={el.username}
                 reviewContent={el.reviewContent}
                 key={el.id}
+                id={el.id}
+                click={this.deleteReveiw}
               />
             );
           })}

@@ -13,7 +13,12 @@ class EachReview extends React.Component {
           <div className="like">
             <i className="far fa-heart"></i>
           </div>
-          <div className="delete">❌</div>
+          <div
+            className="delete"
+            onClick={() => this.props.click(this.props.id)}
+          >
+            ❌
+          </div>
         </div>
       </div>
     );
