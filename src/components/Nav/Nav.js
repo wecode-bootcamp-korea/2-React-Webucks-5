@@ -16,16 +16,16 @@ class TopNav extends Component {
           <div className="menuGroup left toggle">
             <ul>
               <li>
-                <a href="#">COFFEE</a>
+                <Link to="#">COFFEE</Link>
               </li>
               <li>
-                <a href="#">MENU</a>
+                <Link to="#">MENU</Link>
               </li>
               <li>
-                <a href="#">STORE</a>
+                <Link to="#">STORE</Link>
               </li>
               <li>
-                <a href="#">WHAT'S NEW</a>
+                <Link to="#">WHAT'S NEW</Link>
               </li>
               <li>
                 <Link to="/login-wookchanglee">SIGN-IN</Link>

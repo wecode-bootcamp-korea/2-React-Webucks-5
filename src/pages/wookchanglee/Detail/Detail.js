@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { Component } from 'react';
 import Review from './Review/Review';
 import Nav from '../../../components/Nav/Nav';

@@ -1,5 +1,5 @@
-/*eslint-disable */
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Login.scss';
 
 class Login extends Component {
@@ -9,9 +9,7 @@ class Login extends Component {
   }
 
   goToList = () => {
-    this.state.isVerified
-      ? this.props.history.push('/list-wookchanglee')
-      : null;
+    if (this.state.isVerified) this.props.history.push('/list-wookchanglee');
   };
 
   handleInput = e => {
@@ -63,9 +61,9 @@ class Login extends Component {
               </button>
               <i className="fas fa-eye"></i>
             </form>
-            <a href="#" className="section--login__another-approch">
+            <Link to="#" className="section--login__another-approch">
               비밀번호를 잊으셨나요?
-            </a>
+            </Link>
           </div>
         </section>
       </div>
