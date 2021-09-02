@@ -11,19 +11,23 @@ const footerListData = [
     ],
     id: 'footerNum1',
   },
-  { title: 'CORPORATE SALES', list: ['단체 및 기업 구매 안내'], id: 2 },
+  {
+    title: 'CORPORATE SALES',
+    list: ['단체 및 기업 구매 안내'],
+    id: 'footerNum2',
+  },
   {
     title: 'PARTNERSHIP',
     list: ['신규 입점 제의', '협력 고객사 등록 신청'],
-    id: 'footerNum2',
+    id: 'footerNum3',
   },
   {
     title: 'ONLINE COMMUNITY',
     list: ['페이스북', '트위트', '유튜브', '블로그', '인스타그램'],
-    id: 'footerNum3',
+    id: 'footerNum4',
   },
-  { title: 'RECRUIT', list: ['채용 소개', '채용 지원하기'], id: 'footerNum4' },
-  { title: 'WEBUKS', list: [''], id: 'footerNum5' },
+  { title: 'RECRUIT', list: ['채용 소개', '채용 지원하기'], id: 'footerNum5' },
+  { title: 'WEBUKS', list: [''], id: 'footerNum6' },
 ];
 
 export default footerListData;
