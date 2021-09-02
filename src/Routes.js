@@ -28,23 +28,7 @@ import DetailSungJaeLee from './pages/sungjaelee/Detail/Detail';
 // import DetailJaeWonKim from './pages/jaewonkim/Detail/Detail';
 
 class Routes extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      selectedProduct: null,
-    };
-    this.handleSelectedProduct = this.handleSelectedProduct.bind(this);
-  }
-
-  handleSelectedProduct(name) {
-    this.setState({ selectedProduct: name }, () =>
-      console.log('selectedProduct: ', this.state.selectedProduct)
-    );
-  }
-
   render() {
-    const { selectedProduct } = this.state;
-    console.log('selectedProduct', selectedProduct);
     return (
       <Router>
         <Switch>
@@ -71,22 +55,8 @@ class Routes extends React.Component {
           /> */}
 
           <Route exact path="/login-sungjaelee" component={LoginSungJaeLee} />
-          <Route
-            exact
-            path="/list-sungjaelee"
-            render={props => (
-              <ListSungJaeLee
-                onSelectedProduct={this.handleSelectedProduct}
-                {...props}
-              />
-            )}
-          />
-          <Route
-            exact
-            path={`/detail-sungjaelee/${selectedProduct}`}
-            component={DetailSungJaeLee}
-            selectedProduct={selectedProduct}
-          />
+          <Route exact path="/list-sungjaelee" component={ListSungJaeLee} />
+          <Route exact path="/detail-sungjaelee" component={DetailSungJaeLee} />
           {/* 
           <Route exact path="/login-jaewonkim" component={LoginJaeWonKim} />
           <Route exact path="/list-jaewonkim" component={ListJaeWonKim} />

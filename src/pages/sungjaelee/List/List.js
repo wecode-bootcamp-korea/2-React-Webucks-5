@@ -10,8 +10,6 @@ import './List.scss';
 
 class List extends Component {
   render() {
-    const { onSelectedProduct } = this.props;
-
     return (
       <div className="List container">
         <Nav />
@@ -28,10 +26,9 @@ class List extends Component {
             {LIST_COLDBREW_DATA.map(coffee => {
               return (
                 <CoffeeCard
-                  key={coffee.id}
                   name={coffee.name}
                   img={coffee.img}
-                  onSelectedProduct={onSelectedProduct}
+                  key={coffee.id}
                 />
               );
             })}
@@ -51,7 +48,6 @@ class List extends Component {
             {LIST_BREWED_DATA.map(coffee => {
               return (
                 <CoffeeCard
-                  id={coffee.id}
                   name={coffee.name}
                   img={coffee.img}
                   key={coffee.id}

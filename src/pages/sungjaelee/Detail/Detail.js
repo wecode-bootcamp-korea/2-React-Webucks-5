@@ -7,8 +7,6 @@ import './Detail.scss';
 
 class Detail extends Component {
   render() {
-    const { name, img } = this.props;
-    console.log('DETAIL PAGE');
     return (
       <div className="Detail">
         <div className="container">
@@ -18,20 +16,23 @@ class Detail extends Component {
             <header className="topCategoryContainer">
               <h2 className="categoryTitle">콜드 브루</h2>
               <p className="directory">
-                홈 > MENU > 음료 > 에스프레소 > {name}
+                홈 > MENU > 음료 > 에스프레소 > 나이트로 바닐라 크림
               </p>
             </header>
             {/* <!-- product info container  --> */}
             <div className="mainInfoContainer">
               {/* <!-- image container --> */}
               <div className="imageContainer">
-                <img src={img} alt={name} />
+                <img
+                  src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000002487]_20210426091745609.jpg"
+                  alt="나이트로 바닐라 크림"
+                />
               </div>
               {/* <!-- details container --> */}
               <div className="detailsContainer">
                 <div className="descriptionContainer">
                   <h3 className="title">
-                    {name}
+                    나이트로 바닐라 크림
                     <br />
                     <span className="english">Nitro Vanilla Cream</span>
                   </h3>

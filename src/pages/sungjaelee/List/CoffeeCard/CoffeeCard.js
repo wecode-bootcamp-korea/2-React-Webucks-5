@@ -1,39 +1,26 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 import './CoffeeCard.scss';
 
 class CoffeeCard extends Component {
-  // goToDetailPage(name) {
-  //   console.log(this.props.history);
-  //   this.props.history.push(`/detail-sungjaelee/${name}`);
-  //   // this.props.history.goBack();
-  // }
+  goToDetailPage = () => {
+    console.log(this.props.history);
+    this.props.history.push('/detail-sungjaelee');
+    // this.props.history.goBack();
+  };
 
   render() {
-    const { name, img, onSelectedProduct } = this.props;
+    const { name, img } = this.props;
 
     return (
       <li className="CoffeeCard item">
-        <Link
-          className="imageContainer"
-          to={`/detail-sungjaelee/${name}`}
-          onClick={() => onSelectedProduct(name)}
-          name={name}
-          img={img}
-        >
+        {/* <Link className="imageContainer" to="/detail">
           <img src={img} alt={name} />
-        </Link>
-        {/* <div className="imageContainer">
-          <img
-            src={img}
-            alt={name}
-            onClick={() => {
-              onSelectedProduct(name);
-              this.goToDetailPage(name);
-            }}
-          />
-        </div> */}
+        </Link> */}
+        <div className="imageContainer">
+          <img src={img} alt={name} onClick={this.goToDetailPage} />
+        </div>
         <div className="nameContainer">
           <p className="name">{name}</p>
           <span>❤️</span>
@@ -44,5 +31,4 @@ class CoffeeCard extends Component {
   }
 }
 
-// export default withRouter(CoffeeCard);
-export default CoffeeCard;
+export default withRouter(CoffeeCard);

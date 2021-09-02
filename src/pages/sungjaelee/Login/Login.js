@@ -13,7 +13,7 @@ class Login extends Component {
     };
     this.handleIdInput = this.handleIdInput.bind(this);
     this.handlePwInput = this.handlePwInput.bind(this);
-    this.handleIsValidInput = this.handleIsValidInput.bind(this);
+    this.handleValidityCheck = this.handleValidityCheck.bind(this);
   }
 
   getBtnClasses() {
@@ -24,14 +24,14 @@ class Login extends Component {
   }
 
   handleIdInput(e) {
-    this.setState({ idInput: e.target.value }, this.handleIsValidInput);
+    this.setState({ idInput: e.target.value }, this.handleValidityCheck);
   }
 
   handlePwInput(e) {
-    this.setState({ pwInput: e.target.value }, this.handleIsValidInput);
+    this.setState({ pwInput: e.target.value }, this.handleValidityCheck);
   }
 
-  handleIsValidInput() {
+  handleValidityCheck() {
     const { idInput, pwInput } = this.state;
     this.setState({
       isValidInput: idInput.includes('@') && pwInput.length >= 5,
