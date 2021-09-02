@@ -7,27 +7,50 @@ class Login extends Component {
   constructor() {
     super();
     this.state = {
-      idInput: null,
-      pwInput: null,
+      idInput: '',
+      pwInput: '',
+      isValidInput: false,
     };
     this.handleIdInput = this.handleIdInput.bind(this);
     this.handlePwInput = this.handlePwInput.bind(this);
+    this.handleValidityCheck = this.handleValidityCheck.bind(this);
+  }
+
+  getBtnClasses() {
+    const { isValidInput } = this.state;
+    let btnClasses = 'loginBtn ';
+    btnClasses += isValidInput ? 'active' : '';
+    return btnClasses;
   }
 
   handleIdInput(e) {
-    this.setState({ idInput: e.target.value });
-    // console.log(e.target.value);
+    this.setState({ idInput: e.target.value }, this.handleValidityCheck);
   }
 
   handlePwInput(e) {
-    this.setState({ pwInput: e.target.value });
-    // console.log(e.target.value);
+    this.setState({ pwInput: e.target.value }, this.handleValidityCheck);
+  }
+
+  handleValidityCheck() {
+    const { idInput, pwInput } = this.state;
+    this.setState({
+      isValidInput: idInput.includes('@') && pwInput.length >= 5,
+    });
   }
 
   render() {
-    const { idInput, pwInput } = this.state;
-    console.log('idInput', idInput);
-    console.log('pwInput', pwInput);
+    const { idInput, pwInput, isValidInput } = this.state;
+
+    console.log(
+      'RENDER:',
+      'idInput:',
+      idInput,
+      'pwInput:',
+      pwInput,
+      'isValidInput',
+      isValidInput
+    );
+
     return (
       <div className="Login">
         <section className="box">
@@ -55,7 +78,7 @@ class Login extends Component {
               </span>
             </div>
             <Link to="/list-sungjaelee">
-              <button className="loginBtn" type="submit">
+              <button className={this.getBtnClasses()} type="submit">
                 로그인
               </button>
             </Link>

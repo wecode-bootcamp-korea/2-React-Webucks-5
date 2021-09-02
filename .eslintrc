@@ -5,8 +5,8 @@
 
 // {
 //   "extends": ["react-app", "plugin:prettier/recommended", "prettier"],
-//   "plugins": ["prettier"],
+//   // "plugins": ["prettier"],
 //   "rules": {
 //     "prettier/prettier": "error"
-//   },
+//   }
 // }

@@ -11,15 +11,15 @@ class CoffeeCard extends Component {
   };
 
   render() {
-    const { name, imgUrl } = this.props;
+    const { name, img } = this.props;
 
     return (
       <li className="CoffeeCard item">
         {/* <Link className="imageContainer" to="/detail">
-          <img src={imgUrl} alt={name} />
+          <img src={img} alt={name} />
         </Link> */}
         <div className="imageContainer">
-          <img src={imgUrl} alt={name} onClick={this.goToDetailPage} />
+          <img src={img} alt={name} onClick={this.goToDetailPage} />
         </div>
         <div className="nameContainer">
           <p className="name">{name}</p>

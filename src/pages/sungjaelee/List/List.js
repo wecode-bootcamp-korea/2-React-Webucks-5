@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 import Nav from '../../../components/Nav/Nav';
 import CoffeeCard from './CoffeeCard/CoffeeCard';
 
-import { COLD_BREW_DATA, BREWED_DATA } from './sungjaeMockData';
+import LIST_BREWED_DATA from './listBrewedData';
+import LIST_COLDBREW_DATA from './listColdBrewData';
 
 import './List.scss';
 
@@ -23,11 +23,11 @@ class List extends Component {
           </header>
           {/* <!-- cold brew list --> */}
           <ul className="listContainer">
-            {COLD_BREW_DATA.map(coffee => {
+            {LIST_COLDBREW_DATA.map(coffee => {
               return (
                 <CoffeeCard
                   name={coffee.name}
-                  imgUrl={coffee.imgUrl}
+                  img={coffee.img}
                   key={coffee.id}
                 />
               );
@@ -45,11 +45,11 @@ class List extends Component {
           </header>
           {/* <!-- brewed coffee list --> */}
           <ul className="listContainer">
-            {BREWED_DATA.map(coffee => {
+            {LIST_BREWED_DATA.map(coffee => {
               return (
                 <CoffeeCard
                   name={coffee.name}
-                  imgUrl={coffee.imgUrl}
+                  img={coffee.img}
                   key={coffee.id}
                 />
               );
