@@ -25,15 +25,18 @@
     justify-content: center;
     align-items: center;
     // background-color: lawngreen;
-    /* border: 5px solid red; */
+    // border: 5px solid red;
     .name {
       /* border: 5px solid green; */
       margin-right: 10px;
       font-size: 14px;
     }
     .likeBtn {
-      color: grey;
+      color: #dddddd;
       cursor: pointer;
+      &:hover {
+        color: grey;
+      }
       &.fas {
         color: red;
       }
