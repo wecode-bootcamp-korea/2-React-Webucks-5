@@ -34,10 +34,11 @@
     display: flex;
     margin-bottom: 60px;
     .imageContainer {
+      // width: 100%;
       margin-right: 20px;
       img {
         display: block;
-        width: 100%;
+        width: 450px;
       }
     }
     .detailsContainer {
@@ -135,6 +136,7 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        // border: 1px solid black;
       }
       .commentLikeBtn {
         margin-left: 10px;

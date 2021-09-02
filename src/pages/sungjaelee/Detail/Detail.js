@@ -1,9 +1,8 @@
 import React, { Component, createRef } from 'react';
-// import { Link } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { faHeart as faHeartO } from '@fortawesome/free-regular-svg-icons';
-// import {} from '@fortawesome/fontawesome-svg-core';
 
 import Nav from '../../../components/Nav/Nav';
 
@@ -15,49 +14,61 @@ class Detail extends Component {
     this.myRef = createRef();
     this.state = {
       isLiked: false,
-      // newReview: null,
-      // postedReview: null,
-      userId: 'hansybaby',
+      userId: 'codekim',
       reviewInput: '',
-      newReviews: [],
+      reviews: [
+        {
+          id: 1,
+          userId: 'coffee_lover',
+          review: '너무 맛있어요!',
+        },
+        {
+          id: 2,
+          userId: 'CHOCO7 ggg',
+          review: '오늘도 화이팅 gggg',
+        },
+        {
+          id: 3,
+          userId: 'legend_dev',
+          review:
+            '진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.',
+        },
+      ],
     };
     this.handleProductLike = this.handleProductLike.bind(this);
-    // this.handleWriteReview = this.handleWriteReview.bind(this);
-    // this.handlePostReview = this.handlePostReview.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCommentDelete = this.handleCommentDelete.bind(this);
   }
 
   handleProductLike() {
     this.setState({ isLiked: !this.state.isLiked });
   }
 
-  // handleWriteReview(e) {
-  //   this.setState({ newReview: e.target.value }, () =>
-  //     console.log('newReview', this.state.newReview)
-  //   );
-  // }
-
-  // handlePostReview(e) {
-  //   // console.log('new review posted!');
-  //   this.setState({ postedReview: this.state.newReview }, () =>
-  //     console.log('postedReview', this.state.postedReview)
-  //   );
-  //   // this.setState({ postedReview: null });
-  // }
-
   handleInputChange(e) {
     this.setState({ reviewInput: e.target.value });
   }
 
   handleSubmit(e) {
-    console.log('NEW REVIEW POSTED', this.state.reviewInput);
+    const { reviews, userId, reviewInput } = this.state;
     this.setState({
-      newReviews: [...this.state.newReviews, this.state.reviewInput],
+      reviews: [
+        ...reviews,
+        {
+          id: reviews.length ? reviews[reviews.length - 1].id + 1 : 1,
+          userId,
+          review: reviewInput,
+        },
+      ],
       reviewInput: '',
     });
     e.preventDefault();
     this.myRef.current.blur();
+  }
+
+  handleCommentDelete(review) {
+    const reviews = this.state.reviews.filter(r => r !== review);
+    this.setState({ reviews });
   }
 
   getIconClasses() {
@@ -68,15 +79,8 @@ class Detail extends Component {
   }
 
   render() {
-    const {
-      isLiked,
-      // newReview, postedReview,
-      userId,
-      reviewInput,
-      newReviews,
-    } = this.state;
-    console.log('reviewInput', reviewInput);
-    console.log('newReviews', newReviews);
+    const { isLiked, reviews } = this.state;
+
     return (
       <div className="Detail">
         <div className="container">
@@ -106,7 +110,6 @@ class Detail extends Component {
                     <br />
                     <span className="english">Nitro Vanilla Cream</span>
                   </h3>
-                  {/* <i className="likeBtn far fa-heart fa-lg"></i> */}
                   <FontAwesomeIcon
                     className={this.getIconClasses()}
                     icon={isLiked ? faHeart : faHeartO}
@@ -156,45 +159,25 @@ class Detail extends Component {
 
                 <div className="reviewsContainer">
                   <h4 className="reviewsHeader">리뷰</h4>
-                  <div className="reviewContainer">
-                    <span className="reviewerId">coffee_lover</span>
-                    <p className="review">너무 맛있어요!</p>
-                    <i className="commentLikeBtn far fa-heart"></i>
-                  </div>
-                  <div className="reviewContainer">
-                    <span className="reviewerId">CHOCO7 ggg</span>
-                    <p className="review">오늘도 화이팅 gggg</p>
-                    <i className="commentLikeBtn far fa-heart"></i>
-                  </div>
-                  <div className="reviewContainer">
-                    <span className="reviewerId">legend_dev</span>
-                    <p className="review">
-                      진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿
-                      모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜
-                      화이트 초콜릿 모카는 전설이다.
-                    </p>
-                    <i className="commentLikeBtn far fa-heart"></i>
-                  </div>
-                  {/* {postedReview && (
-                    <div className="reviewContainer">
-                      <span className="reviewerId">{userId}</span>
-                      <p className="review">{postedReview}</p>
-                      <i className="commentLikeBtn far fa-heart"></i>
-                    </div>
-                  )} */}
-                  {newReviews.map((review, i) => {
+                  {reviews.map(r => {
                     return (
-                      <div className="reviewContainer" key={i}>
-                        <span className="reviewerId">{userId}</span>
-                        <p className="review">{review}</p>
-                        <i className="commentLikeBtn far fa-heart"></i>
+                      <div className="reviewContainer" key={r.id}>
+                        <span className="reviewerId">{r.userId}</span>
+                        <p className="review">{r.review}</p>
+                        <FontAwesomeIcon
+                          className="commentLikeBtn"
+                          icon={faHeartO}
+                        />
+                        <FontAwesomeIcon
+                          className="commentDeleteBtn"
+                          icon={faTrashAlt}
+                          onClick={() => this.handleCommentDelete(r)}
+                        />
                       </div>
                     );
                   })}
-                  {/* <!-- review form --> */}
                   <form
                     id="newReviewForm"
-                    // onSubmit={this.handlePostReview}
                     onSubmit={this.handleSubmit}
                     autoComplete="off"
                   >
@@ -204,7 +187,6 @@ class Detail extends Component {
                       placeholder="리뷰를 입력해주세요."
                       ref={this.myRef}
                       value={this.state.reviewInput}
-                      // onChange={this.handleWriteReview}
                       onChange={this.handleInputChange}
                     />
                   </form>
