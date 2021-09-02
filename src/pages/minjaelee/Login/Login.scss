@@ -6,7 +6,7 @@ body {
   background-color: #eeefef;
 }
 
-.body_container {
+.loginContainer {
   position: fixed;
   top: 10%;
   bottom: 10%;
@@ -14,8 +14,8 @@ body {
   background-color: #ffffff;
 }
 
-.login-title {
-  &__name {
+.loginTitle {
+  &Name {
     display: flex;
     justify-content: center;
     font-size: 80px;
@@ -25,7 +25,7 @@ body {
   background-color: #ffffff;
 }
 
-.login-form {
+.loginForm {
   input {
     &::placeholder {
       padding-left: 8px;
@@ -44,9 +44,8 @@ body {
     height: 55px;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: #b2dffc;
   }
-  &__btnspan {
+  .loginFormBtnSpan {
     margin-bottom: 500px;
     color: white;
     text-decoration: inherit;
@@ -58,9 +57,17 @@ body {
   padding: 0px 210px;
 }
 
-.login-footer {
+.loginFooter {
   display: flex;
   justify-content: center;
   margin-top: 80px;
   color: #0095f6;
+}
+
+.activeBtn {
+  background-color: #0095f6;
+}
+
+.unactiveBtn {
+  background-color: #b2dffc;
 }

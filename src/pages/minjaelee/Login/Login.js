@@ -5,39 +5,53 @@ import './Login.scss';
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      idInput: '',
+      pwInput: '',
+      isActive: false,
+    };
   }
 
-  handleInput = event => {
-    event.target.value;
+  handleIdInput = event => {
+    this.setState({ idInput: event.target.value }, this.isValidInput);
+  };
+
+  handlePwInput = event => {
+    this.setState({ pwInput: event.target.value }, this.isValidInput);
+  };
+
+  isValidInput = () => {
+    this.state.idInput.includes('@') && this.state.pwInput.length >= 5
+      ? this.setState({ isActive: true })
+      : this.setState({ isActive: false });
   };
 
   render() {
     return (
-      <div className="body_container">
-        <section className="login-title">
-          <div className="login-title__name">WeBucks</div>
+      <div className="loginContainer">
+        <section className="loginTitle">
+          <div className="loginTitleName">WeBucks</div>
         </section>
-        <form className="login-form" action="/list.html" method="get">
+        <form className="loginForm" action="/list.html" method="get">
           <input
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
-            className="login-form__id"
-            onChange={this.state.handleInput}
+            className="loginFormId"
+            onChange={this.handleIdInput}
           />
           <input
             type="password"
             placeholder="비밀번호"
-            className="login-form__pw"
-            onChange={this.state.handleInput}
+            className="loginFormPw"
+            onChange={this.handlePwInput}
           />
-          <button>
-            <Link to="/list-minjaelee" className="login-form__btn">
-              <span className="login-form__btnspan">로그인</span>
+          <button className={this.state.isActive ? 'activeBtn' : 'unactiveBtn'}>
+            <Link to="/list-minjaelee" className="formBtn">
+              <span className="loginFormBtnSpan">로그인</span>
             </Link>
           </button>
         </form>
-        <section className="login-footer">
+        <section className="loginFooter">
           <a href="#">비밀번호를 잊으셨나요?</a>
         </section>
       </div>

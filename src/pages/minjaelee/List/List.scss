@@ -6,7 +6,7 @@ body {
   background-color: #eeefef;
 }
 
-.body-container {
+.listContainer {
   margin: 35px 150px;
   background-color: #ffffff;
 }
@@ -15,7 +15,7 @@ main {
   margin-top: 30px;
 }
 
-.bar2 {
+.secondBar {
   h2 {
     font-size: 18px;
     font-weight: 900;
@@ -36,10 +36,10 @@ main {
   padding: 15px 40px;
   margin-bottom: 30px;
   height: 55px;
-  background-color: #f5f5d7;
+  background-color: #f4f4f2;
 }
 
-.bar3 {
+.thirdBar {
   h2 {
     @extend h2;
   }
@@ -49,7 +49,7 @@ main {
   img {
     @extend img;
   }
-  @extend .bar2;
+  @extend .secondBar;
 }
 
 .coldbrew {
@@ -81,7 +81,7 @@ main {
     width: 90%;
     transition: transform 0.5s;
   }
-  .brewed__line {
+  .brewedList {
     position: relative;
     left: 10px;
     display: flex;

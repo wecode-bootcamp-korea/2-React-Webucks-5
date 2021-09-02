@@ -7,10 +7,10 @@ import LIST_BREWED_DATA from './BrewedData';
 class List extends Component {
   render() {
     return (
-      <div className="body-container">
+      <div className="listContainer">
         <TopNav />
         <main>
-          <div className="bar2">
+          <div className="secondBar">
             <h2>콜드 브루 커피</h2>
             <span>
               <img
@@ -21,7 +21,7 @@ class List extends Component {
             </span>
           </div>
           <div className="coldbrew">
-            <ul className="coldbrewLine">
+            <ul className="coldbrewList">
               {LIST_COLDBREW_DATA.map(product => {
                 return (
                   <li>
@@ -32,7 +32,7 @@ class List extends Component {
               })}
             </ul>
           </div>
-          <div className="bar3">
+          <div className="thirdBar">
             <h2>브루드 커피</h2>
             <span>
               <img
@@ -43,7 +43,7 @@ class List extends Component {
             </span>
           </div>
           <div className="brewed">
-            <ul className="brewed__line">
+            <ul className="brewedList">
               {LIST_BREWED_DATA.map(product => {
                 return (
                   <li>
