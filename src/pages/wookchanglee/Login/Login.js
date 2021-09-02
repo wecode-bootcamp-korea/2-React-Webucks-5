@@ -13,9 +13,8 @@ class Login extends Component {
   };
 
   handleInput = e => {
-    e.target.className === 'login-form__id'
-      ? this.setState({ id: e.target.value }, this.handleInputValidate)
-      : this.setState({ pw: e.target.value }, this.handleInputValidate);
+    const { name, value } = e.target;
+    this.setState({ [name]: value }, this.handleInputValidate);
   };
 
   handleInputValidate = () => {
@@ -38,12 +37,14 @@ class Login extends Component {
             <form className="login-form">
               <input
                 className="login-form__id"
+                name="id"
                 type="text"
                 placeholder="전화번호, 사용자의 이름 또는 이메일"
                 onChange={this.handleInput}
               />
               <input
                 className="login-form__pw"
+                name="pw"
                 type="password"
                 placeholder="비밀번호"
                 onChange={this.handleInput}
