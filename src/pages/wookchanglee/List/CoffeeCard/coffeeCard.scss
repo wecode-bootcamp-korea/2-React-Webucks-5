@@ -4,12 +4,10 @@
   align-items: center;
   margin: 20px 10px;
 
-  &:nth-child(4n + 1) {
-    margin-left: 0;
-  }
-
-  &:nth-child(4n) {
-    margin-right: 0;
+  .wraper {
+    width: 260px;
+    height: 270px;
+    overflow: hidden;
   }
 
   & img {
@@ -20,6 +18,32 @@
 
   & img:hover {
     transform: scale(1.11);
+  }
+
+  .title {
+    display: flex;
+
+    p {
+      margin: 15px 0;
+    }
+
+    .fa-heart {
+      margin: 13.3px;
+      color: #ccc;
+      cursor: pointer;
+
+      &.fas {
+        color: #f5425d;
+      }
+    }
+  }
+
+  &:nth-child(4n + 1) {
+    margin-left: 0;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 0;
   }
 
   @media (max-width: 1200px) {
