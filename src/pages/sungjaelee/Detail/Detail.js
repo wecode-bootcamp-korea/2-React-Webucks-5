@@ -21,23 +21,27 @@ class Detail extends Component {
           id: 1,
           userId: 'coffee_lover',
           review: '너무 맛있어요!',
+          isLiked: false,
         },
         {
           id: 2,
           userId: 'CHOCO7 ggg',
           review: '오늘도 화이팅 gggg',
+          isLiked: false,
         },
         {
           id: 3,
           userId: 'legend_dev',
           review:
             '진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.',
+          isLiked: false,
         },
       ],
     };
     this.handleProductLike = this.handleProductLike.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCommentLike = this.handleCommentLike.bind(this);
     this.handleCommentDelete = this.handleCommentDelete.bind(this);
   }
 
@@ -58,6 +62,7 @@ class Detail extends Component {
           id: reviews.length ? reviews[reviews.length - 1].id + 1 : 1,
           userId,
           review: reviewInput,
+          isLiked: false,
         },
       ],
       reviewInput: '',
@@ -66,16 +71,33 @@ class Detail extends Component {
     this.myRef.current.blur();
   }
 
+  handleCommentLike(r) {
+    let reviews = [...this.state.reviews];
+    let index = reviews.indexOf(r);
+    let review = { ...reviews[index] };
+    review.isLiked = !review.isLiked;
+    reviews[index] = review;
+    this.setState({ reviews });
+  }
+
   handleCommentDelete(review) {
     const reviews = this.state.reviews.filter(r => r !== review);
     this.setState({ reviews });
   }
 
-  getIconClasses() {
+  getProductLikeBtnClasses() {
     const { isLiked } = this.state;
-    let iconClasses = 'likeBtn ';
-    iconClasses += isLiked ? 'fas' : 'far';
-    return iconClasses;
+    let classes = 'likeBtn ';
+    classes += isLiked ? 'fas' : 'far';
+    return classes;
+  }
+
+  getCommentLikeBtnClasses(review) {
+    const { reviews } = this.state;
+    let classes = 'commentLikeBtn ';
+    console.log(reviews[reviews.indexOf(review)].isLiked);
+    classes += reviews[reviews.indexOf(review)].isLiked ? 'fas' : '';
+    return classes;
   }
 
   render() {
@@ -111,7 +133,7 @@ class Detail extends Component {
                     <span className="english">Nitro Vanilla Cream</span>
                   </h3>
                   <FontAwesomeIcon
-                    className={this.getIconClasses()}
+                    className={this.getProductLikeBtnClasses()}
                     icon={isLiked ? faHeart : faHeartO}
                     size="lg"
                     onClick={this.handleProductLike}
@@ -165,8 +187,9 @@ class Detail extends Component {
                         <span className="reviewerId">{r.userId}</span>
                         <p className="review">{r.review}</p>
                         <FontAwesomeIcon
-                          className="commentLikeBtn"
-                          icon={faHeartO}
+                          className={this.getCommentLikeBtnClasses(r)}
+                          icon={r.isLiked ? faHeart : faHeartO}
+                          onClick={() => this.handleCommentLike(r)}
                         />
                         <FontAwesomeIcon
                           className="commentDeleteBtn"
