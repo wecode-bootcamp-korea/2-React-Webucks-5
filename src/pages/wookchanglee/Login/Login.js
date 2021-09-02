@@ -9,7 +9,9 @@ class Login extends Component {
   }
 
   goToList = () => {
-    this.props.history.push('/list-wookchanglee');
+    this.state.isVerified
+      ? this.props.history.push('/list-wookchanglee')
+      : null;
   };
 
   handleInput = e => {
