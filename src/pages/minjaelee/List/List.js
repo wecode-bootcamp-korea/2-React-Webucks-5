@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import TopNav from '../../../components/Nav/Nav';
 import './List.scss';
-import COLDBREW_DATA from './ColdbrewData';
-import BREWED_DATA from './BrewedData';
+import LIST_COLDBREW_DATA from './ColdbrewData';
+import LIST_BREWED_DATA from './BrewedData';
 
 class List extends Component {
   render() {
@@ -22,10 +22,10 @@ class List extends Component {
           </div>
           <div className="coldbrew">
             <ul className="coldbrewLine">
-              {COLDBREW_DATA.map(product => {
+              {LIST_COLDBREW_DATA.map(product => {
                 return (
                   <li>
-                    <img src={product.imgSrc} />
+                    <img key={product.name} src={product.img} />
                     <p>{product.name}</p>
                   </li>
                 );
@@ -44,10 +44,10 @@ class List extends Component {
           </div>
           <div className="brewed">
             <ul className="brewed__line">
-              {BREWED_DATA.map(product => {
+              {LIST_BREWED_DATA.map(product => {
                 return (
                   <li>
-                    <img src={product.imgSrc} />
+                    <img key={product.name} src={product.img} />
                     <p>{product.name}</p>
                   </li>
                 );
