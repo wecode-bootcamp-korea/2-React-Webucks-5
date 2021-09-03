@@ -81,7 +81,7 @@ class Review extends React.Component {
                 reviewContent={el.reviewContent}
                 key={el.id}
                 id={el.id}
-                click={this.deleteReveiw}
+                deleteReview={this.deleteReveiw}
               />
             );
           })}

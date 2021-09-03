@@ -25,7 +25,7 @@ class EachReview extends React.Component {
           </div>
           <div
             className="delete"
-            onClick={() => this.props.click(this.props.id)}
+            onClick={() => this.props.deleteReview(this.props.id)}
           >
             ❌
           </div>
