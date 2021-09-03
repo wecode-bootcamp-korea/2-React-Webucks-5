@@ -16,15 +16,15 @@
     border: 2px solid #ddd;
     border-radius: 3px;
     background-color: #fff;
+
+    .logo {
+      flex: 1;
+      width: 230px;
+      cursor: pointer;
+    }
   }
 
-  .logo {
-    flex: 1;
-    width: 230px;
-    cursor: pointer;
-  }
-
-  .another-approch {
+  .anotherApproch {
     color: #4078c0;
   }
 }

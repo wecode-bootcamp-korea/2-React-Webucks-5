@@ -40,7 +40,7 @@ class Login extends Component {
             handleInput={this.handleInput}
             handleInputValidate={this.handleInputValidate}
           />
-          <Link to="#" className="another-approch">
+          <Link to="#" className="anotherApproch">
             비밀번호를 잊으셨나요?
           </Link>
         </div>

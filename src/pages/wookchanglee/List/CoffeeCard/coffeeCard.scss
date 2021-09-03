@@ -8,16 +8,16 @@
     width: 260px;
     height: 270px;
     overflow: hidden;
-  }
 
-  & img {
-    width: 260px;
-    height: 270px;
-    transition: all 0.5s linear;
-  }
+    img {
+      width: 260px;
+      height: 270px;
+      transition: all 0.5s linear;
+    }
 
-  & img:hover {
-    transform: scale(1.11);
+    img:hover {
+      transform: scale(1.11);
+    }
   }
 
   .title {
