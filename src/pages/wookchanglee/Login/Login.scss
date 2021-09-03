@@ -1,85 +1,30 @@
 .Login {
   background-color: #eeefef;
   height: 100vh;
+  display: flex;
+  justify-content: center;
 
-  .section--login {
+  .inner {
     display: flex;
-    justify-content: center;
-
-    .inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      width: 495px;
-      height: 600px;
-      margin: 100px;
-      padding: 20px 25px 70px 25px;
-      border: 2px solid #ddd;
-      border-radius: 3px;
-      background-color: #fff;
-    }
-
-    &__logo {
-      flex: 1;
-      width: 230px;
-      cursor: pointer;
-    }
-
-    &__another-approch {
-      color: #4078c0;
-    }
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 495px;
+    height: 600px;
+    margin: 100px;
+    padding: 20px 25px 70px 25px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
   }
 
-  .login-form {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    flex: 2;
-    width: 350px;
+  .logo {
+    flex: 1;
+    width: 230px;
+    cursor: pointer;
+  }
 
-    &__id,
-    &__pw,
-    &__btn {
-      height: 40px;
-      margin: 10px;
-      padding: 6px 10px;
-    }
-
-    &__id,
-    &__pw {
-      background-color: #f7f7f7;
-      border: 2px solid #ddd;
-      border-radius: 3px;
-      font-weight: 500;
-    }
-
-    &__verified {
-      border: 2px solid #32a852;
-      outline: 2px solid #32a852;
-    }
-
-    .fas {
-      position: absolute;
-      top: 83px;
-      right: 25px;
-      color: #666;
-      cursor: pointer;
-    }
-
-    &__btn {
-      height: 40px;
-      border: 0;
-      border-radius: 9px;
-      color: #fff;
-      background-color: #add3eb;
-      font-size: 17px;
-      font-weight: 600;
-      cursor: default;
-      &.active {
-        background-color: #61aded;
-        cursor: pointer;
-      }
-    }
+  .another-approch {
+    color: #4078c0;
   }
 }

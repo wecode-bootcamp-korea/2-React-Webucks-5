@@ -1,0 +1,51 @@
+.LoginForm {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  flex: 2;
+  width: 350px;
+
+  .id,
+  .pw,
+  .btn {
+    height: 40px;
+    margin: 10px;
+    padding: 6px 10px;
+  }
+
+  .id,
+  .pw {
+    background-color: #f7f7f7;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+
+  .verified {
+    border: 2px solid #32a852;
+    outline: 2px solid #32a852;
+  }
+
+  .fas {
+    position: absolute;
+    top: 83px;
+    right: 25px;
+    color: #666;
+    cursor: pointer;
+  }
+
+  .btn {
+    height: 40px;
+    border: 0;
+    border-radius: 9px;
+    color: #fff;
+    background-color: #add3eb;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: default;
+    &.active {
+      background-color: #61aded;
+      cursor: pointer;
+    }
+  }
+}
