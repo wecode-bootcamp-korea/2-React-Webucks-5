@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class CoffeeWrapperImgAndName extends Component  {
   render(){
     return (
-      <div className="divWrapperAllImgAndName">
+      <div className="divWrapperAllImgAndName" key={this.props.key}>
         <Link to="/detail-minjaekim"className="divWrapperCoffeeImg">
           <img className="coffeeImg" src={this.props.src} alt={this.props.alt} />
         </Link>
@@ -22,7 +22,7 @@ class brewedCoffeeCard extends Component {
       <section className="sectionContents brewedCoffeeCollections">
           {LIST_DATA.map(ListColdBrewData=> {
           return (
-                  <CoffeeWrapperImgAndName src={ListColdBrewData.img} alt={ListColdBrewData.name}/>
+                  <CoffeeWrapperImgAndName src={ListColdBrewData.img} alt={ListColdBrewData.name} key={ListColdBrewData.id}/>
             )
           })
         }

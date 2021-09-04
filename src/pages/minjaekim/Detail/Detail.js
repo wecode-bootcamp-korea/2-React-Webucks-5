@@ -1,18 +1,21 @@
 import React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faHeart} from '@fortawesome/free-solid-svg-icons';
-import {faThumbsUp} from '@fortawesome/free-solid-svg-icons'
-import {faBackspace} from '@fortawesome/free-solid-svg-icons'
 import TopNav from '../../../components/Nav/Nav'
+import CommetBox from './CommentBox'
 import Footer from "../components/footer";
+
 import "./Detail.scss";
 
 class Detail extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { heartColor: false }
+    this.state = { 
+      heartColor: false,
+      
+    }
   }
-  
+
   isActive = ()=>{
     this.setState({
       heartColor: !this.state.heartColor
@@ -20,6 +23,7 @@ class Detail extends React.Component {
   } 
   
     render() {
+
       const {heartColor} = this.state
         return (
           <>
@@ -100,30 +104,7 @@ class Detail extends React.Component {
                             <header id="coffeeReviewHeader">
                                 <h4 id="reviewTitle">리뷰</h4>
                             </header>
-                            <ul id="reviewStatus">
-                                <li className="reviewList">
-                                    <span className="userId">coffee_lover</span>
-                                    <span className="reviewContents">너무 맛있어요!</span>
-                                    <FontAwesomeIcon icon={faThumbsUp}/>
-                                    <FontAwesomeIcon icon={faBackspace}/>
-                                </li>
-                                <li className="reviewList">
-                                    <span className="userId">CHOCO7</span>
-                                    <span className="reviewContents">오늘도 화이트 초콜릿 모카를 마시러 갑니다.</span>
-                                    <FontAwesomeIcon icon={faThumbsUp}/>
-                                    <FontAwesomeIcon icon={faBackspace}/>
-                                </li>
-                                <li className="reviewList">
-                                    <span className="userId">legend_dev</span>
-                                    <span className="reviewContents">진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다</span>
-                                    <FontAwesomeIcon icon={faThumbsUp}/>
-                                    <FontAwesomeIcon icon={faBackspace}/>
-                                </li>
-                            </ul>
-                            <form id="reviewInputBox">
-                                <input type="text" id="userInputIdBox" placeholder="작성자 명" required="required"/>
-                                <input type="text" id="contentsInputBox" placeholder="리뷰를 입력하세요"/>
-                            </form>
+                            <CommetBox/>
                         </section>
                     </aside>
                 </main>
