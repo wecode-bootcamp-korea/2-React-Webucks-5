@@ -82,8 +82,8 @@ $default-white:white;
       @extend %flex-column-space-around;
       width: 100%;
       
-      #loginUserId,
-      #loginUserPsw {
+      .loginUserId,
+      .loginUserPsw {
         padding: $input-padding;
         @include background-border-Color($windowAndInput-border-color, 3px, whitesmoke);
         @include border-radius(5px); 
@@ -92,20 +92,21 @@ $default-white:white;
           @include font-size-bold-color($input-font-size, $input-font-bolder, $input-font-color);
         }
       }
-      .ButtonWrapper{
-        text-align: center;
-        @include background-border-Color(lightsteelblue, 3px, lightsteelblue);
+
+      .loginUserBtn {
         padding: $input-padding;
+        @include background-border-Color(lightsteelblue, 3px, lightsteelblue);
         @include border-radius(10px);     
+        text-align: center;
         @include font-size-bold-color($input-font-size, $input-font-bolder, $default-white);
-        #loginUserBtn {
-          @extend .ButtonWrapper;
-          padding: 0;
-          border: none;
-          &.changeBtnColor {
-            @include background-border-Color(steelblue, 3px, steelblue);
-          }
+        
+        .ButtonWrapper {
+          @include font-size-bold-color($input-font-size, $input-font-bolder, $default-white);
         }
+      }
+      .changeBtnColor {
+        @extend .loginUserBtn;
+        @include background-border-Color(steelblue, 3px, steelblue);
       }
     }
     
@@ -119,3 +120,9 @@ $default-white:white;
 }
 
 
+// .changeBtnColor{
+//   @include font-size-bold-color($input-font-size, $input-font-bolder, $default-white);
+//   &.changeBtnColor {
+//     @include background-border-Color(steelblue, 3px, steelblue);
+// }
+// }
