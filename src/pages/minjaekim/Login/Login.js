@@ -1,3 +1,4 @@
+import { fas } from "@fortawesome/free-solid-svg-icons";
 import React, {Component} from "react";
 import {Link} from 'react-router-dom';
 import "./Login.scss";
@@ -25,6 +26,8 @@ class Login extends React.Component {
     isValidIdAndPsw = () => {
       if(this.state.idValue.includes('@') && this.state.pswValue.length>=5){
       this.changeBtnAfterValid();
+      } else {
+        this.setState({isChangeBtn:false})
       }
     }
 
@@ -36,7 +39,9 @@ class Login extends React.Component {
     }
 
     render() {
-        console.log(this.state.isChangeBtn)
+      {
+        
+      }
         return (
             <div className="Login">
                 <div className="loginWindow">
@@ -57,7 +62,7 @@ class Login extends React.Component {
                             />
                         <button
                             className= {this.state.isChangeBtn ? 'loginUserBtn changeBtnColor':'loginUserBtn'}>
-                            <Link className="btnLink" to='/list-minjaekim' className="ButtonWrapper">로그인</Link>
+                            <Link to='/list-minjaekim' className="ButtonWrapper">로그인</Link>
                         </button>
                     </form>
                     <a href={'#'} className="loginWindowFindUserPsw">비밀번호를 잊으셨나요?</a>
