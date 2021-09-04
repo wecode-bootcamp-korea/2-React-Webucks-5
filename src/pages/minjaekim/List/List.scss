@@ -33,39 +33,6 @@
           }
       }
       
-      .sectionContents {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          grid-gap: 15px;
-          margin: 20px 0px; 
-          text-align: center;
-      
-          .divWrapperAllImgAndName {
-            transition: ease-in-out .10s;   
-    
-          .divWrapperCoffeeImg {  
-            height:265px;
-            margin-bottom: 15px; 
-            cursor: pointer;
-            margin:0;
-            overflow: hidden; 
-            
-            .coffeeImg {
-              width: 255px;
-              
-              .magnifiedImg {
-                transform: scale(1.15);
-                transform-origin: center;
-                transition-duration: 1s, 3s;
-              }
-            } 
-          }
-  
-          .coffeeName {
-              padding-top: 15px;
-          }
-        }
-      }
     }
   }     
 }
