@@ -1,0 +1,163 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #eeefef;
+}
+
+.detailContainer {
+  margin: 35px 150px;
+  background-color: #ffffff;
+}
+
+.detailPageTop {
+  h1 {
+    margin-bottom: 15px;
+    font-size: 30px;
+    font-weight: 800;
+  }
+  span {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-end;
+    opacity: 0.5;
+    font-size: 15px;
+  }
+  margin-top: -15px;
+}
+
+.detailListPage {
+  .detailPageLeft {
+    img {
+      width: 400px;
+      height: 450px;
+    }
+    margin-right: 40px;
+  }
+  .detailPageRight {
+    .detailTitle {
+      span:first-child {
+        font-size: 26px;
+      }
+      p {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        font-size: 17px;
+      }
+      .redHeart {
+        color: red;
+      }
+      .unactiveHeart {
+        color: blue;
+      }
+      display: flex;
+      justify-content: space-between;
+      width: 780px;
+      border-bottom: 3px solid black;
+      font-weight: 800;
+    }
+    .detailSubTitle {
+      p {
+        span {
+          display: block;
+          margin-bottom: 8px;
+        }
+        font-size: 18px;
+        opacity: 0.8;
+      }
+      padding: 15px 0;
+      border-bottom: 0.8px solid black;
+    }
+    .detailNutritionTitle {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 0.8px solid black;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .detailNutritionContent {
+      .nutritionLeft {
+        div {
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: space-between;
+        }
+        padding: 20px 10px;
+        width: 400px;
+        border-right: 0.8px solid black;
+      }
+      .nutritionRight {
+        div {
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: space-between;
+        }
+        padding: 20px 10px;
+        width: 400px;
+      }
+      display: flex;
+    }
+    width: 780px;
+  }
+  .allergyInfo {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    height: 50px;
+    background-color: #efefef;
+    font-weight: 800;
+  }
+  .detailReview {
+    &Title {
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 0.8px solid black;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    .review1 {
+      padding-bottom: 7px;
+      font-weight: 600;
+    }
+    .review2 {
+      @extend .review1;
+    }
+    .review3 {
+      @extend .review2;
+    }
+    .reviewInput {
+      display: flex;
+      align-items: center;
+      margin-top: 7px;
+      padding-left: 10px;
+      margin-left: -5px;
+      height: 25px;
+      background-color: #efefef;
+      opacity: 0.7;
+    }
+    height: 120px;
+  }
+  height: 570px;
+  display: flex;
+}
+
+.detailPageBottom {
+  dt {
+    span {
+      margin-bottom: 13px;
+    }
+    dl {
+      margin-bottom: 6px;
+    }
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+  display: flex;
+  justify-content: space-around;
+  height: 170px;
+  background-color: #333333;
+  color: white;
+  font-size: 13px;
+}
