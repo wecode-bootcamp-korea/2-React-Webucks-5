@@ -120,14 +120,14 @@ $menu-hover-color: #1B3C35;
             display: flex;
             align-items: center;
             
-            #heartIcon {
+            .heartIcon {
                 font-size: 18px;
                 color: $nav-color;
                 cursor: pointer;
-            }
-          
-            #heartIcon.fillHeartIconColor {
-                color: tomato;
+              }
+              
+            .fillHeartIconColor {
+              color :tomato;
             }
           }      
         }
