@@ -1,0 +1,88 @@
+
+.Detail {
+  #mainAsideInfo {
+    #coffeeReviewWrapper {
+      display: flex;
+      flex-direction: column;
+      width: 608px;
+      padding-top: 45px;
+    
+      #coffeeReviewHeader {
+        width: 610px;
+        border-bottom: 2px solid rgb(207, 207, 207);
+        
+        #reviewTitle {
+          padding-bottom: 7px;
+          font-size: 18px;
+        }
+      }
+      
+      #reviewStatus {
+        padding: 20px 0;
+        
+        .reviewList {
+          display: flex;
+          position: relative;
+          
+          .userId {
+            padding-right: 10px;
+            font-weight: 800;
+          }
+          
+          .reviewContents {
+            display: inline-block;
+            width: 610px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+          .thumbsUpButton{
+            background-color: white;
+            border: none;
+            padding:0;
+            margin: 0x;
+            
+            .fa-thumbs-up {
+              cursor: pointer;
+              
+              .fa-thumbs-up.fillThumbsUpIcon {
+                  color: tomato;
+              }
+            }
+          }
+          .deleteButton{
+            background-color: white;
+            border: none;
+
+            .fa-backspace {
+              cursor: pointer;
+            }
+          }
+  
+        }
+      }
+      
+      #reviewInputBox {
+        display: flex;
+        width: 100%;
+        
+        #userInputIdBox {
+          flex: 0.15 1 0;
+          margin-right: 10px;
+          padding: 10px 0 5px 5px;
+          border: none;
+          background-color: rgb(239,239,239);
+          outline: none;
+        }
+        
+        #contentsInputBox {
+          flex: 0.85 1 0;
+          padding: 10px 0 5px 5px;
+          border: none;
+          background-color: rgb(239,239,239);
+          outline: none;
+        }
+      }
+    }
+  }
+}

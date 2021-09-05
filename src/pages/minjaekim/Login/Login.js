@@ -35,13 +35,9 @@ class Login extends React.Component {
       this.setState({
         isChangeBtn: true,
       })
-      console.log('ok')
     }
 
     render() {
-      {
-        
-      }
         return (
             <div className="Login">
                 <div className="loginWindow">

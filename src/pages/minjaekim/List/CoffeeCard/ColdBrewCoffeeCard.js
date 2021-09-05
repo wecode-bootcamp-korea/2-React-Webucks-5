@@ -18,6 +18,7 @@ class CoffeeWrapperImgAndName extends Component  {
       heartColor: !this.state.heartColor
     })
   } 
+  
   render(){
     const {heartColor} = this.state
     return (
