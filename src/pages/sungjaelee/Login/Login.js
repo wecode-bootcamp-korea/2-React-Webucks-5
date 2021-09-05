@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+import Input from '../../../components/Input/Input';
+
 import './Login.scss';
 
 class Login extends Component {
@@ -11,45 +13,24 @@ class Login extends Component {
       pwInput: '',
       isValidInput: false,
     };
-    this.handleIdInput = this.handleIdInput.bind(this);
-    this.handlePwInput = this.handlePwInput.bind(this);
+    this.handleInput = this.handleInput.bind(this);
     this.handleValidityCheck = this.handleValidityCheck.bind(this);
   }
 
-  getBtnClasses() {
-    const { isValidInput } = this.state;
-    let btnClasses = 'loginBtn ';
-    btnClasses += isValidInput ? 'active' : '';
-    return btnClasses;
-  }
-
-  handleIdInput(e) {
-    this.setState({ idInput: e.target.value }, this.handleValidityCheck);
-  }
-
-  handlePwInput(e) {
-    this.setState({ pwInput: e.target.value }, this.handleValidityCheck);
+  handleInput(e) {
+    const { name, value } = e.target;
+    this.setState({ [name]: value }, this.handleValidityCheck);
   }
 
   handleValidityCheck() {
     const { idInput, pwInput } = this.state;
-    this.setState({
-      isValidInput: idInput.includes('@') && pwInput.length >= 5,
-    });
+    const isValidInput = idInput.includes('@') && pwInput.length >= 5;
+    this.setState({ isValidInput });
   }
 
   render() {
-    const { idInput, pwInput, isValidInput } = this.state;
-
-    console.log(
-      'RENDER:',
-      'idInput:',
-      idInput,
-      'pwInput:',
-      pwInput,
-      'isValidInput',
-      isValidInput
-    );
+    const { isValidInput } = this.state;
+    const { handleInput } = this;
 
     return (
       <div className="Login">
@@ -60,25 +41,30 @@ class Login extends Component {
             alt="logo"
           />
           <form id="loginForm" action="#" autoComplete="off">
-            <input
-              id="userId"
+            <Input
+              id="userId" // don't need? (not used)
+              name="idInput" //same as state name
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
-              onChange={this.handleIdInput}
+              onInput={handleInput}
             />
             <div className="pwInputWrap">
-              <input
-                id="userPw"
+              <Input
+                id="userPw" //don't need? (not used)
+                name="pwInput" //same as state name
                 type="password"
                 placeholder="비밀번호"
-                onChange={this.handlePwInput}
+                onInput={handleInput}
               />
               <span id="showHideText" className="invisible">
                 Show
               </span>
             </div>
             <Link to="/list-sungjaelee">
-              <button className={this.getBtnClasses()} type="submit">
+              <button
+                className={isValidInput ? 'loginBtn active' : 'loginBtn'}
+                type="submit"
+              >
                 로그인
               </button>
             </Link>

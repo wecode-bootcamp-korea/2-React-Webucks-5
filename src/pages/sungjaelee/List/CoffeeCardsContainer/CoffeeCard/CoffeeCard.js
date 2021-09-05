@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faHeart as faHeartO } from '@fortawesome/free-regular-svg-icons';
@@ -14,14 +14,8 @@ class CoffeeCard extends Component {
     };
     this.handleLike = this.handleLike.bind(this);
   }
-  goToDetailPage = () => {
-    console.log(this.props.history);
-    this.props.history.push('/detail-sungjaelee');
-    // this.props.history.goBack();
-  };
 
   handleLike() {
-    console.log('hello');
     this.setState({ isLiked: !this.state.isLiked });
   }
 
@@ -30,13 +24,13 @@ class CoffeeCard extends Component {
     const { name, img } = this.props;
 
     return (
-      <li className="CoffeeCard item">
-        {/* <Link className="imageContainer" to="/detail">
+      <li className="CoffeeCard">
+        <Link
+          className="imageContainer"
+          to={{ pathname: '/detail-sungjaelee', state: {} }}
+        >
           <img src={img} alt={name} />
-        </Link> */}
-        <div className="imageContainer">
-          <img src={img} alt={name} onClick={this.goToDetailPage} />
-        </div>
+        </Link>
         <div className="nameContainer">
           <p className="name">{name}</p>
           <FontAwesomeIcon
@@ -45,11 +39,10 @@ class CoffeeCard extends Component {
             size="lg"
             onClick={this.handleLike}
           />
-          {/* <i className="likeBtn far fa-heart"></i> */}
         </div>
       </li>
     );
   }
 }
 
-export default withRouter(CoffeeCard);
+export default CoffeeCard;

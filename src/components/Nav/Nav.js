@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import './Nav.scss';
 
@@ -9,7 +11,7 @@ class Nav extends Component {
       <div className="Nav">
         <header className="section">
           <div className="menuGroup right">
-            <Link to="/list">
+            <Link to="/login-sungjaelee">
               <img src="/images/sungjaelee/WeBucks-logo.svg" alt="logo" />
             </Link>
           </div>
@@ -32,8 +34,7 @@ class Nav extends Component {
               </li>
             </ul>
           </div>
-          {/* <i className="fas fa-bars" id="toggle-bar"></i> */}
-          <span id="toggleBar">HELLO</span>
+          <FontAwesomeIcon icon={faBars} id="toggleBar" />
         </header>
       </div>
     );

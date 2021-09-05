@@ -1,0 +1,23 @@
+.Reviews {
+  // background-color: red;
+
+  .reviewsHeader {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #efefef;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  #newReviewForm {
+    margin-top: 10px;
+
+    #newReview {
+      width: 100%;
+      padding: 7px;
+      background-color: #efefef;
+      border: none;
+      font-size: 12px; //repetive
+    }
+  }
+}

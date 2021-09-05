@@ -1,0 +1,25 @@
+.Nutrition {
+  // background-color: green;
+
+  .nutritionHeaderContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-bottom: 2px solid #efefef;
+  }
+
+  .nutritionInfoContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 70px;
+    padding: 20px 0;
+    box-sizing: content-box;
+  }
+
+  .allergyInfo {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #efefef;
+  }
+}
