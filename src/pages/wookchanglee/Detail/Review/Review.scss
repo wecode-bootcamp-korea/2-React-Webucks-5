@@ -7,7 +7,7 @@
     border-bottom: 1px solid #ccc;
   }
 
-  .wrap {
+  .reviewList {
     margin: 20px 0;
   }
 
@@ -20,13 +20,13 @@
       height: 30px;
       padding-left: 10px;
     }
-  }
 
-  .id {
-    flex: 1;
-  }
+    .id {
+      flex: 1;
+    }
 
-  .content {
-    flex: 5;
+    .content {
+      flex: 5;
+    }
   }
 }

@@ -73,7 +73,7 @@ class Review extends React.Component {
     return (
       <div className="Review">
         <h2>리뷰</h2>
-        <div className="wrap">
+        <div className="reviewList">
           {this.state.review.map(el => {
             return (
               <EachReview

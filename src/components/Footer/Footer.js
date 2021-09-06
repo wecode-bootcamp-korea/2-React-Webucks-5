@@ -12,8 +12,8 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="Footer">
-        <div className="inner">
-          <div className="footer-list-wrap">
+        <div className="footerInner">
+          <div className="footerList">
             {this.state.footerListData.map(el => {
               return <FooterList title={el.title} list={el.list} key={el.id} />;
             })}
