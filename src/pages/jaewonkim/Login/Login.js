@@ -5,6 +5,43 @@ import '../../../styles/_common.scss';
 import './Login.scss';
 
 class LoginJaeWonKim extends Component {
+  constructor() {
+    super();
+    this.state = {
+      inputUserName: '',
+      inputPassword: '',
+      buttonClassName: 'form-input',
+      buttonDisabled: true,
+      formAction: '',
+    };
+  }
+
+  handleInputUserName = event => {
+    this.setState({ inputUserName: event.target.value });
+  };
+
+  handleInputPassword = event => {
+    this.setState({ inputPassword: event.target.value });
+  };
+
+  isValidInput = () => {
+    return (
+      this.state.inputUserName.includes('@') &&
+      this.state.inputPassword.length >= 5
+    );
+  };
+
+  verifyForm = () => {
+    if (this.isValidInput()) {
+      this.setState({ buttonClassName: 'form-input active' });
+      this.setState({ buttonDisabled: false });
+      this.setState({ formAction: '/list-jaewonkim' });
+    } else {
+      this.setState({ buttonClassName: 'form-input' });
+      this.setState({ buttonDisabled: true });
+    }
+  };
+
   render() {
     return (
       <div className="Login">
@@ -19,18 +56,28 @@ class LoginJaeWonKim extends Component {
             src="/images/jaewonkim/WeBucks-logo.svg"
           />
 
-          <form id="form">
+          <form
+            id="form"
+            onChange={this.verifyForm}
+            action={this.state.formAction}
+          >
             <input
               className="form-input"
+              onChange={this.handleInputUserName}
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
             />
             <input
               className="form-input"
+              onChange={this.handleInputPassword}
               type="password"
               placeholder="비밀번호"
             />
-            <button className="form-input" type="submit">
+            <button
+              className={this.state.buttonClassName}
+              type="submit"
+              disabled={this.state.buttonDisabled}
+            >
               로그인
             </button>
           </form>
