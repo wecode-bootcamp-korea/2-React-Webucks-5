@@ -27,19 +27,18 @@ class LoginJaeWonKim extends Component {
   isValidInput = () => {
     return (
       this.state.inputUserName.includes('@') &&
-      this.state.inputPassword.length >= 5
+      this.state.inputPassword.length >= 8
     );
   };
 
   verifyForm = () => {
-    if (this.isValidInput()) {
-      this.setState({ buttonClassName: 'form-input active' });
-      this.setState({ buttonDisabled: false });
-      this.setState({ formAction: '/list-jaewonkim' });
-    } else {
-      this.setState({ buttonClassName: 'form-input' });
-      this.setState({ buttonDisabled: true });
-    }
+    this.isValidInput()
+      ? this.setState({
+          buttonClassName: 'form-input active',
+          buttonDisabled: false,
+          formAction: '/list-jaewonkim',
+        })
+      : this.setState({ buttonClassName: 'form-input', buttonDisabled: true });
   };
 
   render() {
@@ -58,7 +57,7 @@ class LoginJaeWonKim extends Component {
 
           <form
             id="form"
-            onChange={this.verifyForm}
+            onKeyUp={this.verifyForm}
             action={this.state.formAction}
           >
             <input
