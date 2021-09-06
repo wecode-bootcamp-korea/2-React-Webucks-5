@@ -6,26 +6,18 @@ class Review extends React.Component {
   constructor() {
     super();
     this.state = {
-      review: [
-        {
-          username: 'coffee_lover',
-          reviewContent: '진짜 진자 너무 너무 맛있어요!',
-          id: 1,
-        },
-        {
-          username: 'myloveIstCoffee',
-          reviewContent: '오늘도 내일도 모레도 먹을거에요',
-          id: 2,
-        },
-        {
-          username: 'legend_dev',
-          reviewContent: '전설이라는 말은 이때를 위해 존재한것',
-          id: 3,
-        },
-      ],
+      review: [],
       tempUsername: '',
       tempReviewContent: '',
     };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/reviewListData.json')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({ review: data });
+      });
   }
 
   usernameRef = React.createRef();
@@ -36,7 +28,7 @@ class Review extends React.Component {
     this.setState({ [name]: value });
   };
 
-  deleteReveiw = id => {
+  deleteReview = id => {
     let reviewArr = [...this.state.review];
     reviewArr = reviewArr.filter(el => el.id !== id);
     this.setState({ review: reviewArr });
@@ -49,12 +41,12 @@ class Review extends React.Component {
         this.state.tempUsername.trim() !== ''
       ) {
         const reviewArr = [...this.state.review];
-        const newid =
+        const newId =
           reviewArr.length > 0 ? reviewArr[reviewArr.length - 1].id + 1 : 1;
         reviewArr.push({
           username: this.state.tempUsername,
           reviewContent: this.state.tempReviewContent,
-          id: newid,
+          id: newId,
         });
         this.setState({ review: reviewArr });
         this.usernameRef.current.value = '';
@@ -81,7 +73,7 @@ class Review extends React.Component {
                 reviewContent={el.reviewContent}
                 key={el.id}
                 id={el.id}
-                deleteReview={this.deleteReveiw}
+                deleteReview={this.deleteReview}
               />
             );
           })}
