@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './Review.scss';
 
 class Review extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       newComment: '',
       allComments: [
@@ -27,7 +27,7 @@ class Review extends Component {
     this.setState({ newComment: e.target.value });
   };
 
-  submitComment = e => {
+  isValidEnterAndSubmitComment = e => {
     if (e.key === 'Enter') {
       e.preventDefault();
       this.state.allComments.push({
@@ -58,7 +58,7 @@ class Review extends Component {
             className="reviewInputComment"
             placeholder="리뷰를 입력해주세요. (아이디는 입력하지 않으셔도 됩니다.)"
             onChange={this.commentInput}
-            onKeyPress={this.submitComment}
+            onKeyPress={this.isValidEnterAndSubmitComment}
           />
         </section>
       </form>

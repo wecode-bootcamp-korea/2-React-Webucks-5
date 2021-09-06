@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import './Login.scss';
 
 class Login extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       idInput: '',
       pwInput: '',
@@ -13,21 +13,19 @@ class Login extends Component {
   }
 
   handleIdInput = event => {
-    this.setState(
-      { idInput: event.target.value },
-      this.isValidInputAndChangeColor
-    );
+    const { value } = event.target;
+    this.setState({ idInput: value }, this.changeBtnColor);
   };
 
   handlePwInput = event => {
-    this.setState(
-      { pwInput: event.target.value },
-      this.isValidInputAndChangeColor
-    );
+    const { value } = event.target;
+    this.setState({ pwInput: value }, this.changeBtnColor);
   };
 
-  isValidInputAndChangeColor = () => {
-    this.state.idInput.includes('@') && this.state.pwInput.length >= 5
+  changeBtnColor = () => {
+    const isValid =
+      this.state.idInput.includes('@') && this.state.pwInput.length >= 5;
+    isValid
       ? this.setState({ isActiveButton: true })
       : this.setState({ isActiveButton: false });
   };
@@ -52,7 +50,7 @@ class Login extends Component {
             onChange={this.handlePwInput}
           />
           <button
-            className={this.state.isActiveButton ? 'activeBtn' : 'unactiveBtn'}
+            className={this.state.isActiveButton ? 'activeBtn' : 'deactiveBtn'}
           >
             <Link to="/list-minjaelee" className="formBtn">
               <span className="loginFormBtnSpan">로그인</span>

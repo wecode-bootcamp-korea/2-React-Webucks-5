@@ -25,10 +25,7 @@ class List extends Component {
             <ul className="coldbrewList">
               {LIST_COLDBREW_DATA.map(product => {
                 return (
-                  /*<li>
-                    <img key={product.id} src={product.img} />
-                    <p>{product.name}</p>
-                  </li> */ <CoffeeCard
+                  <CoffeeCard
                     key={product.name}
                     img={product.img}
                     name={product.name}
@@ -51,10 +48,11 @@ class List extends Component {
             <ul className="brewedList">
               {LIST_BREWED_DATA.map(product => {
                 return (
-                  <li>
-                    <img key={product.name} src={product.img} />
-                    <p>{product.name}</p>
-                  </li>
+                  <CoffeeCard
+                    key={product.name}
+                    img={product.img}
+                    name={product.name}
+                  />
                 );
               })}
             </ul>

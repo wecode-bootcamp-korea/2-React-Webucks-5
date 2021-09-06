@@ -7,18 +7,17 @@ import Review from './Review';
 import './Detail.scss';
 
 class Detail extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
-      blackHeart: false,
+      isLike: false,
       heartIcon: faHeart,
-      rev: false,
     };
   }
 
-  changeColor = e => {
-    this.setState({ blackHeart: !this.state.blackHeart });
-    this.state.blackHeart
+  handleClickAndChangeHeartColor = () => {
+    this.setState({ isLike: !this.state.isLike });
+    this.state.isLike
       ? this.setState({ heartIcon: faHeart })
       : this.setState({ heartIcon: fasHeart });
   };
@@ -44,8 +43,8 @@ class Detail extends Component {
                 </span>
                 <FontAwesomeIcon
                   icon={this.state.heartIcon}
-                  className={this.state.blackHeart ? 'redHeart' : 'blackHeart'}
-                  onClick={this.changeColor}
+                  className={this.state.isLike ? 'redHeart' : 'blackHeart'}
+                  onClick={this.handleClickAndChangeHeartColor}
                 />
               </section>
               <div className="detailSubTitle">
