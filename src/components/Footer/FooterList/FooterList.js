@@ -6,11 +6,11 @@ class FooterList extends React.Component {
   render() {
     return (
       <div className="FooterList">
-        <h3 className="footer-list__title">{this.props.title}</h3>
+        <h3 className="title">{this.props.title}</h3>
         {this.props.list.map((el, idx) => {
           return (
             <Link to="#" key={el}>
-              <p className="footer-list__item">{el}</p>
+              <p className="footerItem">{el}</p>
             </Link>
           );
         })}

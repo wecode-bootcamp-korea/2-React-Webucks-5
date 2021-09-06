@@ -7,7 +7,7 @@ class TopNav extends Component {
   render() {
     return (
       <div className="TopNav">
-        <header className="section">
+        <header className="navInner">
           <div className="menuGroup right">
             <Link to="/list-wookchanglee">
               <img src="/images/wookchanglee/WeBucks-logo.svg" alt="logo" />

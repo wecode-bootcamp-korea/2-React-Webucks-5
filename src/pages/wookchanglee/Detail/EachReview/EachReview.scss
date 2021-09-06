@@ -3,31 +3,34 @@
   justify-content: space-between;
   margin: 6px 0;
 
-  .option,
-  .core {
+  .content {
     display: flex;
-  }
 
-  .username {
-    font-weight: 700;
-    margin-right: 10px;
-  }
-
-  .like {
-    position: relative;
-    top: -4px;
-    margin: 0 0 10px 10px;
-    font-size: 18px;
-    color: #ccc;
-    cursor: pointer;
-
-    .fas {
-      color: #f5425d;
+    .username {
+      font-weight: 700;
+      margin-right: 10px;
     }
   }
 
-  .delete {
-    margin-left: 15px;
-    cursor: pointer;
+  .option {
+    display: flex;
+
+    .like {
+      position: relative;
+      top: -4px;
+      margin: 0 0 10px 10px;
+      font-size: 18px;
+      color: #ccc;
+      cursor: pointer;
+
+      .fas {
+        color: #f5425d;
+      }
+    }
+
+    .delete {
+      margin-left: 15px;
+      cursor: pointer;
+    }
   }
 }

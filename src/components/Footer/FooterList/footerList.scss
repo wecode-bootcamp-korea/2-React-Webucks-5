@@ -1,16 +1,16 @@
 .FooterList {
   margin: 60px 0;
 
-  .footer-list__title {
+  .title {
     margin: 20px 16px;
   }
 
-  .footer-list__item {
+  .footerItem {
     margin: 16px;
   }
 
   @media (max-width: 1200px) {
-    .footer-list {
+    .footerItem {
       width: 200px;
     }
   }

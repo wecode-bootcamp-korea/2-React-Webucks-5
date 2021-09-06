@@ -6,7 +6,7 @@ class EachReview extends React.Component {
   render() {
     return (
       <div className="EachReview">
-        <div className="core">
+        <div className="content">
           <p className="username">{this.props.username}</p>
           <p className="string">{this.props.reviewContent}</p>
         </div>
