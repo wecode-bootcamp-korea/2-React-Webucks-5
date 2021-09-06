@@ -8,22 +8,28 @@ class Login extends Component {
     this.state = {
       idInput: '',
       pwInput: '',
-      isActive: false,
+      isActiveButton: false,
     };
   }
 
   handleIdInput = event => {
-    this.setState({ idInput: event.target.value }, this.isValidInput);
+    this.setState(
+      { idInput: event.target.value },
+      this.isValidInputAndChangeColor
+    );
   };
 
   handlePwInput = event => {
-    this.setState({ pwInput: event.target.value }, this.isValidInput);
+    this.setState(
+      { pwInput: event.target.value },
+      this.isValidInputAndChangeColor
+    );
   };
 
-  isValidInput = () => {
+  isValidInputAndChangeColor = () => {
     this.state.idInput.includes('@') && this.state.pwInput.length >= 5
-      ? this.setState({ isActive: true })
-      : this.setState({ isActive: false });
+      ? this.setState({ isActiveButton: true })
+      : this.setState({ isActiveButton: false });
   };
 
   render() {
@@ -45,7 +51,9 @@ class Login extends Component {
             className="loginFormPw"
             onChange={this.handlePwInput}
           />
-          <button className={this.state.isActive ? 'activeBtn' : 'unactiveBtn'}>
+          <button
+            className={this.state.isActiveButton ? 'activeBtn' : 'unactiveBtn'}
+          >
             <Link to="/list-minjaelee" className="formBtn">
               <span className="loginFormBtnSpan">로그인</span>
             </Link>

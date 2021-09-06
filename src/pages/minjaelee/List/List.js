@@ -3,6 +3,7 @@ import TopNav from '../../../components/Nav/Nav';
 import './List.scss';
 import LIST_COLDBREW_DATA from './ColdbrewData';
 import LIST_BREWED_DATA from './BrewedData';
+import CoffeeCard from './CoffeeCard/CoffeeCard';
 
 class List extends Component {
   render() {
@@ -24,10 +25,14 @@ class List extends Component {
             <ul className="coldbrewList">
               {LIST_COLDBREW_DATA.map(product => {
                 return (
-                  <li>
-                    <img key={product.name} src={product.img} />
+                  /*<li>
+                    <img key={product.id} src={product.img} />
                     <p>{product.name}</p>
-                  </li>
+                  </li> */ <CoffeeCard
+                    key={product.name}
+                    img={product.img}
+                    name={product.name}
+                  />
                 );
               })}
             </ul>
