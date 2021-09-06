@@ -3,6 +3,7 @@ import TopNav from '../../../components/Nav/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
+import Review from './Review';
 import './Detail.scss';
 
 class Detail extends Component {
@@ -11,6 +12,7 @@ class Detail extends Component {
     this.state = {
       blackHeart: false,
       heartIcon: faHeart,
+      rev: false,
     };
   }
 
@@ -20,8 +22,6 @@ class Detail extends Component {
       ? this.setState({ heartIcon: faHeart })
       : this.setState({ heartIcon: fasHeart });
   };
-
-  va;
 
   render() {
     return (
@@ -94,21 +94,7 @@ class Detail extends Component {
                 </div>
               </div>
               <div className="allergyInfo">알레르기 유발 요인: 우유</div>
-              <div className="detailReview">
-                <div className="detailReviewTitle">리뷰</div>
-                <div className="review1">
-                  <bold>coffee_lover</bold> 너무 맛있어요!
-                </div>
-                <div className="review2">
-                  <bold>choco7</bold> 오늘도 제주 비자림 콜드 브루 마시러
-                  갑니다.
-                </div>
-                <div className="review3">
-                  <bold>legend_dev</bold> 진짜 제주 비자림 콜드브루는 전설이다.
-                  최강!
-                </div>
-                <div className="reviewInput">리뷰를 입력해주세요.</div>
-              </div>
+              <Review />
             </div>
           </div>
           <div className="detailPageBottom">
