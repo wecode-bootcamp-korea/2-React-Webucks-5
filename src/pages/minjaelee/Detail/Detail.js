@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import TopNav from '../../../components/Nav/Nav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 import Review from './Review';
+import TopNav from '../../../components/Nav/Nav';
 import './Detail.scss';
 
 class Detail extends Component {

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import TopNav from '../../../components/Nav/Nav';
-import './List.scss';
+import CoffeeCard from './CoffeeCard/CoffeeCard';
 import LIST_COLDBREW_DATA from './ColdbrewData';
 import LIST_BREWED_DATA from './BrewedData';
-import CoffeeCard from './CoffeeCard/CoffeeCard';
+import TopNav from '../../../components/Nav/Nav';
+import './List.scss';
 
 class List extends Component {
   render() {
