@@ -25,6 +25,7 @@ class Login extends React.Component {
     
     isValidIdAndPsw = () => {
       if(this.state.idValue.includes('@') && this.state.pswValue.length>=5){
+        //이를 변수로 들고 올 수 있는가?
       this.changeBtnAfterValid();
       } else {
         this.setState({isChangeBtn:false})

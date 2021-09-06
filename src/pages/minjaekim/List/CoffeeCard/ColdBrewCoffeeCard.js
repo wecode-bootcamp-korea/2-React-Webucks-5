@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import LIST_DATA from '../ListColdBrewData'
 import { Link } from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faHeart} from '@fortawesome/free-solid-svg-icons';
@@ -35,12 +34,32 @@ class CoffeeWrapperImgAndName extends Component  {
   };
 
 class coldBrewCoffeeCard extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      products:[],
+    }
+  }
+
+  componentDidMount(){
+    fetch(`http://localhost:3000/data/ListColdBrewData.json`, {
+      method : 'GET',
+    })
+    .then(res => res.json())
+    .then(data => 
+      {
+      this.setState({
+        products: data.coldBrewCoffeeData
+      })
+    })
+  }
+
   render() {
     return (
       <section className="sectionContents coldBrewCoffeeCollections">
-        {LIST_DATA.map(ListColdBrewData=> {
+        {this.state.products.map((product)=> {
           return (
-              <CoffeeWrapperImgAndName src={ListColdBrewData.img} alt={ListColdBrewData.name} key={ListColdBrewData.id}/>
+              <CoffeeWrapperImgAndName src={product.img} alt={product.name} key={product.id}/>
             )
           })
         }

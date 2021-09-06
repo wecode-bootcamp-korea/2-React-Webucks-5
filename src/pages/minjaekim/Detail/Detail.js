@@ -12,7 +12,6 @@ class Detail extends React.Component {
     super(props)
     this.state = { 
       heartColor: false,
-      
     }
   }
 
