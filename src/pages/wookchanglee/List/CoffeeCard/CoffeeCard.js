@@ -9,7 +9,7 @@ class CoffeeCard extends React.Component {
     return (
       <div className="CoffeeCard">
         <Link to="/detail-wookchanglee">
-          <div className="wraper">
+          <div className="wrapper">
             <img src={this.props.img} alt={this.props.title} />
           </div>
         </Link>

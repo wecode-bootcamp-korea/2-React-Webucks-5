@@ -7,10 +7,10 @@
 
     .title {
       h1 {
+        padding-left: 0;
         margin: 0 0 7px 0;
         font-weight: 600;
         font-size: 25px;
-        padding-left: 0;
       }
 
       p {
@@ -20,8 +20,8 @@
 
     .like {
       align-self: center;
-      font-size: 20px;
       color: #ccc;
+      font-size: 20px;
       cursor: pointer;
       .fas {
         color: #f5425d;

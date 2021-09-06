@@ -1,9 +1,9 @@
 @import '../../styles/variable';
 .Footer {
   .footerInner {
+    width: 100vw;
     margin-top: 100px;
     background-color: #333;
-    width: 100vw;
 
     .footerList {
       display: flex;

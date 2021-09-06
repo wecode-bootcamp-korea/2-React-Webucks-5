@@ -7,8 +7,8 @@
     display: flex;
 
     .username {
-      font-weight: 700;
       margin-right: 10px;
+      font-weight: 700;
     }
   }
 
@@ -19,8 +19,8 @@
       position: relative;
       top: -4px;
       margin: 0 0 10px 10px;
-      font-size: 18px;
       color: #ccc;
+      font-size: 18px;
       cursor: pointer;
 
       .fas {

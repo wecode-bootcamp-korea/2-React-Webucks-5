@@ -1,8 +1,8 @@
 .Login {
-  background-color: #eeefef;
-  height: 100vh;
   display: flex;
   justify-content: center;
+  height: 100vh;
+  background-color: #eeefef;
 
   .inner {
     display: flex;
@@ -24,7 +24,7 @@
     }
   }
 
-  .anotherApproch {
+  .anotherApproach {
     color: #4078c0;
   }
 }

@@ -1,6 +1,6 @@
 .LoginForm {
-  display: flex;
   position: relative;
+  display: flex;
   flex-direction: column;
   flex: 2;
   width: 350px;
@@ -15,9 +15,9 @@
 
   .id,
   .pw {
-    background-color: #f7f7f7;
     border: 2px solid #ddd;
     border-radius: 3px;
+    background-color: #f7f7f7;
     font-weight: 500;
   }
 
