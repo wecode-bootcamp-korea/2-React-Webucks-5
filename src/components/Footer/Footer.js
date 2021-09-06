@@ -1,6 +1,6 @@
 import React from 'react';
-import FooterList from './FooterList/FooterList';
 import footerListData from './footerListData';
+import FooterList from './FooterList/FooterList';
 import './footer.scss';
 
 class Footer extends React.Component {

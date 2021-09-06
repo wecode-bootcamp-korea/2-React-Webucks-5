@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import CoffeeCardList from './CoffeeCardList/CoffeeCardList';
 import Nav from '../../../components/Nav/Nav';
 import Footer from '../../../components/Footer/Footer';
-import CoffeeCardList from './CoffeeCardList/CoffeeCardList';
 import './list.scss';
 
 class List extends Component {

@@ -1,7 +1,6 @@
 import React from 'react';
 import DetailHeader from './DetailHeader/DetailHeader';
 import DetailContent from './DetailContent/DetailContent';
-
 import Nav from '../../../components/Nav/Nav';
 import Footer from '../../../components/Footer/Footer';
 import './detail.scss';
