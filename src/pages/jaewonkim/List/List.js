@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import Nav from '../../../components/Nav/Nav';
-import './List.scss';
-
-// 합의한 공용 Mock Data와 map 함수를 활용하여 CoffeeCard 컴포넌트로 기존 코드를 대체
 import CoffeeCard from './CoffeCard/CoffeeCard';
-import LIST_COLDBREW_DATA from './ListColdBrewData';
-import LIST_BREWED_DATA from './ListBrewedData';
+import './List.scss';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
@@ -22,7 +18,7 @@ class ListJaeWonKim extends Component {
     };
   }
 
-  componenetDidMount() {
+  componentDidMount() {
     fetch('http://localhost:3000/data/myCoffeeCards.json', {
       method: 'GET',
     })
@@ -53,7 +49,7 @@ class ListJaeWonKim extends Component {
           </dl>
 
           <dl id="section2">
-            {LIST_COLDBREW_DATA.map(data => {
+            {this.state.coldBrewCoffeeData.map(data => {
               return (
                 <CoffeeCard
                   key={data.id}
@@ -78,7 +74,7 @@ class ListJaeWonKim extends Component {
           </dl>
 
           <dl id="section2">
-            {LIST_BREWED_DATA.map(data => {
+            {this.state.brewedCoffeeData.map(data => {
               return (
                 <CoffeeCard
                   key={data.id}
