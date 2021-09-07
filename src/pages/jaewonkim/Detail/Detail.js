@@ -17,22 +17,17 @@ class DetailJaeWonKim extends Component {
     super();
     this.state = {
       isLikedHeart: false,
-      heartClassName: 'fas fa-heart',
     };
   }
 
   toggleHeart = () => {
     const { isLikedHeart } = this.state;
-    this.setState({ isLikedHeart: !isLikedHeart }, this.activateHeart);
-  };
-
-  activateHeart = () => {
-    this.state.isLikedHeart
-      ? this.setState({ heartClassName: 'fas fa-heart active' })
-      : this.setState({ heartClassName: 'fas fa-heart' });
+    this.setState({ isLikedHeart: !isLikedHeart });
   };
 
   render() {
+    const { isLikedHeart } = this.state;
+
     return (
       <div className="Detail">
         <TopNav />
@@ -58,7 +53,9 @@ class DetailJaeWonKim extends Component {
                     icon={faHeartRegular}
                   />
                   <FontAwesomeIcon
-                    className={this.state.heartClassName}
+                    className={
+                      isLikedHeart ? 'fas fa-heart active' : 'fas fa-heart'
+                    }
                     onClick={this.toggleHeart}
                     icon={faHeartSolid}
                   />
