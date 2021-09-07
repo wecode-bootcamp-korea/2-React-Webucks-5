@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
-import '../../../styles/_common.scss';
 import './Login.scss';
 
 class LoginJaeWonKim extends Component {
@@ -10,35 +8,26 @@ class LoginJaeWonKim extends Component {
     this.state = {
       inputUserName: '',
       inputPassword: '',
-      buttonClassName: 'form-input',
-      buttonDisabled: true,
-      formAction: '',
+      isValidInput: false,
     };
   }
 
-  handleInputUserName = event => {
-    this.setState({ inputUserName: event.target.value });
-  };
-
-  handleInputPassword = event => {
-    this.setState({ inputPassword: event.target.value });
-  };
-
-  isValidInput = () => {
-    return (
-      this.state.inputUserName.includes('@') &&
-      this.state.inputPassword.length >= 8
-    );
+  handleInput = event => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value }, this.verifyForm);
   };
 
   verifyForm = () => {
-    this.isValidInput()
-      ? this.setState({
-          buttonClassName: 'form-input active',
-          buttonDisabled: false,
-          formAction: '/list-jaewonkim',
-        })
-      : this.setState({ buttonClassName: 'form-input', buttonDisabled: true });
+    this.state.inputUserName.includes('@') &&
+    this.state.inputPassword.length >= 8
+      ? this.setState({ isValidInput: true })
+      : this.setState({ isValidInput: false });
+  };
+
+  activateButton = () => {
+    this.state.isValidInput
+      ? this.setState({ buttonClassName: 'form-input active' })
+      : this.setState({ buttonClassName: 'form-input' });
   };
 
   render() {
@@ -57,25 +46,27 @@ class LoginJaeWonKim extends Component {
 
           <form
             id="form"
-            onKeyUp={this.verifyForm}
-            action={this.state.formAction}
+            onKeyUp={this.activateButton}
+            action="/list-jaewonkim"
           >
             <input
               className="form-input"
-              onChange={this.handleInputUserName}
+              onChange={this.handleInput}
               type="text"
+              name="inputUserName"
               placeholder="전화번호, 사용자 이름 또는 이메일"
             />
             <input
               className="form-input"
-              onChange={this.handleInputPassword}
+              onChange={this.handleInput}
               type="password"
+              name="inputPassword"
               placeholder="비밀번호"
             />
             <button
               className={this.state.buttonClassName}
               type="submit"
-              disabled={this.state.buttonDisabled}
+              disabled={!this.state.isValidInput}
             >
               로그인
             </button>
