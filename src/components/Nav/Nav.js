@@ -7,12 +7,12 @@ class Nav extends Component {
     return (
       <div className="Nav">
         <header className="section">
-          <div className="menuGroup right">
+          <div className="menuGroup left">
             <Link to="/login-jaewonkim">
               <img src="/images/jaewonkim/WeBucks-logo.svg" alt="logo" />
             </Link>
           </div>
-          <div className="menuGroup left toggle">
+          <div className="menuGroup right toggle">
             <ul>
               <li>
                 <Link to="#">COFFEE</Link>

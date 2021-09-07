@@ -20,25 +20,29 @@ $wookwidth: 1100px;
     background-color: #f4f4f2;
   }
 
-  .menuGroup.right img {
-    width: 100px;
-  }
+  .menuGroup {
+    &.left img {
+      width: 100px;
+    }
 
-  .menuGroup.left ul {
-    display: flex;
-    justify-content: space-around;
-  }
+    &.right {
+      ul {
+        display: flex;
+        justify-content: space-around;
+      }
 
-  .menuGroup.left li {
-    padding: 5px;
-  }
+      li {
+        padding: 5px;
+      }
 
-  .menuGroup.left a {
-    color: rgb(146, 135, 120);
-  }
+      a {
+        color: rgb(146, 135, 120);
 
-  .menuGroup.left a:hover {
-    color: rgb(171, 89, 17);
+        &:hover {
+          color: rgb(171, 89, 17);
+        }
+      }
+    }
   }
 
   #toggleBar {
@@ -58,7 +62,7 @@ $wookwidth: 1100px;
   //     display: block;
   //   }
 
-  //   .menuGroup.left {
+  //   .menuGroup.right {
   //     display: none;
   //   }
 

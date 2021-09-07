@@ -11,7 +11,7 @@ class Home extends React.Component {
         <Link to="/login-jaewonkim">
           <button>김재원</button>
         </Link>
-        <Link to="//login-minjaelee'">
+        <Link to="/login-minjaelee">
           <button>이민재</button>
         </Link>
         <Link to="/login-sungjaelee">

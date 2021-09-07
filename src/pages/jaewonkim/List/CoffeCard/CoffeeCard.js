@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './CoffeCard.scss';
+import './CoffeeCard.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -9,10 +9,10 @@ import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faHeartRegular, faHeartSolid);
 
-class CoffeCard extends Component {
+class CoffeeCard extends Component {
   render() {
     return (
-      <dt className="CoffeCard">
+      <dt className="CoffeeCard">
         <Link to={this.props.link}>
           <img alt={this.props.alt} src={this.props.src} />
         </Link>
@@ -25,4 +25,4 @@ class CoffeCard extends Component {
   }
 }
 
-export default CoffeCard;
+export default CoffeeCard;
