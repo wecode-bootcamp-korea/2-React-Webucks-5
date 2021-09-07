@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 import './Nav.scss';
 
 class Nav extends Component {
+  constructor() {
+    super();
+    this.state = { isMenuClicked: false };
+  }
   render() {
     return (
       <div className="Nav">
@@ -13,7 +17,13 @@ class Nav extends Component {
               <img src="/images/wookchanglee/WeBucks-logo.svg" alt="logo" />
             </Link>
           </div>
-          <div className="menuGroup left toggle">
+          <div
+            className={
+              this.state.isMenuClicked
+                ? 'menuGroup left toggle on'
+                : 'menuGroup left toggle'
+            }
+          >
             <ul className="menuGroupList">
               <li className="menuContent">
                 <Link to="#">COFFEE</Link>
@@ -32,7 +42,13 @@ class Nav extends Component {
               </li>
             </ul>
           </div>
-          <i className="fas fa-bars" id="toggleBar"></i>
+          <i
+            className="fas fa-bars"
+            id="toggleBar"
+            onClick={() => {
+              this.setState({ isMenuClicked: !this.state.isMenuClicked });
+            }}
+          ></i>
         </header>
       </div>
     );
