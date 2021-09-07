@@ -37,12 +37,12 @@
             text-overflow: ellipsis;
             overflow: hidden;
           }
-          .thumbsUpBtn {
+          .LikeBtn {
             background-color: white;
             border: none;
             cursor: pointer;
 
-            &.changeColorThumbsUpBtn {
+            &.beRedColor {
               background-color: white;
               color: tomato;
             }

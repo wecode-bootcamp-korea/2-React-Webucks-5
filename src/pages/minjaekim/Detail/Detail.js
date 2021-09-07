@@ -1,9 +1,9 @@
 import React from "react";
+import TopNav from "../../../components/Nav/Nav";
+import Footer from "../components/footer";
+import CommentBox from "./CommentBox";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import TopNav from "../../../components/Nav/Nav";
-import CommentBox from "./CommentBox";
-import Footer from "../components/footer";
 import "./Detail.scss";
 
 class Detail extends React.Component {

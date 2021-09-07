@@ -1,5 +1,6 @@
-import React, { Component } from "react";
 import "../../minjaekim/components/footer.scss";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Footer extends React.Component {
   render() {
@@ -8,64 +9,64 @@ class Footer extends React.Component {
         <ul id="companyMenu">
           <h5 class="footerMenuTitle">COMPANY</h5>
           <li>
-            <a href="#">한눈에 보기</a>
+            <Link href="#">한눈에 보기</Link>
           </li>
           <li>
-            <a href="#">스타벅스 소개</a>
+            <Link href="#">스타벅스 소개</Link>
           </li>
           <li>
-            <a href="#">스타벅스 사명</a>
+            <Link href="#">스타벅스 사명</Link>
           </li>
           <li>
-            <a href="#">국내 뉴스룸</a>
+            <Link href="#">국내 뉴스룸</Link>
           </li>
           <li>
-            <a href="#">세계의 스타벅스</a>
+            <Link href="#">세계의 스타벅스</Link>
           </li>
           <li>
-            <a href="#">글로벌 뉴스룸</a>
+            <Link href="#">글로벌 뉴스룸</Link>
           </li>
         </ul>
         <ul id="corporateSales">
           <h5 class="footerMenuTitle">CORPORATE SALES</h5>
           <li>
-            <a href="#">단체 및 기업 구매 안내</a>
+            <Link href="#">단체 및 기업 구매 안내</Link>
           </li>
         </ul>
         <ul id="partnershipMenu">
           <h5 class="footerMenuTitle">PARTNERSHIP</h5>
           <li>
-            <a href="#">신규 입점 제의</a>
+            <Link href="#">신규 입점 제의</Link>
           </li>
           <li>
-            <a href="#">협력 고객사 등록 신청</a>
+            <Link href="#">협력 고객사 등록 신청</Link>
           </li>
         </ul>
         <ul id="onlineCommnityMenu">
           <h5 class="footerMenuTitle">ONLINE COMMUNITY</h5>
           <li>
-            <a href="#">페이스북</a>
+            <Link href="#">페이스북</Link>
           </li>
           <li>
-            <a href="#">트위터</a>
+            <Link href="#">트위터</Link>
           </li>
           <li>
-            <a href="#">유튜브</a>
+            <Link href="#">유튜브</Link>
           </li>
           <li>
-            <a href="#">블로그</a>
+            <Link href="#">블로그</Link>
           </li>
           <li>
-            <a href="#">인스타그램</a>
+            <Link href="#">인스타그램</Link>
           </li>
         </ul>
         <ul id="recuitMenu">
           <h5 class="footerMenuTitle">RECUIT</h5>
           <li>
-            <a href="#">채용 소개</a>
+            <Link href="#">채용 소개</Link>
           </li>
           <li>
-            <a href="#">채용 지원하기</a>
+            <Link href="#">채용 지원하기</Link>
           </li>
         </ul>
         <ul id="webuckMenu">

@@ -1,8 +1,8 @@
-import React, { Component, Suspense } from "react";
+import React, { Component } from "react";
+import COMMENT_DATA from "./detailCommentData";
+import LikeBtn from "./Button/LikeBtn";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBackspace } from "@fortawesome/free-solid-svg-icons";
-import COMMENT_DATA from "./detailCommentData";
-import ThumbsUpBtn from "./Button/ThumbsUpBtn";
 import "./commentBox.scss";
 
 class CommentBox extends Component {
@@ -63,7 +63,7 @@ class CommentBox extends Component {
               <li className="reviewList" id={DATA.id}>
                 <span className="userId">{DATA.authorName}</span>
                 <span className="reviewContents">{DATA.contents}</span>
-                <ThumbsUpBtn />
+                <LikeBtn />
                 <button
                   className="deleteBtn"
                   onClick={() => this.deleteCommentBox(DATA.id)}
