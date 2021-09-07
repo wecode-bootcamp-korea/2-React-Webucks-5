@@ -21,14 +21,14 @@ class ListJaeWonKim extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/myCoffeeCards.json', {
+    fetch('http://localhost:3000/data/myCoffeePages.json', {
       method: 'GET',
     })
       .then(res => res.json())
       .then(data => {
         this.setState({
-          coldBrewCoffeeData: data.coldBrewCoffeeCards,
-          brewedCoffeeData: data.brewedCoffeeCards,
+          coldBrewCoffeeData: data.coldBrewCoffeePages,
+          brewedCoffeeData: data.brewedCoffeePages,
         });
       });
   }
@@ -40,7 +40,7 @@ class ListJaeWonKim extends Component {
 
         <section>
           <dl className="section1">
-            <CoffeeType name={'콜드 브루 커피'} />
+            <CoffeeType title={'콜드 브루 커피'} />
           </dl>
 
           <dl className="section2">
@@ -50,15 +50,15 @@ class ListJaeWonKim extends Component {
                   key={data.id}
                   alt={data.alt}
                   src={data.src}
-                  text={data.text}
-                  link={data.link}
+                  name={data.name}
+                  link="/detail-jaewonkim"
                 />
               );
             })}
           </dl>
 
           <dl className="section1">
-            <CoffeeType name={'브루드 커피'} />
+            <CoffeeType title={'브루드 커피'} />
           </dl>
 
           <dl className="section2">
@@ -68,8 +68,8 @@ class ListJaeWonKim extends Component {
                   key={data.id}
                   alt={data.alt}
                   src={data.src}
-                  text={data.text}
-                  link={data.link}
+                  name={data.name}
+                  link="/detail-jaewonkim"
                 />
               );
             })}

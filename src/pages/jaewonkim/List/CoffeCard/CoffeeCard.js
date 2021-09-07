@@ -18,7 +18,7 @@ class CoffeeCard extends Component {
           <img alt={this.props.alt} src={this.props.src} />
         </Link>
         <h3>
-          {this.props.text}
+          {this.props.name}
           <FontAwesomeIcon className="far fa-heart" icon={faHeartRegular} />
         </h3>
       </dt>
