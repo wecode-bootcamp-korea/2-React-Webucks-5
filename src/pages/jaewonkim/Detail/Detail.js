@@ -18,16 +18,6 @@ class DetailJaeWonKim extends Component {
     };
   }
 
-  verifyForm = () => {
-    this.isValidInput()
-      ? this.setState({
-          buttonClassName: 'form-input active',
-          buttonDisabled: false,
-          formAction: '/list-jaewonkim',
-        })
-      : this.setState({ buttonClassName: 'form-input', buttonDisabled: true });
-  };
-
   toggleHeart = () => {
     if (this.state.toggleHeartClassName === 'fas fa-heart') {
       this.setState({ toggleHeartClassName: 'fas fa-heart active' });
