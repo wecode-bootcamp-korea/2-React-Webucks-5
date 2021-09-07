@@ -76,7 +76,7 @@ main {
 .brewed {
   img {
     &:hover {
-      @extend :hover;
+      transform: scale(1.1);
     }
     width: 90%;
     transition: transform 0.5s;

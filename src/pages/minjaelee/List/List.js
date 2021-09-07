@@ -1,11 +1,28 @@
 import React, { Component } from 'react';
 import CoffeeCard from './CoffeeCard/CoffeeCard';
-import LIST_COLDBREW_DATA from './ColdbrewData';
-import LIST_BREWED_DATA from './BrewedData';
 import TopNav from '../../../components/Nav/Nav';
 import './List.scss';
 
 class List extends Component {
+  constructor() {
+    super();
+    this.state = {
+      coldbrewProducts: [],
+      brewedProducts: [],
+    };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/CoffeeListData.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(result => {
+        this.setState({ coldbrewProducts: result.coldbrewData });
+        this.setState({ brewedProducts: result.brewData });
+      });
+  }
+
   render() {
     return (
       <div className="listContainer">
@@ -23,7 +40,7 @@ class List extends Component {
           </div>
           <div className="coldbrew">
             <ul className="coldbrewList">
-              {LIST_COLDBREW_DATA.map(product => {
+              {this.state.coldbrewProducts.map(product => {
                 return (
                   <CoffeeCard
                     key={product.name}
@@ -46,7 +63,7 @@ class List extends Component {
           </div>
           <div className="brewed">
             <ul className="brewedList">
-              {LIST_BREWED_DATA.map(product => {
+              {this.state.brewedProducts.map(product => {
                 return (
                   <CoffeeCard
                     key={product.name}
