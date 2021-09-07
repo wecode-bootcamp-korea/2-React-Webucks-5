@@ -9,10 +9,6 @@ class List extends Component {
     super();
     this.state = {
       COFFEELIST_DATA: [],
-      coffeeCardsName: {
-        coldBrewCoffeeCards: '콜드 브루 커피',
-        brewedCoffeeCards: '브루드 커피',
-      },
     };
   }
 
@@ -31,18 +27,26 @@ class List extends Component {
         <CoffeeCardList
           COFFEELIST_DATA={
             this.state.COFFEELIST_DATA.coldBrewCoffeeCards
-              ? this.state.COFFEELIST_DATA.coldBrewCoffeeCards
+              ? this.state.COFFEELIST_DATA.coldBrewCoffeeCards.coffees
               : []
           }
-          coffeeCardsName={this.state.coffeeCardsName.coldBrewCoffeeCards}
+          coffeeCardsName={
+            this.state.COFFEELIST_DATA.coldBrewCoffeeCards
+              ? this.state.COFFEELIST_DATA.coldBrewCoffeeCards.title
+              : ''
+          }
         />
         <CoffeeCardList
           COFFEELIST_DATA={
             this.state.COFFEELIST_DATA.brewedCoffeeCards
-              ? this.state.COFFEELIST_DATA.brewedCoffeeCards
+              ? this.state.COFFEELIST_DATA.brewedCoffeeCards.coffees
               : []
           }
-          coffeeCardsName={this.state.coffeeCardsName.brewedCoffeeCards}
+          coffeeCardsName={
+            this.state.COFFEELIST_DATA.brewedCoffeeCards
+              ? this.state.COFFEELIST_DATA.brewedCoffeeCards.title
+              : ''
+          }
         />
         <Footer />
       </div>

@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Nav.scss';
 
-class TopNav extends Component {
+class Nav extends Component {
   render() {
     return (
-      <div className="TopNav">
+      <div className="Nav">
         <header className="navInner">
           <div className="menuGroup right">
             <Link to="/list-wookchanglee">
@@ -14,20 +14,20 @@ class TopNav extends Component {
             </Link>
           </div>
           <div className="menuGroup left toggle">
-            <ul>
-              <li>
+            <ul className="menuGroupList">
+              <li className="menuContent">
                 <Link to="#">COFFEE</Link>
               </li>
-              <li>
+              <li className="menuContent">
                 <Link to="#">MENU</Link>
               </li>
-              <li>
+              <li className="menuContent">
                 <Link to="#">STORE</Link>
               </li>
-              <li>
+              <li className="menuContent">
                 <Link to="#">WHAT'S NEW</Link>
               </li>
-              <li>
+              <li className="menuContent">
                 <Link to="/login-wookchanglee">SIGN-IN</Link>
               </li>
             </ul>
@@ -39,4 +39,4 @@ class TopNav extends Component {
   }
 }
 
-export default TopNav;
+export default Nav;

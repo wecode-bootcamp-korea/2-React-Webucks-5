@@ -7,7 +7,6 @@ class DetailImageBox extends React.Component {
       <div className="DetailImageBox">
         <img
           src={this.props.coffeeData.img}
-          // src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/06/[9200000003643]_20210623101238875.jpg"
           alt={this.props.coffeeData.title}
           className="coffeeImage"
         />

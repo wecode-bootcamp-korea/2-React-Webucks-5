@@ -18,7 +18,7 @@ class Detail extends React.Component {
       .then(res => res.json())
       .then(res => {
         for (const coffeeCards in res) {
-          for (const coffeeCard of res[coffeeCards]) {
+          for (const coffeeCard of res[coffeeCards].coffees) {
             if (coffeeCard.id === this.props.match.params.id) {
               this.setState({ coffeeData: coffeeCard });
             }

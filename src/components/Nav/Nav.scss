@@ -1,6 +1,6 @@
 @import '../../styles/variable';
 
-.TopNav {
+.Nav {
   .navInner {
     display: flex;
     justify-content: space-between;
@@ -18,12 +18,12 @@
       }
 
       &.left {
-        ul {
+        .menuGroupList {
           display: flex;
           justify-content: space-around;
         }
 
-        li {
+        .menuContent {
           padding: 5px;
         }
 
@@ -67,7 +67,7 @@
       .on.toggle {
         display: block;
 
-        ul {
+        .menuGroupList {
           position: relative;
           right: 20px;
           flex-direction: column;

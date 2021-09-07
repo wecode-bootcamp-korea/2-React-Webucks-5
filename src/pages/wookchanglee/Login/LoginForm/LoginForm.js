@@ -20,8 +20,12 @@ class LoginForm extends React.Component {
           onChange={this.props.handleInput}
         />
         <button
-          className={this.props.isVerified ? 'btn active' : 'btn'}
-          disabled={!this.props.isVerified}
+          className={
+            this.props.id.includes('@') && this.props.pw.length > 4
+              ? 'btn active'
+              : 'btn'
+          }
+          disabled={!(this.props.id.includes('@') && this.props.pw.length > 4)}
           type="submit"
           onClick={this.props.goToList}
         >

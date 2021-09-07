@@ -6,22 +6,17 @@ import './Login.scss';
 class Login extends Component {
   constructor() {
     super();
-    this.state = { id: '', pw: '', isVerified: false };
+    this.state = { id: '', pw: '' };
   }
 
   goToList = () => {
-    if (this.state.isVerified) this.props.history.push('/list-wookchanglee');
+    if (this.state.id.includes('@') && this.state.pw.length > 4)
+      this.props.history.push('/list-wookchanglee');
   };
 
   handleInput = e => {
     const { name, value } = e.target;
-    this.setState({ [name]: value }, this.handleInputValidate);
-  };
-
-  handleInputValidate = () => {
-    this.state.id.includes('@') && this.state.pw.length > 4
-      ? this.setState({ isVerified: true })
-      : this.setState({ isVerified: false });
+    this.setState({ [name]: value });
   };
 
   render() {
@@ -35,10 +30,10 @@ class Login extends Component {
             onClick={this.goToList}
           />
           <LoginForm
-            isVerified={this.state.isVerified}
+            id={this.state.id}
+            pw={this.state.pw}
             goToList={this.goToList}
             handleInput={this.handleInput}
-            handleInputValidate={this.handleInputValidate}
           />
           <Link to="#" className="anotherApproach">
             비밀번호를 잊으셨나요?
