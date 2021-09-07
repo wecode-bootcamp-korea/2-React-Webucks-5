@@ -2,38 +2,26 @@
   margin: 0 auto;
   padding: 0 180px;
 
-  $nav-color: rgb(165, 165, 161);
-  %webucks-logo-style{
-    font-size: 23px;
-    font-weight: bolder;
-    font-family: 'Dancing Script', cursive;
-  }
-  %flex-row-space-between {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .coffeeListPageMain{
+  .coffeeListPageMain {
     flex: display;
     flex-direction: column;
-    
+
     .mainCategoryWrapper {
-      margin-bottom: 35px; 
-      
+      margin-bottom: 35px;
+
       .coldBrewCoffeeSection {
-          padding-top: 15px;
+        padding-top: 15px;
       }
 
       .categoryHeader {
-          background-color: rgb(246, 240, 245);
-          padding: 15px;
-          
-          .coffeeTypeName, .coffeeDetailDescription {
-              display: inline-block
-          }
-      }
-      
-    }
-  }     
-}
+        background-color: rgb(246, 240, 245);
+        padding: 15px;
 
+        .coffeeTypeName,
+        .coffeeDetailDescription {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

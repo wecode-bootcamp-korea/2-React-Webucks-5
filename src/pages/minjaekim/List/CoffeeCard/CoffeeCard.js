@@ -8,24 +8,26 @@ class CoffeeCard extends Component {
   constructor() {
     super();
     this.state = {
-      heartColor: false,
+      isHeartColorRed: false,
     };
   }
-  isActive = () => {
+
+  changeHeartBtnColor = () => {
+    const { isHeartColorRed } = this.state;
     this.setState({
-      heartColor: !this.state.heartColor,
+      isHeartColorRed: !isHeartColorRed,
     });
   };
 
   render() {
-    const { heartColor } = this.state;
+    const { isHeartColorRed } = this.state;
     return (
-      <div className="divWrapperAllImgAndName">
-        <Link to="/detail-minjaekim" className="divWrapperCoffeeImg">
+      <div className="divTagWrapperCoffeeImgAndName">
+        <Link to="/detail-minjaekim" className="aTagWrapperCoffeeImg">
           <img
             className="coffeeImg"
             key={this.props.coffeeListKey}
-            src={this.props.imgUrl}
+            src={this.props.coffeeImgUrl}
             alt={this.props.coffeeName}
           />
         </Link>
@@ -33,10 +35,8 @@ class CoffeeCard extends Component {
           {this.props.coffeeName}
           <FontAwesomeIcon
             icon={faHeart}
-            className={
-              heartColor ? "heartIcon fillHeartIconColor" : "heartIcon"
-            }
-            onClick={this.isActive}
+            className={isHeartColorRed ? "fa-heart changeColor" : "fa-heart"}
+            onClick={this.changeHeartBtnColor}
           />
         </p>
       </div>

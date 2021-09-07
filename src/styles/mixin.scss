@@ -1,0 +1,17 @@
+%flex-column-space-around {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+%flex-column-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+%logo-style {
+  font-weight: bolder;
+  font-family: "Dancing Script", cursive;
+  font-size: 4.5rem;
+}

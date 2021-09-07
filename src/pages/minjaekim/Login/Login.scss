@@ -2,8 +2,8 @@ $windowAndInput-border-color: #e8e8e8;
 $input-padding: 10px 12px;
 $input-font-bolder: 600;
 $input-font-size: 16.5px;
-$input-font-color:#9b9696;
-$default-white:white;
+$input-font-color: #9b9696;
+$default-white: white;
 
 %flex-column {
   display: flex;
@@ -29,20 +29,20 @@ $default-white:white;
   justify-content: flex-end;
 }
 
-%logo-style{
+%logo-style {
   font-weight: bolder;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 4.5rem;
 }
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-        border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
 }
 
-@mixin background-border-Color($border-color, $border-px , $background-color) {
+@mixin background-border-Color($border-color, $border-px, $background-color) {
   border: $border-px solid $border-color;
   background-color: $background-color;
 }
@@ -54,7 +54,7 @@ $default-white:white;
 }
 
 #root {
-  margin : 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -64,13 +64,17 @@ $default-white:white;
   padding: 20px 0;
 
   .loginWindow {
-    @extend  %flex-column;
+    @extend %flex-column;
     height: 75vh;
     margin: 80px 450px;
     padding: 30px 60px;
-    @include background-border-Color($windowAndInput-border-color, 5px ,$default-white);
-    @include border-radius(10px); 
-    
+    @include background-border-Color(
+      $windowAndInput-border-color,
+      5px,
+      $default-white
+    );
+    @include border-radius(10px);
+
     &Title {
       flex: 0.28 1 0;
       @extend %flex-row;
@@ -81,41 +85,64 @@ $default-white:white;
       flex: 0.35 1 0;
       @extend %flex-column-space-around;
       width: 100%;
-      
+
       .loginUserId,
       .loginUserPsw {
         padding: $input-padding;
-        @include background-border-Color($windowAndInput-border-color, 3px, whitesmoke);
-        @include border-radius(5px); 
-        @include font-size-bold-color($input-font-size, $input-font-bolder, $input-font-color);
+        @include background-border-Color(
+          $windowAndInput-border-color,
+          3px,
+          whitesmoke
+        );
+        @include border-radius(5px);
+        @include font-size-bold-color(
+          $input-font-size,
+          $input-font-bolder,
+          $input-font-color
+        );
         &::placeholder {
-          @include font-size-bold-color($input-font-size, $input-font-bolder, $input-font-color);
+          @include font-size-bold-color(
+            $input-font-size,
+            $input-font-bolder,
+            $input-font-color
+          );
         }
       }
 
       .loginUserBtn {
         padding: $input-padding;
         @include background-border-Color(lightsteelblue, 3px, lightsteelblue);
-        @include border-radius(10px);     
+        @include border-radius(10px);
         text-align: center;
-        @include font-size-bold-color($input-font-size, $input-font-bolder, $default-white);
-        
+        @include font-size-bold-color(
+          $input-font-size,
+          $input-font-bolder,
+          $default-white
+        );
+
         .ButtonWrapper {
-          @include font-size-bold-color($input-font-size, $input-font-bolder, $default-white);
+          @include font-size-bold-color(
+            $input-font-size,
+            $input-font-bolder,
+            $default-white
+          );
         }
       }
-      .changeBtnColor {
+      .changeColor {
         @extend .loginUserBtn;
         @include background-border-Color(steelblue, 3px, steelblue);
       }
     }
-    
+
     &FindUserPsw {
-        flex: 0.3 1 0;
-        @extend %flex-column-end;
-        text-decoration: none;
-        @include font-size-bold-color($input-font-size, $input-font-bolder, rgb(75, 124, 160));
+      flex: 0.3 1 0;
+      @extend %flex-column-end;
+      text-decoration: none;
+      @include font-size-bold-color(
+        $input-font-size,
+        $input-font-bolder,
+        rgb(75, 124, 160)
+      );
     }
   }
 }
-

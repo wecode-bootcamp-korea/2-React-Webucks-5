@@ -37,7 +37,7 @@ class ListPage extends Component {
               {this.state.coldBrewProducts.map((product) => {
                 return (
                   <CoffeeCard
-                    imgUrl={product.img}
+                    coffeeImgUrl={product.img}
                     coffeeName={product.name}
                     CoffeeListKey={product.id}
                   />
@@ -56,7 +56,7 @@ class ListPage extends Component {
               {this.state.brewedProducts.map((product) => {
                 return (
                   <CoffeeCard
-                    imgUrl={product.img}
+                    coffeeImgUrl={product.img}
                     coffeeName={product.name}
                     CoffeeListKey={product.id}
                   />

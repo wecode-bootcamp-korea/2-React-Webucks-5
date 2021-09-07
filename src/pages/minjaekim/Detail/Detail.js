@@ -10,25 +10,18 @@ class Detail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      heartColor: false,
+      isHeartColorRed: false,
     };
   }
 
-  isActive = () => {
+  changeHeartBtnColor = () => {
     this.setState({
-      heartColor: !this.state.heartColor,
+      isHeartColorRed: !this.state.isHeartColorRed,
     });
   };
 
-  // handleCommentList = () => {
-  //   const { heartColor, commentList } = this.state
-  //   this.setState({
-  //     commentList: commentList.map
-  //   })
-  // }
-
   render() {
-    const { heartColor } = this.state;
+    const { isHeartColorRed } = this.state;
     return (
       <>
         <div className="Detail">
@@ -47,7 +40,7 @@ class Detail extends React.Component {
             <img
               id="selectedCoffeeImg"
               src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/03/[9200000003507]_20210322093414289.jpg"
-              alt="white chocholate coffee"
+              alt="white-coffee"
             />
             <aside id="mainAsideInfo">
               <section id="coffeeNameAndDetailsInfoWrapper">
@@ -60,11 +53,11 @@ class Detail extends React.Component {
                     <FontAwesomeIcon
                       icon={faHeart}
                       className={
-                        heartColor
-                          ? "heartIcon fillHeartIconColor"
-                          : "heartIcon"
+                        isHeartColorRed
+                          ? "fa-heart changeHeartBtnColor"
+                          : "fa-heart"
                       }
-                      onClick={this.isActive}
+                      onClick={this.changeHeartBtnColor}
                     />
                   </div>
                 </header>
@@ -116,8 +109,8 @@ class Detail extends React.Component {
                   <h4 id="reviewTitle">리뷰</h4>
                 </header>
                 <CommentBox
-                  isActive={this.isActive}
-                  heartColor={this.state.heartColor}
+                  changeHeartBtnColor={this.changeHeartBtnColor}
+                  isHeartColorRed={this.state.isHeartColorRed}
                 />
               </section>
             </aside>
