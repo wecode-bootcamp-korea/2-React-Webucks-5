@@ -14,10 +14,10 @@ class LoginJaeWonKim extends Component {
 
   handleInput = event => {
     const { name, value } = event.target;
-    this.setState({ [name]: value }, this.verifyForm);
+    this.setState({ [name]: value }, this.verifyInput);
   };
 
-  verifyForm = () => {
+  verifyInput = () => {
     this.state.inputUserName.includes('@') &&
     this.state.inputPassword.length >= 8
       ? this.setState({ isValidInput: true })

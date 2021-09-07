@@ -1,0 +1,31 @@
+.CoffeeType {
+  width: 1060px;
+  height: 60px;
+  background-color: #f6f5ef;
+
+  padding-top: 8px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  h2 {
+    color: #333;
+    font-family: Avenir, Arial, georgia;
+    font-size: 16px;
+
+    margin-left: 24px;
+  }
+
+  img {
+    height: 30px;
+
+    margin: 9px 9px 9px 15px;
+  }
+
+  p {
+    color: #333;
+    font-family: Avenir, Arial, georgia;
+    font-size: 14px;
+  }
+}

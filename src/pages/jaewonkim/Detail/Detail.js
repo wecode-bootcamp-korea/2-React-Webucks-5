@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Nav from '../../../components/Nav/Nav';
-import './Detail.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
+
+import TopNav from '../../../components/TopNav/TopNav';
+import MidNav from './MidNav/MidNav';
+import Footer from '../../../components/Footer/Footer';
+import './Detail.scss';
 
 library.add(faHeartRegular, faHeartSolid);
 
@@ -14,52 +16,27 @@ class DetailJaeWonKim extends Component {
   constructor() {
     super();
     this.state = {
-      toggleHeartClassName: 'fas fa-heart',
+      isLikedHeart: false,
+      heartClassName: 'fas fa-heart',
     };
   }
 
   toggleHeart = () => {
-    if (this.state.toggleHeartClassName === 'fas fa-heart') {
-      this.setState({ toggleHeartClassName: 'fas fa-heart active' });
-    } else if (this.state.toggleHeartClassName === 'fas fa-heart active') {
-      this.setState({ toggleHeartClassName: 'fas fa-heart' });
-    }
+    const { isLikedHeart } = this.state;
+    this.setState({ isLikedHeart: !isLikedHeart }, this.activateHeart);
+  };
+
+  activateHeart = () => {
+    this.state.isLikedHeart
+      ? this.setState({ heartClassName: 'fas fa-heart active' })
+      : this.setState({ heartClassName: 'fas fa-heart' });
   };
 
   render() {
     return (
       <div className="Detail">
-        <Nav />
-
-        <nav>
-          <h2>콜드 브루 커피</h2>
-          <img
-            id="nav-title"
-            alt="Cold Brew"
-            src="https://image.istarbucks.co.kr/common/img/menu/tit/drink_tit9.png"
-          />
-          <Link to="login-jaewonkim">홈</Link>
-          <img
-            alt="Arrow Icon"
-            src="https://image.istarbucks.co.kr/common/img/common/icon_arrow.png"
-          />
-          <Link to="/list-jaewonkim">MENU</Link>
-          <img
-            alt="Arrow Icon"
-            src="https://image.istarbucks.co.kr/common/img/common/icon_arrow.png"
-          />
-          <Link to="#">음료</Link>
-          <img
-            alt="Arrow Icon"
-            src="https://image.istarbucks.co.kr/common/img/common/icon_arrow.png"
-          />
-          <Link to="#">콜드 브루</Link>
-          <img
-            alt="Arrow Icon"
-            src="https://image.istarbucks.co.kr/common/img/common/icon_arrow.png"
-          />
-          <Link to="/detail-jaewonkim">제주 비자림 콜드 브루</Link>
-        </nav>
+        <TopNav />
+        <MidNav />
 
         <main>
           <aside>
@@ -81,7 +58,7 @@ class DetailJaeWonKim extends Component {
                     icon={faHeartRegular}
                   />
                   <FontAwesomeIcon
-                    className={this.state.toggleHeartClassName}
+                    className={this.state.heartClassName}
                     onClick={this.toggleHeart}
                     icon={faHeartSolid}
                   />
@@ -162,6 +139,7 @@ class DetailJaeWonKim extends Component {
                   </dd>
                 </dl>
               </div>
+
               <div className="section-review">
                 <input type="text" placeholder="리뷰를 입력해주세요." />
               </div>
@@ -169,67 +147,7 @@ class DetailJaeWonKim extends Component {
           </section>
         </main>
 
-        <footer>
-          <dl className="footer">
-            <dt className="footer-menu">
-              <Link to="#">COMPANY</Link>
-            </dt>
-            <dd className="footer-list">
-              <Link to="#">한눈에 보기</Link>
-              <Link to="#">스타벅스 사명</Link>
-              <Link to="#">스타벅스 소개</Link>
-              <Link to="#">국내 뉴스룸</Link>
-              <Link to="#">세계의 스타벅스</Link>
-              <Link to="#">글로벌 뉴스룸</Link>
-            </dd>
-          </dl>
-          <dl className="footer">
-            <dt className="footer-menu">
-              <Link to="#">CORPORATE SALES</Link>
-            </dt>
-            <dd className="footer-list">
-              <Link to="#">단체 및 기업 구매 안내</Link>
-            </dd>
-          </dl>
-          <dl className="footer">
-            <dt className="footer-menu">
-              <Link to="#">PARTNERSHIP</Link>
-            </dt>
-            <dd className="footer-list">
-              <Link to="#">신규 입점 제의</Link>
-              <Link to="#">협력 고객사 등록 신청</Link>
-            </dd>
-          </dl>
-          <dl className="footer">
-            <dt className="footer-menu">
-              <Link to="#">ONLINE COMMUNITY</Link>
-            </dt>
-            <dd className="footer-list">
-              <Link to="#">페이스북</Link>
-              <Link to="#">트위터</Link>
-              <Link to="#">유튜브</Link>
-              <Link to="#">블로그</Link>
-              <Link to="#">인스타그램</Link>
-            </dd>
-          </dl>
-          <dl className="footer">
-            <dt className="footer-menu">
-              <Link to="#">RECRUIT</Link>
-            </dt>
-            <dd className="footer-list">
-              <Link to="#">채용 소개</Link>
-              <Link to="#">채용 지원하기</Link>
-            </dd>
-          </dl>
-          <dl className="footer">
-            <dt className="footer-menu">
-              <Link to="#">WEBUCKS</Link>
-            </dt>
-            <dd className="footer-list">
-              <Link to="#"></Link>
-            </dd>
-          </dl>
-        </footer>
+        <Footer />
       </div>
     );
   }

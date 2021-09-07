@@ -1,0 +1,45 @@
+.TopNav {
+  .section {
+    max-width: 1060px;
+    height: 55px;
+    padding: 10px 20px;
+  }
+
+  header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f4f4f2;
+  }
+
+  .menuGroup {
+    &.left img {
+      width: 100px;
+    }
+
+    &.right {
+      ul {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      li {
+        padding: 5px;
+      }
+
+      a {
+        color: rgb(146, 135, 120);
+
+        &:hover {
+          color: rgb(171, 89, 17);
+        }
+      }
+    }
+  }
+
+  #toggleBar {
+    display: none;
+  }
+}
