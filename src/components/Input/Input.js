@@ -4,7 +4,7 @@ import './Input.scss';
 
 class Input extends Component {
   render() {
-    const { id, name, type, placeholder, onInput } = this.props;
+    const { id, name, type, placeholder, handleInput } = this.props;
 
     return (
       <input
@@ -13,7 +13,7 @@ class Input extends Component {
         name={name}
         type={type}
         placeholder={placeholder}
-        onChange={onInput}
+        onChange={handleInput}
       />
     );
   }

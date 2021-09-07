@@ -7,27 +7,18 @@ import { faHeart as faHeartO } from '@fortawesome/free-regular-svg-icons';
 import './CoffeeCard.scss';
 
 class CoffeeCard extends Component {
-  constructor() {
-    super();
-    this.state = {
-      isLiked: false,
-    };
-    this.handleLike = this.handleLike.bind(this);
-  }
-
-  handleLike() {
-    this.setState({ isLiked: !this.state.isLiked });
-  }
-
   render() {
-    const { isLiked } = this.state;
-    const { name, img } = this.props;
+    const { coffee, i, dataName, handleLike } = this.props;
+    const { name, img, isLiked } = coffee;
 
     return (
       <li className="CoffeeCard">
         <Link
           className="imageContainer"
-          to={{ pathname: '/detail-sungjaelee', state: {} }}
+          to={{
+            pathname: '/detail-sungjaelee',
+            state: { coffee, i, dataName },
+          }}
         >
           <img src={img} alt={name} />
         </Link>
@@ -37,7 +28,7 @@ class CoffeeCard extends Component {
             className={isLiked ? 'likeBtn fas' : 'likeBtn'}
             icon={isLiked ? faHeart : faHeartO}
             size="lg"
-            onClick={this.handleLike}
+            onClick={() => handleLike(dataName, i)}
           />
         </div>
       </li>

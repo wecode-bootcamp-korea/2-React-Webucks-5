@@ -4,17 +4,14 @@
   flex-direction: column;
   background-color: white;
   height: 323px;
-  /* border: 5px solid red; */
 
   .imageContainer {
     overflow: hidden;
-    /* border: 5px solid blue; */
 
     img {
       display: block; /* this eliminates 3px of bottom margin on img */
       width: 100%;
       transition: transform 1s ease;
-      /* border: 5px solid black; */
 
       &:hover {
         transform: scale(1.1);
@@ -28,11 +25,8 @@
     flex-grow: 1;
     justify-content: center;
     align-items: center;
-    // background-color: lawngreen;
-    // border: 5px solid red;
 
     .name {
-      /* border: 5px solid green; */
       margin-right: 10px;
       font-size: 14px;
     }

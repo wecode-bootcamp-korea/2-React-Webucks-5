@@ -6,7 +6,8 @@ import './Nutrition.scss';
 
 class Nutrition extends Component {
   render() {
-    const { data } = this.props;
+    const { coffee } = this.props;
+    const { nutritionInfo, allergen } = coffee;
 
     return (
       <div className="Nutrition">
@@ -16,15 +17,15 @@ class Nutrition extends Component {
         </div>
 
         <dl className="nutritionInfoContainer">
-          {data[0].nutritionInfo.map((label, i) => {
+          {nutritionInfo.map((label, i) => {
             const { name, amount } = label;
             return <NutritionLabel key={i} name={name} amount={amount} />;
           })}
         </dl>
 
-        {data[0].allergen && (
+        {allergen && (
           <p className="allergyInfo">
-            알레르기 유발요인: <span>{data[0].allergen}</span>
+            알레르기 유발요인: <span>{allergen}</span>
           </p>
         )}
       </div>

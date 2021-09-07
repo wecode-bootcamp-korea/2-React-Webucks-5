@@ -1,0 +1,253 @@
+{
+  "MESSAGE": "SUCCESS",
+  "coldBrewData": [
+    {
+      "isLiked": true,
+      "id": 1,
+      "name": "나이트로 바닐라 크림",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000002487]_20210426091745467.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 345 },
+        { "name": "포화지방 (g)", "amount": 11 },
+        { "name": "단백질 (g)", "amount": 11 },
+        { "name": "나트륨 (mg)", "amount": 150 },
+        { "name": "당류 (g)", "amount": 35 },
+        { "name": "카페인 (mg)", "amount": 75 }
+      ],
+      "allergen": "우유"
+    },
+    {
+      "isLiked": false,
+      "id": 2,
+      "name": "나이트로 콜드 브루",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000479]_20210426091843897.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 412 },
+        { "name": "포화지방 (g)", "amount": 33 },
+        { "name": "단백질 (g)", "amount": 60 },
+        { "name": "나트륨 (mg)", "amount": 134 },
+        { "name": "당류 (g)", "amount": 25 },
+        { "name": "카페인 (mg)", "amount": 48 }
+      ],
+      "allergen": null
+    },
+    {
+      "isLiked": false,
+      "id": 3,
+      "name": "돌체 콜드 브루",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000002081]_20210415133656839.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 358 },
+        { "name": "포화지방 (g)", "amount": 47 },
+        { "name": "단백질 (g)", "amount": 10 },
+        { "name": "나트륨 (mg)", "amount": 85 },
+        { "name": "당류 (g)", "amount": 308 },
+        { "name": "카페인 (mg)", "amount": 758 }
+      ],
+      "allergen": "커피"
+    },
+    {
+      "isLiked": false,
+      "id": 4,
+      "name": "벨벳 다크 모카 나이트로",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000487]_20210430112319040.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 755 },
+        { "name": "포화지방 (g)", "amount": 159 },
+        { "name": "단백질 (g)", "amount": 58 },
+        { "name": "나트륨 (mg)", "amount": 350 },
+        { "name": "당류 (g)", "amount": 35 },
+        { "name": "카페인 (mg)", "amount": 7 }
+      ],
+      "allergen": null
+    },
+    {
+      "isLiked": false,
+      "id": 5,
+      "name": " 바닐라 크림 콜드 브루",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/03/[9200000003509]_20210322093452399.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 358 },
+        { "name": "포화지방 (g)", "amount": 159 },
+        { "name": "단백질 (g)", "amount": 84 },
+        { "name": "나트륨 (mg)", "amount": 57 },
+        { "name": "당류 (g)", "amount": 47 },
+        { "name": "카페인 (mg)", "amount": 29 }
+      ],
+      "allergen": "바닐라"
+    },
+    {
+      "isLiked": false,
+      "id": 6,
+      "name": "제주 비자림 콜드 브루",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2020/09/[9200000002672]_20200921171223898.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 174 },
+        { "name": "포화지방 (g)", "amount": 57 },
+        { "name": "단백질 (g)", "amount": 88 },
+        { "name": "나트륨 (mg)", "amount": 142 },
+        { "name": "당류 (g)", "amount": 85 },
+        { "name": "카페인 (mg)", "amount": 83 }
+      ],
+      "allergen": null
+    },
+    {
+      "isLiked": false,
+      "id": 7,
+      "name": "콜드 브루",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000038]_20210430113202458.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 585 },
+        { "name": "포화지방 (g)", "amount": 38 },
+        { "name": "단백질 (g)", "amount": 41 },
+        { "name": "나트륨 (mg)", "amount": 36 },
+        { "name": "당류 (g)", "amount": 22 },
+        { "name": "카페인 (mg)", "amount": 99 }
+      ],
+      "allergen": "아라비카"
+    },
+    {
+      "isLiked": false,
+      "id": 8,
+      "name": "콜드 브루 몰트",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/02/[9200000001636]_20210225093600536.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 905 },
+        { "name": "포화지방 (g)", "amount": 89 },
+        { "name": "단백질 (g)", "amount": 92 },
+        { "name": "나트륨 (mg)", "amount": 47 },
+        { "name": "당류 (g)", "amount": 24 },
+        { "name": "카페인 (mg)", "amount": 75 }
+      ],
+      "allergen": null
+    },
+    {
+      "isLiked": false,
+      "id": 9,
+      "name": "콜드 브루 오트 라떼",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000003285]_20210416154437069.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 345 },
+        { "name": "포화지방 (g)", "amount": 11 },
+        { "name": "단백질 (g)", "amount": 11 },
+        { "name": "나트륨 (mg)", "amount": 150 },
+        { "name": "당류 (g)", "amount": 35 },
+        { "name": "카페인 (mg)", "amount": 75 }
+      ],
+      "allergen": "우유"
+    },
+    {
+      "isLiked": false,
+      "id": 10,
+      "name": "콜드 브루 플로트",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/02/[9200000001635]_20210225092236748.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 345 },
+        { "name": "포화지방 (g)", "amount": 11 },
+        { "name": "단백질 (g)", "amount": 11 },
+        { "name": "나트륨 (mg)", "amount": 150 },
+        { "name": "당류 (g)", "amount": 35 },
+        { "name": "카페인 (mg)", "amount": 75 }
+      ],
+      "allergen": "우유"
+    },
+    {
+      "isLiked": false,
+      "id": 11,
+      "name": "프렌치 애플 타르트 나이트로",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/03/[9200000003507]_20210322093414289.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 345 },
+        { "name": "포화지방 (g)", "amount": 11 },
+        { "name": "단백질 (g)", "amount": 11 },
+        { "name": "나트륨 (mg)", "amount": 150 },
+        { "name": "당류 (g)", "amount": 35 },
+        { "name": "카페인 (mg)", "amount": 75 }
+      ],
+      "allergen": "우유"
+    }
+  ],
+  "brewedData": [
+    {
+      "isLiked": false,
+      "id": 1,
+      "name": "콜드 브루 플로트",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/02/[9200000001635]_20210225092236748.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 345 },
+        { "name": "포화지방 (g)", "amount": 11 },
+        { "name": "단백질 (g)", "amount": 11 },
+        { "name": "나트륨 (mg)", "amount": 150 },
+        { "name": "당류 (g)", "amount": 35 },
+        { "name": "카페인 (mg)", "amount": 75 }
+      ],
+      "allergen": "우유"
+    },
+    {
+      "isLiked": false,
+      "id": 2,
+      "name": "프렌치 애플 타르트 나이트로",
+      "img": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/03/[9200000003507]_20210322093414289.jpg",
+      "nutritionInfo": [
+        { "name": "1회 제공량", "amount": 345 },
+        { "name": "포화지방 (g)", "amount": 11 },
+        { "name": "단백질 (g)", "amount": 11 },
+        { "name": "나트륨 (mg)", "amount": 150 },
+        { "name": "당류 (g)", "amount": 35 },
+        { "name": "카페인 (mg)", "amount": 75 }
+      ],
+      "allergen": "우유"
+    }
+  ],
+  "footerData": [
+    {
+      "id": 1,
+      "header": "Company",
+      "options": [
+        { "title": "한눈에 보기", "url": "" },
+        { "title": "스타벅스 사명", "url": "" },
+        { "title": "스타벅스 소개", "url": "" },
+        { "title": "국내 뉴스룸", "url": "" },
+        { "title": "세계의 스타벅스", "url": "" },
+        { "title": "글로벌 뉴스룸", "url": "" }
+      ]
+    },
+    {
+      "id": 2,
+      "header": "Corporate Sales",
+      "options": [{ "title": "단체 및 기업 구매 안내", "url": "" }]
+    },
+    {
+      "id": 3,
+      "header": "Partnership",
+      "options": [
+        { "title": "신규 입점 제의", "url": "" },
+        { "title": "협력 고객사 등록 신청", "url": "" }
+      ]
+    },
+    {
+      "id": 4,
+      "header": "Online Community",
+      "options": [
+        { "title": "페이스북", "url": "" },
+        { "title": "트위터", "url": "" },
+        { "title": "유튜브", "url": "" },
+        { "title": "블로그", "url": "" },
+        { "title": "인스타그램", "url": "" }
+      ]
+    },
+    {
+      "id": 5,
+      "header": "Recruit",
+      "options": [
+        { "title": "채용 소개", "url": "" },
+        { "title": "채용 지원하기", "url": "" }
+      ]
+    },
+    {
+      "id": 6,
+      "header": "WeBucks",
+      "options": []
+    }
+  ]
+}

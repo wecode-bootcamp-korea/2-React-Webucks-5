@@ -43,31 +43,34 @@ class Login extends Component {
           <form id="loginForm" action="#" autoComplete="off">
             <Input
               id="userId" // don't need? (not used)
-              name="idInput" //same as state name
+              name="idInput"
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
-              onInput={handleInput}
+              handleInput={handleInput}
             />
             <div className="pwInputWrap">
               <Input
                 id="userPw" //don't need? (not used)
-                name="pwInput" //same as state name
+                name="pwInput"
                 type="password"
                 placeholder="비밀번호"
-                onInput={handleInput}
+                handleInput={handleInput}
               />
               <span id="showHideText" className="invisible">
                 Show
               </span>
             </div>
-            <Link to="/list-sungjaelee">
-              <button
-                className={isValidInput ? 'loginBtn active' : 'loginBtn'}
-                type="submit"
-              >
+            {isValidInput ? ( // messy?
+              <Link to="/list-sungjaelee">
+                <button className="loginBtn active" type="submit">
+                  로그인
+                </button>
+              </Link>
+            ) : (
+              <button className="loginBtn" type="button">
                 로그인
               </button>
-            </Link>
+            )}
           </form>
           <p className="forgotPw">비밀번호를 잊으셨나요?</p>
         </section>

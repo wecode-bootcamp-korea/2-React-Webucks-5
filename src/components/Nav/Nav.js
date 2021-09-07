@@ -7,13 +7,19 @@ import './Nav.scss';
 
 class Nav extends Component {
   render() {
+    const { pathname } = this.props;
+
     return (
       <div className="Nav">
         <header className="section">
           <div className="menuGroup right">
-            <Link to="/login-sungjaelee">
+            {pathname === '/list-sungjaelee' ? (
               <img src="/images/sungjaelee/WeBucks-logo.svg" alt="logo" />
-            </Link>
+            ) : (
+              <Link to="/list-sungjaelee">
+                <img src="/images/sungjaelee/WeBucks-logo.svg" alt="logo" />
+              </Link>
+            )}
           </div>
           <div className="menuGroup left toggle">
             <ul>
@@ -30,7 +36,7 @@ class Nav extends Component {
                 <Link to="#">WHAT'S NEW</Link>
               </li>
               <li>
-                <Link to="/login">SIGN-IN</Link>
+                <Link to="/login-sungjaelee">SIGN-IN</Link>
               </li>
             </ul>
           </div>
