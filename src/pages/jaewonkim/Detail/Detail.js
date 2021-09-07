@@ -11,6 +11,31 @@ import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 library.add(faHeartRegular, faHeartSolid);
 
 class DetailJaeWonKim extends Component {
+  constructor() {
+    super();
+    this.state = {
+      toggleHeartClassName: 'fas fa-heart',
+    };
+  }
+
+  verifyForm = () => {
+    this.isValidInput()
+      ? this.setState({
+          buttonClassName: 'form-input active',
+          buttonDisabled: false,
+          formAction: '/list-jaewonkim',
+        })
+      : this.setState({ buttonClassName: 'form-input', buttonDisabled: true });
+  };
+
+  toggleHeart = () => {
+    if (this.state.toggleHeartClassName === 'fas fa-heart') {
+      this.setState({ toggleHeartClassName: 'fas fa-heart active' });
+    } else if (this.state.toggleHeartClassName === 'fas fa-heart active') {
+      this.setState({ toggleHeartClassName: 'fas fa-heart' });
+    }
+  };
+
   render() {
     return (
       <div className="Detail">
@@ -62,10 +87,12 @@ class DetailJaeWonKim extends Component {
                   제주 비자림 콜드 브루
                   <FontAwesomeIcon
                     className="far fa-heart"
+                    onClick={this.toggleHeart}
                     icon={faHeartRegular}
                   />
                   <FontAwesomeIcon
-                    className="fas fa-heart"
+                    className={this.state.toggleHeartClassName}
+                    onClick={this.toggleHeart}
                     icon={faHeartSolid}
                   />
                 </h3>
