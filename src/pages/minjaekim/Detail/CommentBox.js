@@ -1,11 +1,11 @@
 import React, { Component, Suspense } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { fas, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { faBackspace } from "@fortawesome/free-solid-svg-icons";
 import COMMNET_DATA from "./detailCommentData";
+import ThumbsUpBtn from "./ThumbsUpBtn";
 import "./commentBox.scss";
 
-class commentBox extends Component {
+class CommentBox extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,8 +13,6 @@ class commentBox extends Component {
       authorName: "",
       context: "",
       commentList: COMMNET_DATA,
-      isLiked: false,
-      btnId: [],
     };
     this.icon = React.createRef();
   }
@@ -37,7 +35,7 @@ class commentBox extends Component {
           id: commmentIndex + 1,
           authorName: authorName,
           context: context,
-          isLiked: isLiked,
+          isLiked: false,
         };
         this.setState({ commmentIndex: commmentIndex + 1 });
         this.setState({ commentList: [...commentList, newCommentObject] });
@@ -69,44 +67,6 @@ class commentBox extends Component {
     }
   };
 
-  // 모든 UI 변경은 Render(state), 즉 state 값 변경으로 이뤄진다.
-  // 1. liked의 state 값이 비어있으면 현재 좋아요 버튼에 어떠한 버튼도 눌리지 않았다는 것
-  // => filter 메서드를 사용해 내가 클릭한 좋아요 버튼의 id와 일치한 버튼의 state의 값을 추가해준다.
-  // => 좋아요 버튼의 색이 빨강으로 변한다는 건 state 값이 추가되면 동시에 해당 버튼의 className도 변경되어 toggled된다는 것을 의미
-  // 2. liked의 state 값에 값이 들어가 있으면 현재 특정 좋아요 버튼이 눌렸다는 것
-  // => filter 메서드를 사용해 값 삭제하기
-  // => 좋아요 버튼의 색이 원래대로 돌아간다는 건 state 값이 삭제됨과 동시에 해당 버튼의 className도 변경되어 toggled 해준다는 것
-  isActive = (e, idx) => {
-    // 클릭한 버튼의 고유 id, index 값
-    const btn = e.currentTarget.id;
-    const { commentList, isLiked, btnId } = this.state;
-    if (commentList.find((e) => e.id == btn)) {
-      console.log(isLiked);
-      if (commentList.find((e) => e.isLike == false)) {
-        this.setState({
-          isLiked: !isLiked,
-        });
-      }
-    }
-  };
-
-  // if(commentList.find(comment => comment.id == btnId)){
-  //   this.setState({
-  //     liked: liked.concat(btnId)
-  //   })
-  //   console.log(liked)
-  // }
-  // if(commentList.find(el=> el.id === btnId)){
-  //   클릭한 버튼과 목데이터에 해당하는 버튼의 아이디가 일치하면
-  //   this.setState({commentList: commentList.filter(el => el.className)})
-  // } else {
-
-  // }
-  // for (let i = 0; i <commentList.length; i++){
-  // if(btnId == commentList[i].id)
-  // this.setState({liked: !liked})
-  // }
-
   render() {
     return (
       <>
@@ -116,15 +76,10 @@ class commentBox extends Component {
               <li className="reviewList" id={DATA.id}>
                 <span className="userId">{DATA.authorName}</span>
                 <span className="reviewContents">{DATA.context}</span>
-                <button
-                  className={
-                    this.state.isLiked ? "fillThumbsUpIcon" : "thumbsUpButton"
-                  }
-                  onClick={(e, idx) => this.isActive(e, idx)}
-                  id={DATA.id}
-                >
-                  <FontAwesomeIcon icon={faThumbsUp} />
-                </button>
+                <ThumbsUpBtn
+                  isLiked={this.props.heartColor}
+                  isActive={this.props.isActive}
+                />
 
                 <button
                   className="deleteButton"
@@ -162,4 +117,4 @@ class commentBox extends Component {
   }
 }
 
-export default commentBox;
+export default CommentBox;
