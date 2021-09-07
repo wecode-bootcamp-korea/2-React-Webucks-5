@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "../../minjaekim/components/footer.scss";
 
 class Footer extends React.Component {
   render() {
     return (
-      <footer>
+      <footer className="Footer">
         <ul id="companyMenu">
           <h5 class="footerMenuTitle">COMPANY</h5>
           <li>

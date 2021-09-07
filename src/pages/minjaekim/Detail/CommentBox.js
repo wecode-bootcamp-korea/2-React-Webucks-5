@@ -17,11 +17,11 @@ class CommentBox extends Component {
   }
 
   handleAuthorInput = (e) => {
-    this.setState({ authorName: e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   handleContentsInput = (e) => {
-    this.setState({ contents: e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   sendComment = (e) => {
@@ -86,12 +86,14 @@ class CommentBox extends Component {
             id="userInputIdBox"
             placeholder="작성자 명"
             required="required"
+            name="authorName"
             onChange={this.handleAuthorInput}
           />
           <input
             type="text"
             id="contentsInputBox"
             placeholder="리뷰를 입력하세요"
+            name="contents"
             onChange={this.handleContentsInput}
           />
         </form>

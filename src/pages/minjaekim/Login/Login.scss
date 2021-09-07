@@ -1,70 +1,13 @@
-$windowAndInput-border-color: #e8e8e8;
-$input-padding: 10px 12px;
-$input-font-bolder: 600;
-$input-font-size: 16.5px;
-$input-font-color: #9b9696;
-$default-white: white;
-
-%flex-column {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-%flex-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-%flex-column-space-around {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-%flex-column-end {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-%logo-style {
-  font-weight: bolder;
-  font-family: "Dancing Script", cursive;
-  font-size: 4.5rem;
-}
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
-
-@mixin background-border-Color($border-color, $border-px, $background-color) {
-  border: $border-px solid $border-color;
-  background-color: $background-color;
-}
-
-@mixin font-size-bold-color($font-size, $font-bolder, $font-color) {
-  font-size: $font-size;
-  font-weight: $font-bolder;
-  color: $font-color;
-}
-
-#root {
-  margin: 0;
-  padding: 0;
-}
+@import "../../../styles/variable.scss";
+@import "../../../styles/mixin.scss";
 
 .Login {
-  background-color: #eeefef;
   margin: 0 auto;
   padding: 20px 0;
+  background-color: #eeefef;
 
   .loginWindow {
-    @extend %flex-column;
+    @include flex-column-center;
     height: 75vh;
     margin: 80px 450px;
     padding: 30px 60px;
@@ -73,17 +16,17 @@ $default-white: white;
       5px,
       $default-white
     );
-    @include border-radius(10px);
+    border-radius: 10px;
 
     &Title {
       flex: 0.28 1 0;
-      @extend %flex-row;
-      @extend %logo-style;
+      @include flex-row;
+      @include logo-style;
     }
 
     &InputBox {
       flex: 0.35 1 0;
-      @extend %flex-column-space-around;
+      @include flex-column-space-around;
       width: 100%;
 
       .loginUserId,
@@ -94,17 +37,17 @@ $default-white: white;
           3px,
           whitesmoke
         );
-        @include border-radius(5px);
+        border-radius: 5px;
         @include font-size-bold-color(
+          $input-font-color,
           $input-font-size,
-          $input-font-bolder,
-          $input-font-color
+          $input-font-bolder
         );
         &::placeholder {
           @include font-size-bold-color(
+            $input-font-color,
             $input-font-size,
-            $input-font-bolder,
-            $input-font-color
+            $input-font-bolder
           );
         }
       }
@@ -112,20 +55,21 @@ $default-white: white;
       .loginUserBtn {
         padding: $input-padding;
         @include background-border-Color(lightsteelblue, 3px, lightsteelblue);
-        @include border-radius(10px);
+        border-radius: 10px;
         text-align: center;
         @include font-size-bold-color(
+          $default-white,
           $input-font-size,
-          $input-font-bolder,
-          $default-white
+          $input-font-bolder
         );
 
         .ButtonWrapper {
           @include font-size-bold-color(
+            $default-white,
             $input-font-size,
-            $input-font-bolder,
-            $default-white
+            $input-font-bolder
           );
+          padding: 10px 160px;
         }
       }
       .changeColor {
@@ -136,13 +80,13 @@ $default-white: white;
 
     &FindUserPsw {
       flex: 0.3 1 0;
-      @extend %flex-column-end;
-      text-decoration: none;
+      @include flex-column-end;
       @include font-size-bold-color(
+        rgb(75, 124, 160),
         $input-font-size,
-        $input-font-bolder,
-        rgb(75, 124, 160)
+        $input-font-bolder
       );
+      text-decoration: none;
     }
   }
 }

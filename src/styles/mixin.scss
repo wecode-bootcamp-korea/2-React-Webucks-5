@@ -1,17 +1,62 @@
-%flex-column-space-around {
+// Login Page
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flex-column-space-around {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-%flex-column-end {
+@mixin flex-column-end {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-%logo-style {
+@mixin logo-style {
   font-weight: bolder;
   font-family: "Dancing Script", cursive;
   font-size: 4.5rem;
+}
+
+@mixin background-border-Color($border-color, $border-px, $background-color) {
+  border: $border-px solid $border-color;
+  background-color: $background-color;
+}
+
+@mixin font-size-bold-color($font-color, $font-size, $font-bolder) {
+  color: $font-color;
+  font-size: $font-size;
+  font-weight: $font-bolder;
+}
+
+// List Page
+
+@mixin flex-row-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+// Detail Page
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Footer Pate
+
+@mixin flex-row-space-around {
+  display: flex;
+  justify-content: space-around;
 }

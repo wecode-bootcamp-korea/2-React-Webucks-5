@@ -6,81 +6,61 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      idValue: "",
-      pswValue: "",
-      isChangeBtn: false,
+      id: "",
+      psw: "",
     };
   }
 
-  handleIdInput = (e) => {
-    this.setState(
-      {
-        idValue: e.target.value,
-      },
-      this.isValidIdAndPsw
-    );
-  };
-
-  handlePswInput = (e) => {
-    this.setState(
-      {
-        pswValue: e.target.value,
-      },
-      this.isValidIdAndPsw
-    );
-  };
-
-  isValidIdAndPsw = (e) => {
-    const { idValue, pswValue } = this.state;
-    const isValid = idValue.includes("@") && pswValue.length >= 5;
-    isValid
-      ? this.changeLoginBtnColorAfterValidation()
-      : this.setState({ isChangeBtn: false });
-  };
-
-  changeLoginBtnColorAfterValidation = () => {
-    this.setState({ isChangeBtn: true });
+  isValidInput = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   render() {
+    const { id, psw } = this.state;
     return (
       <div className="Login">
         <div className="loginWindow">
           <h1 className="loginWindowTitle">WeBucks</h1>
-          <form
-            onChange={this.isValidIdAndPsw}
-            action="list.html"
-            className="loginWindowInputBox"
-            id="loginForm"
-          >
+          <form action="#" className="loginWindowInputBox" id="loginForm">
             <input
               className="loginUserId"
               type="text"
               placeholder="전화번호, 사용자 이름 또는 이메일"
               autoFocus="autofocus"
-              onChange={this.handleIdInput}
+              name="id"
+              value={this.state.id}
+              onChange={this.isValidInput}
             />
             <input
               className="loginUserPsw"
               type="password"
               placeholder="비밀번호"
-              onChange={this.handlePswInput}
+              name="psw"
+              value={this.state.psw}
+              onChange={this.isValidInput}
             />
             <button
+              type="submit"
               className={
-                this.state.isChangeBtn
+                id.includes("@") && psw.length > 4
                   ? "loginUserBtn changeColor"
                   : "loginUserBtn"
               }
             >
-              <Link to="/list-minjaekim" className="ButtonWrapper">
-                로그인
-              </Link>
+              {id.includes("@") && psw.length > 4 ? (
+                <Link to="/list-minjaekim" className="ButtonWrapper">
+                  로그인
+                </Link>
+              ) : (
+                <Link to="/login-minjaekim" className="ButtonWrapper">
+                  로그인
+                </Link>
+              )}
             </button>
           </form>
-          <a href={"#"} className="loginWindowFindUserPsw">
+          <Link to="#" className="loginWindowFindUserPsw">
             비밀번호를 잊으셨나요?
-          </a>
+          </Link>
         </div>
       </div>
     );
