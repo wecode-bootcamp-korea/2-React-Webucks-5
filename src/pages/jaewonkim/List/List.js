@@ -14,6 +14,27 @@ import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 library.add(faHeartRegular, faHeartSolid);
 
 class ListJaeWonKim extends Component {
+  constructor() {
+    super();
+    this.state = {
+      coldBrewCoffeeData: [],
+      brewedCoffeeData: [],
+    };
+  }
+
+  componenetDidMount() {
+    fetch('http://localhost:3000/data/myCoffeeCards.json', {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          coldBrewCoffeeData: data.coldBrewCoffeeCards,
+          brewedCoffeeData: data.brewedCoffeeCards,
+        });
+      });
+  }
+
   render() {
     return (
       <div className="List">
@@ -32,14 +53,14 @@ class ListJaeWonKim extends Component {
           </dl>
 
           <dl id="section2">
-            {LIST_COLDBREW_DATA.map(listColdBrewData => {
+            {LIST_COLDBREW_DATA.map(data => {
               return (
                 <CoffeeCard
-                  key={listColdBrewData.id}
-                  alt={listColdBrewData.alt}
-                  src={listColdBrewData.src}
-                  text={listColdBrewData.text}
-                  link={listColdBrewData.link}
+                  key={data.id}
+                  alt={data.alt}
+                  src={data.src}
+                  text={data.text}
+                  link={data.link}
                 />
               );
             })}
@@ -57,14 +78,14 @@ class ListJaeWonKim extends Component {
           </dl>
 
           <dl id="section2">
-            {LIST_BREWED_DATA.map(listBrewedData => {
+            {LIST_BREWED_DATA.map(data => {
               return (
                 <CoffeeCard
-                  key={listBrewedData.id}
-                  alt={listBrewedData.alt}
-                  src={listBrewedData.src}
-                  text={listBrewedData.text}
-                  link={listBrewedData.link}
+                  key={data.id}
+                  alt={data.alt}
+                  src={data.src}
+                  text={data.text}
+                  link={data.link}
                 />
               );
             })}
