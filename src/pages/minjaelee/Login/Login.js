@@ -8,7 +8,7 @@ class Login extends Component {
     this.state = {
       idInput: '',
       pwInput: '',
-      isActiveButton: false,
+      isValid: false,
     };
   }
 
@@ -20,9 +20,7 @@ class Login extends Component {
   changeBtnColor = () => {
     const isValid =
       this.state.idInput.includes('@') && this.state.pwInput.length >= 5;
-    isValid
-      ? this.setState({ isActiveButton: true })
-      : this.setState({ isActiveButton: false });
+    this.setState({ isValid });
   };
 
   render() {
@@ -31,7 +29,7 @@ class Login extends Component {
         <section className="loginTitle">
           <div className="loginTitleName">WeBucks</div>
         </section>
-        <form className="loginForm" action="/list.html" method="get">
+        <form className="loginForm" action="/list-minjaelee" method="get">
           <input
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
@@ -46,9 +44,7 @@ class Login extends Component {
             className="loginFormPw"
             onChange={this.handleIdPwInput}
           />
-          <button
-            className={this.state.isActiveButton ? 'activeBtn' : 'deactiveBtn'}
-          >
+          <button className={this.state.isValid ? 'activeBtn' : 'deactiveBtn'}>
             <Link to="/list-minjaelee" className="formBtn">
               <span className="loginFormBtnSpan">로그인</span>
             </Link>

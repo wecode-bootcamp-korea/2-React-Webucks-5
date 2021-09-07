@@ -16,6 +16,13 @@ main {
 }
 
 .secondBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  margin-bottom: 30px;
+  height: 55px;
+  background-color: #f4f4f2;
   h2 {
     font-size: 18px;
     font-weight: 900;
@@ -30,16 +37,10 @@ main {
   img {
     height: 25px;
   }
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  margin-bottom: 30px;
-  height: 55px;
-  background-color: #f4f4f2;
 }
 
 .thirdBar {
+  @extend .secondBar;
   h2 {
     @extend h2;
   }
@@ -49,10 +50,11 @@ main {
   img {
     @extend img;
   }
-  @extend .secondBar;
 }
 
 .coldbrew {
+  width: 90%;
+  transition: transform 0.5s;
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -68,8 +70,6 @@ main {
     &:hover {
       transform: scale(1.1);
     }
-    width: 90%;
-    transition: transform 0.5s;
   }
 }
 

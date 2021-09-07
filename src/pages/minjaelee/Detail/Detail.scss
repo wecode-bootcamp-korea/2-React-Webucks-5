@@ -10,6 +10,7 @@ body {
 }
 
 .detailPageTop {
+  margin-top: -15px;
   h1 {
     margin-bottom: 15px;
     font-size: 30px;
@@ -22,10 +23,11 @@ body {
     opacity: 0.5;
     font-size: 15px;
   }
-  margin-top: -15px;
 }
 
 .detailListPage {
+  height: 570px;
+  display: flex;
   .detailPageLeft {
     img {
       width: 400px;
@@ -34,8 +36,14 @@ body {
     margin-right: 40px;
   }
   .detailPageRight {
+    width: 780px;
     .detailTitle {
-      span:first-child {
+      display: flex;
+      justify-content: space-between;
+      width: 780px;
+      border-bottom: 3px solid black;
+      font-weight: 800;
+      .detailTitleName {
         font-size: 26px;
       }
       p {
@@ -46,11 +54,6 @@ body {
       .redHeart {
         color: red;
       }
-      display: flex;
-      justify-content: space-between;
-      width: 780px;
-      border-bottom: 3px solid black;
-      font-weight: 800;
     }
     .detailSubTitle {
       p {
@@ -73,6 +76,7 @@ body {
       font-weight: 800;
     }
     .detailNutritionContent {
+      display: flex;
       .nutritionLeft {
         div {
           display: flex;
@@ -84,17 +88,15 @@ body {
         border-right: 0.8px solid black;
       }
       .nutritionRight {
+        padding: 20px 10px;
+        width: 400px;
         div {
           display: flex;
           justify-content: space-between;
           margin-bottom: 10px;
         }
-        padding: 20px 10px;
-        width: 400px;
       }
-      display: flex;
     }
-    width: 780px;
   }
   .allergyInfo {
     display: flex;
@@ -105,26 +107,24 @@ body {
     background-color: #efefef;
     font-weight: 800;
   }
-  height: 570px;
-  display: flex;
 }
 
 .detailPageBottom {
-  dt {
-    span {
-      margin-bottom: 13px;
-    }
-    dl {
-      margin-bottom: 6px;
-    }
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0px;
-  }
   display: flex;
   justify-content: space-around;
   height: 170px;
   background-color: #333333;
   color: white;
   font-size: 13px;
+  dt {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    span {
+      margin-bottom: 13px;
+    }
+    dl {
+      margin-bottom: 6px;
+    }
+  }
 }

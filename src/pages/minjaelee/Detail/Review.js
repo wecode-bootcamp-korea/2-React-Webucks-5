@@ -23,20 +23,19 @@ class Review extends Component {
     };
   }
 
-  commentInput = e => {
+  handleCommentInput = e => {
     this.setState({ newComment: e.target.value });
   };
 
-  isValidEnterAndSubmitComment = e => {
+  handleEnterAndSubmit = e => {
     if (e.key === 'Enter') {
       e.preventDefault();
       this.state.allComments.push({
         comment: this.state.newComment,
       });
+      this.setState({ allComments: this.state.allComments });
       e.target.value = '';
     }
-
-    this.setState({ newComment: '', allComments: this.state.allComments });
   };
 
   render() {
@@ -57,8 +56,8 @@ class Review extends Component {
             type="text"
             className="reviewInputComment"
             placeholder="리뷰를 입력해주세요. (아이디는 입력하지 않으셔도 됩니다.)"
-            onChange={this.commentInput}
-            onKeyPress={this.isValidEnterAndSubmitComment}
+            onChange={this.handleCommentInput}
+            onKeyPress={this.handleEnterAndSubmit}
           />
         </section>
       </form>
