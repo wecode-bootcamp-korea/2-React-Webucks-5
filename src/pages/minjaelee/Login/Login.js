@@ -12,14 +12,9 @@ class Login extends Component {
     };
   }
 
-  handleIdInput = event => {
-    const { value } = event.target;
-    this.setState({ idInput: value }, this.changeBtnColor);
-  };
-
-  handlePwInput = event => {
-    const { value } = event.target;
-    this.setState({ pwInput: value }, this.changeBtnColor);
+  handleIdPwInput = e => {
+    const { value, name } = e.target;
+    this.setState({ [name]: value }, this.changeBtnColor);
   };
 
   changeBtnColor = () => {
@@ -40,14 +35,16 @@ class Login extends Component {
           <input
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
+            name="idInput"
             className="loginFormId"
-            onChange={this.handleIdInput}
+            onChange={this.handleIdPwInput}
           />
           <input
             type="password"
             placeholder="비밀번호"
+            name="pwInput"
             className="loginFormPw"
-            onChange={this.handlePwInput}
+            onChange={this.handleIdPwInput}
           />
           <button
             className={this.state.isActiveButton ? 'activeBtn' : 'deactiveBtn'}
