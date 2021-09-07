@@ -5,7 +5,7 @@ class CoffeeType extends Component {
   render() {
     return (
       <dt className="CoffeeType">
-        <h2>{this.props.name}</h2>
+        <h2>{this.props.title}</h2>
         <img
           alt="Decaf Coffee Icon"
           src="https://image.istarbucks.co.kr/common/img/menu/logo_decaf.png"
