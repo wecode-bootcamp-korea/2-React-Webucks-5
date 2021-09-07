@@ -25,6 +25,7 @@ class CoffeeCardList extends React.Component {
                 img={coffee.img}
                 title={coffee.title}
                 key={coffee.id}
+                id={coffee.id}
               />
             );
           })}

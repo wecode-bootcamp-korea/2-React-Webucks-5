@@ -10,10 +10,10 @@ class DetailContent extends React.Component {
     return (
       <div className="DetailContent">
         <div className="left">
-          <DetailImageBox />
+          <DetailImageBox coffeeData={this.props.coffeeData} />
         </div>
         <div className="right">
-          <CoffeeDescription />
+          <CoffeeDescription coffeeData={this.props.coffeeData} />
           <NutritionFacts />
           <Review />
         </div>

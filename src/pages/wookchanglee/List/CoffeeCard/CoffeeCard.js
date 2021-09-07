@@ -8,7 +8,7 @@ class CoffeeCard extends React.Component {
   render() {
     return (
       <div className="CoffeeCard">
-        <Link to="/detail-wookchanglee">
+        <Link to={'/detail-wookchanglee/' + this.props.id}>
           <div className="wrapper">
             <img src={this.props.img} alt={this.props.title} />
           </div>

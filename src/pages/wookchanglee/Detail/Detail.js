@@ -6,13 +6,34 @@ import Footer from '../../../components/Footer/Footer';
 import './detail.scss';
 
 class Detail extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      coffeeData: {},
+    };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/coffeeListData.json')
+      .then(res => res.json())
+      .then(res => {
+        for (const coffeeCards in res) {
+          for (const coffeeCard of res[coffeeCards]) {
+            if (coffeeCard.id === this.props.match.params.id) {
+              this.setState({ coffeeData: coffeeCard });
+            }
+          }
+        }
+      });
+  }
+
   render() {
     return (
       <div className="Detail">
         <Nav />
         <section className="detailInner">
           <DetailHeader />
-          <DetailContent />
+          <DetailContent coffeeData={this.state.coffeeData} />
         </section>
         <Footer />
       </div>
