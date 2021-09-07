@@ -1,0 +1,30 @@
+.MidNav {
+  width: 1060px;
+  color: #666;
+  font-size: 14px;
+  text-align: right;
+
+  margin: 75px auto 30px auto;
+
+  position: relative;
+
+  h2 {
+    display: none;
+  }
+
+  #nav-title {
+    position: absolute;
+    top: -60px;
+    left: 0;
+  }
+
+  a {
+    color: #222;
+    font-family: Avenir, Arial, georgia;
+    font-size: 16px;
+    text-decoration: none;
+    opacity: 0.6;
+
+    margin: 0 2px;
+  }
+}

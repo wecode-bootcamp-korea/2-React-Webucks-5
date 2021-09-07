@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Nav.scss';
+import './TopNav.scss';
 
-class Nav extends Component {
+class TopNav extends Component {
   render() {
     return (
-      <div className="Nav">
+      <div className="TopNav">
         <header className="section">
           <div className="menuGroup left">
             <Link to="/login-jaewonkim">
@@ -38,4 +38,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+export default TopNav;
