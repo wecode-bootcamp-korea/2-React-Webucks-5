@@ -14,7 +14,7 @@ class DetailContent extends React.Component {
         </div>
         <div className="right">
           <CoffeeDescription coffeeData={this.props.coffeeData} />
-          <NutritionFacts />
+          <NutritionFacts nutrition={this.props.coffeeData.nutrition} />
           <Reviews />
         </div>
       </div>

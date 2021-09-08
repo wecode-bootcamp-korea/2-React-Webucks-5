@@ -14,7 +14,8 @@
           "protein": 10,
           "sodium": 140,
           "sugars": 53,
-          "caffeine": 210
+          "caffeine": 210,
+          "allergy": "우유 / 대두"
         }
       },
       {
@@ -29,7 +30,8 @@
           "protein": 1,
           "sodium": 20,
           "sugars": 10,
-          "caffeine": 245
+          "caffeine": 245,
+          "allergy": "우유"
         }
       },
       {
@@ -44,7 +46,8 @@
           "protein": 0,
           "sodium": 5,
           "sugars": 0,
-          "caffeine": 245
+          "caffeine": 245,
+          "allergy": null
         }
       },
       {
@@ -59,7 +62,8 @@
           "protein": 8,
           "sodium": 115,
           "sugars": 29,
-          "caffeine": 150
+          "caffeine": 150,
+          "allergy": "우유"
         }
       },
       {
@@ -74,7 +78,8 @@
           "protein": 2,
           "sodium": 15,
           "sugars": 17,
-          "caffeine": 160
+          "caffeine": 160,
+          "allergy": "우유"
         }
       },
       {
@@ -89,7 +94,8 @@
           "protein": 3,
           "sodium": 58,
           "sugars": 11,
-          "caffeine": 150
+          "caffeine": 150,
+          "allergy": "우유"
         }
       },
       {
@@ -104,7 +110,8 @@
           "protein": 10,
           "sodium": 115,
           "sugars": 44,
-          "caffeine": 105
+          "caffeine": 105,
+          "allergy": null
         }
       },
       {
@@ -119,7 +126,8 @@
           "protein": 0,
           "sodium": 11,
           "sugars": 0,
-          "caffeine": 150
+          "caffeine": 150,
+          "allergy": null
         }
       },
       {
@@ -134,7 +142,8 @@
           "protein": 10,
           "sodium": 147.8,
           "sugars": 40,
-          "caffeine": 150
+          "caffeine": 150,
+          "allergy": "우유 / 대두"
         }
       },
       {
@@ -149,7 +158,8 @@
           "protein": 1,
           "sodium": 95,
           "sugars": 11,
-          "caffeine": 65
+          "caffeine": 65,
+          "allergy": null
         }
       }
     ]
@@ -169,7 +179,8 @@
           "protein": 0,
           "sodium": 10,
           "sugars": 0,
-          "caffeine": 140
+          "caffeine": 140,
+          "allergy": null
         }
       },
       {
@@ -184,7 +195,8 @@
           "protein": 0,
           "sodium": 10,
           "sugars": 0,
-          "caffeine": 260
+          "caffeine": 260,
+          "allergy": null
         }
       }
     ]

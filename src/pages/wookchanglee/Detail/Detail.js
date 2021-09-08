@@ -9,7 +9,7 @@ class Detail extends React.Component {
   constructor() {
     super();
     this.state = {
-      coffeeData: {},
+      coffeeData: null,
     };
   }
 
@@ -33,7 +33,9 @@ class Detail extends React.Component {
         <Nav />
         <section className="detailInner">
           <DetailHeader />
-          <DetailContent coffeeData={this.state.coffeeData} />
+          <DetailContent
+            coffeeData={this.state.coffeeData ? this.state.coffeeData : {}}
+          />
         </section>
         <Footer />
       </div>

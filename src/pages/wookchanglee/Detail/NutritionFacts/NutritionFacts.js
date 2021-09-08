@@ -13,33 +13,37 @@ class NutritionFacts extends React.Component {
           <div className="nutritionRow">
             <div className="nutritionCol">
               <p>1회 제공량 (kcal)</p>
-              <p>420</p>
+              <p>{this.props.nutrition?.kcal}</p>
             </div>
             <div className="nutritionCol">
               <p>포화지방 (g)</p>
-              <p>6</p>
+              <p>{this.props.nutrition?.satFat}</p>
             </div>
             <div className="nutritionCol">
               <p>단백질 (g)</p>
-              <p>10</p>
+              <p>{this.props.nutrition?.protein}</p>
             </div>
           </div>
           <div className="nutritionRow">
             <div className="nutritionCol">
               <p>나트륨 (mg)</p>
-              <p>140</p>
+              <p>{this.props.nutrition?.sodium}</p>
             </div>
             <div className="nutritionCol">
               <p>당류 (g)</p>
-              <p>53</p>
+              <p>{this.props.nutrition?.sugars}</p>
             </div>
             <div className="nutritionCol">
               <p>카페인 (mg)</p>
-              <p>210</p>
+              <p>{this.props.nutrition?.caffeine}</p>
             </div>
           </div>
         </div>
-        <p className="allergy">알레르기 유발 요인 : 대두 / 우유</p>
+        {this.props.nutrition?.allergy ? (
+          <p className="allergy">
+            알레르기 유발 요인 : {this.props.nutrition.allergy}
+          </p>
+        ) : null}
       </div>
     );
   }
