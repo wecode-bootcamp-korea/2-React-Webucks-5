@@ -38,8 +38,8 @@ class DetailJaeWonKim extends Component {
   };
 
   render() {
-    const { isLikedHeart } = this.state;
-
+    const { isLikedHeart, myReviews } = this.state;
+    const { toggleHeart } = this;
     return (
       <div className="Detail">
         <TopNav />
@@ -59,14 +59,14 @@ class DetailJaeWonKim extends Component {
                   제주 비자림 콜드 브루
                   <FontAwesomeIcon
                     className="far fa-heart"
-                    onClick={this.toggleHeart}
+                    onClick={toggleHeart}
                     icon={faHeartRegular}
                   />
                   <FontAwesomeIcon
                     className={
                       isLikedHeart ? 'fas fa-heart active' : 'fas fa-heart'
                     }
-                    onClick={this.toggleHeart}
+                    onClick={toggleHeart}
                     icon={faHeartSolid}
                   />
                 </h3>
@@ -126,7 +126,7 @@ class DetailJaeWonKim extends Component {
                 <h5>리뷰</h5>
               </div>
               <div className="section-review">
-                {this.state.myReviews.map(data => {
+                {myReviews.map(data => {
                   return (
                     <Review
                       key={data.id}
