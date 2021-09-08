@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
-
 import TopNav from '../../../components/TopNav/TopNav';
 import CoffeeType from './CoffeeType/CoffeeType';
 import CoffeeCard from './CoffeCard/CoffeeCard';
@@ -37,10 +35,8 @@ class ListJaeWonKim extends Component {
     return (
       <div className="List">
         <TopNav />
-
         <section>
           <CoffeeType title={'콜드 브루 커피'} />
-
           <dl className="section-cards">
             {this.state.coldBrewCoffeeData.map(data => {
               return (
@@ -54,9 +50,7 @@ class ListJaeWonKim extends Component {
               );
             })}
           </dl>
-
           <CoffeeType title={'브루드 커피'} />
-
           <dl className="section-cards">
             {this.state.brewedCoffeeData.map(data => {
               return (
