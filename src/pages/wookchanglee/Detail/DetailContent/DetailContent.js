@@ -2,7 +2,7 @@ import React from 'react';
 import DetailImageBox from '../DetailImageBox/DetailImageBox';
 import CoffeeDescription from '../CoffeeDescription/CoffeeDescription';
 import NutritionFacts from '../NutritionFacts/NutritionFacts';
-import Review from '../Review/Review';
+import Reviews from '../Reviews/Reviews';
 import './DetailContent.scss';
 
 class DetailContent extends React.Component {
@@ -15,7 +15,7 @@ class DetailContent extends React.Component {
         <div className="right">
           <CoffeeDescription coffeeData={this.props.coffeeData} />
           <NutritionFacts />
-          <Review />
+          <Reviews />
         </div>
       </div>
     );

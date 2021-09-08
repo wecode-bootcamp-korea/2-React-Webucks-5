@@ -8,7 +8,8 @@ class List extends Component {
   constructor() {
     super();
     this.state = {
-      COFFEELIST_DATA: [],
+      coldBrewCoffeeCards: null,
+      brewedCoffeeCards: null,
     };
   }
 
@@ -16,7 +17,10 @@ class List extends Component {
     fetch('http://localhost:3000/data/coffeeListData.json')
       .then(res => res.json())
       .then(res => {
-        this.setState({ COFFEELIST_DATA: res });
+        this.setState({
+          coldBrewCoffeeCards: res.coldBrewCoffeeCards,
+          brewedCoffeeCards: res.brewedCoffeeCards,
+        });
       });
   }
 
@@ -26,25 +30,25 @@ class List extends Component {
         <Nav />
         <CoffeeCardList
           COFFEELIST_DATA={
-            this.state.COFFEELIST_DATA.coldBrewCoffeeCards
-              ? this.state.COFFEELIST_DATA.coldBrewCoffeeCards.coffees
+            this.state.coldBrewCoffeeCards
+              ? this.state.coldBrewCoffeeCards.coffees
               : []
           }
           coffeeCardsName={
-            this.state.COFFEELIST_DATA.coldBrewCoffeeCards
-              ? this.state.COFFEELIST_DATA.coldBrewCoffeeCards.title
+            this.state.coldBrewCoffeeCards
+              ? this.state.coldBrewCoffeeCards.title
               : ''
           }
         />
         <CoffeeCardList
           COFFEELIST_DATA={
-            this.state.COFFEELIST_DATA.brewedCoffeeCards
-              ? this.state.COFFEELIST_DATA.brewedCoffeeCards.coffees
+            this.state.brewedCoffeeCards
+              ? this.state.brewedCoffeeCards.coffees
               : []
           }
           coffeeCardsName={
-            this.state.COFFEELIST_DATA.brewedCoffeeCards
-              ? this.state.COFFEELIST_DATA.brewedCoffeeCards.title
+            this.state.brewedCoffeeCards
+              ? this.state.brewedCoffeeCards.title
               : ''
           }
         />

@@ -10,14 +10,14 @@ class LoginForm extends React.Component {
           name="id"
           type="text"
           placeholder="전화번호, 사용자의 이름 또는 이메일"
-          onChange={this.props.handleInput}
+          onChange={this.props.writeInput}
         />
         <input
           className="pw"
           name="pw"
           type="password"
           placeholder="비밀번호"
-          onChange={this.props.handleInput}
+          onChange={this.props.writeInput}
         />
         <button
           className={

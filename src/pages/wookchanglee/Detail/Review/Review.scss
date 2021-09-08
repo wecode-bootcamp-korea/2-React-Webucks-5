@@ -1,32 +1,36 @@
 .Review {
-  h2 {
-    margin: 40px 0 10px 0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    font-size: 20px;
-    font-weight: 600;
-  }
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
 
-  .reviewList {
-    margin: 20px 0;
-  }
-
-  .inputBox {
+  .content {
     display: flex;
 
-    input {
-      height: 30px;
-      padding-left: 10px;
-      border: 0;
-      background-color: #efefef;
+    .username {
+      margin-right: 10px;
+      font-weight: 700;
+    }
+  }
+
+  .option {
+    display: flex;
+
+    .like {
+      position: relative;
+      top: -4px;
+      margin: 0 0 10px 10px;
+      color: #ccc;
+      font-size: 18px;
+      cursor: pointer;
+
+      .fas {
+        color: #f5425d;
+      }
     }
 
-    .id {
-      flex: 1;
-    }
-
-    .content {
-      flex: 5;
+    .delete {
+      margin-left: 15px;
+      cursor: pointer;
     }
   }
 }

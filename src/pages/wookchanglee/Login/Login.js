@@ -14,7 +14,7 @@ class Login extends Component {
       this.props.history.push('/list-wookchanglee');
   };
 
-  handleInput = e => {
+  writeInput = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
   };
@@ -33,7 +33,7 @@ class Login extends Component {
             id={this.state.id}
             pw={this.state.pw}
             goToList={this.goToList}
-            handleInput={this.handleInput}
+            writeInput={this.writeInput}
           />
           <Link to="#" className="anotherApproach">
             비밀번호를 잊으셨나요?
