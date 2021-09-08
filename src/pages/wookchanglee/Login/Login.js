@@ -4,21 +4,6 @@ import LoginForm from './LoginForm/LoginForm';
 import './Login.scss';
 
 class Login extends Component {
-  constructor() {
-    super();
-    this.state = { id: '', pw: '' };
-  }
-
-  goToList = () => {
-    if (this.state.id.includes('@') && this.state.pw.length > 4)
-      this.props.history.push('/list-wookchanglee');
-  };
-
-  writeInput = e => {
-    const { name, value } = e.target;
-    this.setState({ [name]: value });
-  };
-
   render() {
     return (
       <section className="Login">
@@ -27,14 +12,8 @@ class Login extends Component {
             className="logo"
             src="/images/wookchanglee/WeBucks-logo.svg"
             alt="logo"
-            onClick={this.goToList}
           />
-          <LoginForm
-            id={this.state.id}
-            pw={this.state.pw}
-            goToList={this.goToList}
-            writeInput={this.writeInput}
-          />
+          <LoginForm />
           <Link to="#" className="anotherApproach">
             비밀번호를 잊으셨나요?
           </Link>
