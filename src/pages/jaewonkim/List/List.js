@@ -39,11 +39,9 @@ class ListJaeWonKim extends Component {
         <TopNav />
 
         <section>
-          <dl className="section1">
-            <CoffeeType title={'콜드 브루 커피'} />
-          </dl>
+          <CoffeeType title={'콜드 브루 커피'} />
 
-          <dl className="section2">
+          <dl className="section-cards">
             {this.state.coldBrewCoffeeData.map(data => {
               return (
                 <CoffeeCard
@@ -57,11 +55,9 @@ class ListJaeWonKim extends Component {
             })}
           </dl>
 
-          <dl className="section1">
-            <CoffeeType title={'브루드 커피'} />
-          </dl>
+          <CoffeeType title={'브루드 커피'} />
 
-          <dl className="section2">
+          <dl className="section-cards">
             {this.state.brewedCoffeeData.map(data => {
               return (
                 <CoffeeCard

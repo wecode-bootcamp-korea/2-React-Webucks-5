@@ -1,18 +1,13 @@
 .List {
-  width: 100vw;
-  height: 100vh;
-  background-color: #ffffff;
-
-  margin: 0;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 
-  position: relative;
-  top: -8px;
-  left: -8px;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #ffffff;
 
   .TopNav {
     // 팀에서 공유한 TopNav 컴포넌트의 세부 레이아웃을 알맞게 조정
@@ -27,44 +22,30 @@
       font-weight: 400;
       text-decoration: none;
     }
-
-    ul {
-      list-style: none;
-    }
   }
 
   section {
-    // 팀에서 공유한 TopNav 컴포넌트의 세부 레이아웃을 알맞게 조정
-    &::before {
-      content: '';
-      margin-top: -20px;
-    }
-
-    width: 1080px;
+    position: relative;
+    top: -32px;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-  }
 
-  .section1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  .section2 {
     width: 1080px;
 
-    margin: 0;
+    .section-cards {
+      position: relative;
+      top: 15px;
+      left: 10px;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
 
-    position: relative;
-    left: 10px;
+      width: 1080px;
+    }
   }
 }
