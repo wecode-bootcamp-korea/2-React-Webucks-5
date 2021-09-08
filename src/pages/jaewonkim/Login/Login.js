@@ -36,14 +36,12 @@ class LoginJaeWonKim extends Component {
         <header>
           <h1>WeBucks Login Page</h1>
         </header>
-
         <section>
           <img
             id="logo"
             alt="WeBucks Logo"
             src="/images/jaewonkim/WeBucks-logo.svg"
           />
-
           <form
             id="form"
             onKeyUp={this.activateButton}
@@ -71,7 +69,6 @@ class LoginJaeWonKim extends Component {
               로그인
             </button>
           </form>
-
           <Link id="lost" to="#">
             비밀번호를 잊으셨나요?
           </Link>

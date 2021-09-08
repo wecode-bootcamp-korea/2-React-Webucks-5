@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
-
 import TopNav from '../../../components/TopNav/TopNav';
 import MidNav from './MidNav/MidNav';
 import Review from './Review/Review';
@@ -46,7 +44,6 @@ class DetailJaeWonKim extends Component {
       <div className="Detail">
         <TopNav />
         <MidNav />
-
         <main>
           <aside>
             <h3>제주 비자림 콜드 브루</h3>
@@ -55,7 +52,6 @@ class DetailJaeWonKim extends Component {
               src="https://image.istarbucks.co.kr/upload/store/skuimg/2020/09/[9200000002672]_20200921171223958.jpg"
             />
           </aside>
-
           <section>
             <div className="section">
               <div className="section-info">
@@ -86,13 +82,11 @@ class DetailJaeWonKim extends Component {
                 </p>
               </div>
             </div>
-
             <div className="section">
               <div className="section-spec">
                 <h5>제품 영양 정보</h5>
                 <p>Grande(그란데) / 473ml (16 fl oz)</p>
               </div>
-
               <div className="section-spec">
                 <div>
                   <dl>
@@ -123,12 +117,10 @@ class DetailJaeWonKim extends Component {
                   </dl>
                 </div>
               </div>
-
               <div className="section-spec">
                 <p>알레르기 유발 요인 : 우유</p>
               </div>
             </div>
-
             <div className="section">
               <div className="section-review">
                 <h5>리뷰</h5>
@@ -144,14 +136,12 @@ class DetailJaeWonKim extends Component {
                   );
                 })}
               </div>
-
               <form className="section-review">
                 <input type="text" placeholder="리뷰를 입력해주세요." />
               </form>
             </div>
           </section>
         </main>
-
         <Footer />
       </div>
     );
