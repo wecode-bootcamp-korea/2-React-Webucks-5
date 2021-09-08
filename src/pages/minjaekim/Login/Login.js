@@ -17,6 +17,7 @@ class Login extends Component {
 
   render() {
     const { id, psw } = this.state;
+    const isVaild = id.includes("@") && psw.length > 4;
     return (
       <div className="Login">
         <div className="loginWindow">
@@ -41,13 +42,9 @@ class Login extends Component {
             />
             <button
               type="submit"
-              className={
-                id.includes("@") && psw.length > 4
-                  ? "loginUserBtn changeColor"
-                  : "loginUserBtn"
-              }
+              className={isVaild ? "loginUserBtn changeColor" : "loginUserBtn"}
             >
-              {id.includes("@") && psw.length > 4 ? (
+              {isVaild ? (
                 <Link to="/list-minjaekim" className="ButtonWrapper">
                   로그인
                 </Link>
