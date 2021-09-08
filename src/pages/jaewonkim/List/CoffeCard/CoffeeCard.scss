@@ -1,26 +1,25 @@
 .CoffeeCard {
-  width: 250px;
-
-  margin-top: 4px;
-  margin-inline-end: 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  width: 250px;
+  margin-top: 4px;
+  margin-inline-end: 20px;
 
   img {
     width: 250px;
   }
 
   h3 {
+    margin: 8px 0 20px 0;
+
     color: #333;
     font-family: Avenir, Arial, georgia;
     font-size: 16px;
     font-weight: 450;
-    text-decoration: none;
     text-align: center;
-
-    margin: 8px 0 20px 0;
+    text-decoration: none;
   }
 
   .fa-heart.far {

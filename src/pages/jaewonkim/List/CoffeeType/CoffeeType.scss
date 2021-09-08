@@ -1,31 +1,36 @@
 .CoffeeType {
-  width: 1060px;
-  height: 60px;
-  background-color: #f6f5ef;
+  margin-top: 30px;
 
-  padding-top: 8px;
+  dt {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+    width: 1060px;
+    height: 60px;
+    padding-top: 20px;
 
-  h2 {
-    color: #333;
-    font-family: Avenir, Arial, georgia;
-    font-size: 16px;
+    background-color: #f6f5ef;
 
-    margin-left: 24px;
-  }
+    h2 {
+      margin-left: 24px;
 
-  img {
-    height: 30px;
+      color: #333;
+      font-family: Avenir, Arial, georgia;
+      font-size: 16px;
+    }
 
-    margin: 9px 9px 9px 15px;
-  }
+    img {
+      height: 30px;
+      margin: -4px 9px 9px 15px;
+    }
 
-  p {
-    color: #333;
-    font-family: Avenir, Arial, georgia;
-    font-size: 14px;
+    p {
+      padding-top: 1px;
+
+      color: #333;
+      font-family: Avenir, Arial, georgia;
+      font-size: 14px;
+    }
   }
 }
