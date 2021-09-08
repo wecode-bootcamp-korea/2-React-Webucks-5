@@ -1,0 +1,463 @@
+{
+  "MESSAGE": "SUCCESS",
+  "COLD_BREW_DETAIL_DATA": [
+    {
+      "id": 1,
+      "englishName": "Nitro Vanilla Cream",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 345 },
+          { "name": "포화지방 (g)", "amount": 11 },
+          { "name": "단백질 (g)", "amount": 11 },
+          { "name": "나트륨 (mg)", "amount": 150 },
+          { "name": "당류 (g)", "amount": 35 },
+          { "name": "카페인 (mg)", "amount": 75 }
+        ],
+        "allergen": "우유"
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "coffee_lover",
+          "reviewContent": "너무 맛있어요!",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "CHOCO7 ggg",
+          "reviewContent": "오늘도 화이팅",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "englishName": "Nitro Cold Brew",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 412 },
+          { "name": "포화지방 (g)", "amount": 33 },
+          { "name": "단백질 (g)", "amount": 60 },
+          { "name": "나트륨 (mg)", "amount": 134 },
+          { "name": "당류 (g)", "amount": 25 },
+          { "name": "카페인 (mg)", "amount": 48 }
+        ],
+        "allergen": null
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "coffee_hater",
+          "reviewContent": "별로인데요?",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "mint_chocoholic",
+          "reviewContent": "끝내줘요!",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 나이트로 콜드 블루는 전설이다. 진짜 나이트로 콜드 블루는 전설이다. 진짜 나이트로 콜드 블루는 전설이다. 진짜 나이트로 콜드 블루는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "englishName": "Dolce Cold Brew",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 358 },
+          { "name": "포화지방 (g)", "amount": 47 },
+          { "name": "단백질 (g)", "amount": 10 },
+          { "name": "나트륨 (mg)", "amount": 85 },
+          { "name": "당류 (g)", "amount": 308 },
+          { "name": "카페인 (mg)", "amount": 758 }
+        ],
+        "allergen": "커피"
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "codingchoi",
+          "reviewContent": "최고입니다!",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "CHOCO999",
+          "reviewContent": "가성비 최고",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 돌체는 전설이다. 진짜 돌체는 전설이다. 진짜 돌체는 전설이다. 진짜 돌체는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "englishName": "Velvet Dark Mocha Nitro",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 755 },
+          { "name": "포화지방 (g)", "amount": 159 },
+          { "name": "단백질 (g)", "amount": 58 },
+          { "name": "나트륨 (mg)", "amount": 350 },
+          { "name": "당류 (g)", "amount": 35 },
+          { "name": "카페인 (mg)", "amount": 7 }
+        ],
+        "allergen": null
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "coffee_lover",
+          "reviewContent": "너무 맛있어요!",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "CHOCO7 ggg",
+          "reviewContent": "오늘도 화이팅 gggg",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "englishName": "Vanilla Cream Cold Brew",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 358 },
+          { "name": "포화지방 (g)", "amount": 159 },
+          { "name": "단백질 (g)", "amount": 84 },
+          { "name": "나트륨 (mg)", "amount": 57 },
+          { "name": "당류 (g)", "amount": 47 },
+          { "name": "카페인 (mg)", "amount": 29 }
+        ],
+        "allergen": "바닐라"
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "coffee_lover",
+          "reviewContent": "너무 맛있어요!",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "CHOCO7 ggg",
+          "reviewContent": "오늘도 화이팅 gggg",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "englishName": "Jeju Bijarim Cold Brew",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 174 },
+          { "name": "포화지방 (g)", "amount": 57 },
+          { "name": "단백질 (g)", "amount": 88 },
+          { "name": "나트륨 (mg)", "amount": 142 },
+          { "name": "당류 (g)", "amount": 85 },
+          { "name": "카페인 (mg)", "amount": 83 }
+        ],
+        "allergen": null
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "coffee_lover",
+          "reviewContent": "너무 맛있어요!",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "CHOCO7 ggg",
+          "reviewContent": "오늘도 화이팅 gggg",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "englishName": "Cold Brew",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 585 },
+          { "name": "포화지방 (g)", "amount": 38 },
+          { "name": "단백질 (g)", "amount": 41 },
+          { "name": "나트륨 (mg)", "amount": 36 },
+          { "name": "당류 (g)", "amount": 22 },
+          { "name": "카페인 (mg)", "amount": 99 }
+        ],
+        "allergen": "아라비카"
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "coffee_lover",
+          "reviewContent": "너무 맛있어요!",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "CHOCO7 ggg",
+          "reviewContent": "오늘도 화이팅 gggg",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "englishName": "Cold Brew Malt",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 905 },
+          { "name": "포화지방 (g)", "amount": 89 },
+          { "name": "단백질 (g)", "amount": 92 },
+          { "name": "나트륨 (mg)", "amount": 47 },
+          { "name": "당류 (g)", "amount": 24 },
+          { "name": "카페인 (mg)", "amount": 75 }
+        ],
+        "allergen": null
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "coffee_lover",
+          "reviewContent": "너무 맛있어요!",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "CHOCO7 ggg",
+          "reviewContent": "오늘도 화이팅 gggg",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "englishName": "Cold Brew Oat Latte",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 345 },
+          { "name": "포화지방 (g)", "amount": 11 },
+          { "name": "단백질 (g)", "amount": 11 },
+          { "name": "나트륨 (mg)", "amount": 150 },
+          { "name": "당류 (g)", "amount": 35 },
+          { "name": "카페인 (mg)", "amount": 75 }
+        ],
+        "allergen": "우유"
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "coffee_lover",
+          "reviewContent": "너무 맛있어요!",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "CHOCO7 ggg",
+          "reviewContent": "오늘도 화이팅 gggg",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "englishName": "Cold Brew Float",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 345 },
+          { "name": "포화지방 (g)", "amount": 11 },
+          { "name": "단백질 (g)", "amount": 11 },
+          { "name": "나트륨 (mg)", "amount": 150 },
+          { "name": "당류 (g)", "amount": 35 },
+          { "name": "카페인 (mg)", "amount": 75 }
+        ],
+        "allergen": "우유"
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "coffee_lover",
+          "reviewContent": "너무 맛있어요!",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "CHOCO7 ggg",
+          "reviewContent": "오늘도 화이팅 gggg",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "englishName": "French Apple Tart Nitro",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 345 },
+          { "name": "포화지방 (g)", "amount": 11 },
+          { "name": "단백질 (g)", "amount": 11 },
+          { "name": "나트륨 (mg)", "amount": 150 },
+          { "name": "당류 (g)", "amount": 35 },
+          { "name": "카페인 (mg)", "amount": 75 }
+        ],
+        "allergen": "우유"
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "coffee_lover",
+          "reviewContent": "너무 맛있어요!",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "CHOCO7 ggg",
+          "reviewContent": "오늘도 화이팅 gggg",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    }
+  ],
+
+  "BREWED_DETAIL_DATA": [
+    {
+      "id": 1,
+      "englishName": "Cold Brew",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 345 },
+          { "name": "포화지방 (g)", "amount": 11 },
+          { "name": "단백질 (g)", "amount": 11 },
+          { "name": "나트륨 (mg)", "amount": 150 },
+          { "name": "당류 (g)", "amount": 35 },
+          { "name": "카페인 (mg)", "amount": 75 }
+        ],
+        "allergen": "우유"
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "coffee_lover",
+          "reviewContent": "아아는 돈 주고 안 사먹습니다.",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "mOoNcOdInG",
+          "reviewContent": "JMT",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 아이스 커피는 전설이다. 진짜 아이스 커피는 전설이다. 진짜 아이스 커피는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "englishName": "Nitro",
+      "nutrition": {
+        "labels": [
+          { "name": "1회 제공량", "amount": 412 },
+          { "name": "포화지방 (g)", "amount": 33 },
+          { "name": "단백질 (g)", "amount": 60 },
+          { "name": "나트륨 (mg)", "amount": 134 },
+          { "name": "당류 (g)", "amount": 25 },
+          { "name": "카페인 (mg)", "amount": 48 }
+        ],
+        "allergen": null
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "userId": "coffee_lover",
+          "reviewContent": "너무 맛있어요!",
+          "isLiked": false
+        },
+        {
+          "id": 2,
+          "userId": "CHOCO7 ggg",
+          "reviewContent": "오늘도 화이팅 gggg",
+          "isLiked": false
+        },
+        {
+          "id": 3,
+          "userId": "legend_dev",
+          "reviewContent": "진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다. 진짜 화이트 초콜릿 모카는 전설이다.",
+          "isLiked": false
+        }
+      ]
+    }
+  ]
+}

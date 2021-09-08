@@ -1,12 +1,8 @@
-$leewidth: 1100px;
-$kimwidth: 1080px;
-$sungwidth: 1100px;
-$wonwidth: 1060px;
-$wookwidth: 1100px;
+@import '../../styles/variable';
 
 .Nav {
   .section {
-    max-width: $sungwidth;
+    max-width: $mainWidth;
     height: 55px;
     padding: 10px 20px;
   }
@@ -44,6 +40,8 @@ $wookwidth: 1100px;
   #toggleBar {
     display: none;
   }
+
+  // 밑에 내용은 공용으로 사용 할 반응형 scss인데 아직 완벽히 구현하지 못해서 일단 주석처리했습니다.
 
   // @media (max-width: 1200px) {
   //   .section {

@@ -1,0 +1,18 @@
+// 아직 구현하지 못했습니다. 무시하셔도 됩니다.
+{
+  "MESSAGE": "SUCCESS",
+  "LOGIN_DATA": [
+    {
+      "email": "s@",
+      "password": 12345
+    },
+    {
+      "email": "d@",
+      "password": 12345
+    },
+    {
+      "email": "f@",
+      "password": 12345
+    }
+  ]
+}

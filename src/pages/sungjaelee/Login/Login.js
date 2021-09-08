@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
 import Input from '../../../components/Input/Input';
-
 import './Login.scss';
 
 class Login extends Component {
@@ -11,26 +9,18 @@ class Login extends Component {
     this.state = {
       idInput: '',
       pwInput: '',
-      isValidInput: false,
     };
-    this.handleInput = this.handleInput.bind(this);
-    this.handleValidityCheck = this.handleValidityCheck.bind(this);
   }
 
-  handleInput(e) {
+  handleInput = e => {
     const { name, value } = e.target;
-    this.setState({ [name]: value }, this.handleValidityCheck);
-  }
-
-  handleValidityCheck() {
-    const { idInput, pwInput } = this.state;
-    const isValidInput = idInput.includes('@') && pwInput.length >= 5;
-    this.setState({ isValidInput });
-  }
+    this.setState({ [name]: value });
+  };
 
   render() {
-    const { isValidInput } = this.state;
+    const { idInput, pwInput } = this.state;
     const { handleInput } = this;
+    const isValidInput = idInput.includes('@') && pwInput.length >= 5;
 
     return (
       <div className="Login">

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-
 import './Nav.scss';
 
 class Nav extends Component {
@@ -10,10 +9,10 @@ class Nav extends Component {
     const { pathname } = this.props;
 
     return (
-      <div className="Nav">
+      <nav className="Nav">
         <header className="section">
           <div className="menuGroup right">
-            {pathname === '/list-sungjaelee' ? (
+            {pathname === '/list-sungjaelee' ? ( // 더 clean code한 방법 찾고 있음
               <img src="/images/sungjaelee/WeBucks-logo.svg" alt="logo" />
             ) : (
               <Link to="/list-sungjaelee">
@@ -42,7 +41,7 @@ class Nav extends Component {
           </div>
           <FontAwesomeIcon icon={faBars} id="toggleBar" />
         </header>
-      </div>
+      </nav>
     );
   }
 }

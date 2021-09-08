@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import './NutritionLabel.scss';
 
 class NutritionLabel extends Component {

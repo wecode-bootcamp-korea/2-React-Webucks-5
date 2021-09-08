@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-
 import CoffeeCard from './CoffeeCard/CoffeeCard';
-
 import './CoffeeCardsContainer.scss';
 
 class CoffeeCardsContainer extends Component {
   render() {
-    const { data, dataName, title, subtitle, handleLike } = this.props;
+    const { data, dataName, title, subtitle, toggleLike } = this.props;
 
     return (
       <section className="CoffeeCardsContainer">
@@ -15,14 +13,14 @@ class CoffeeCardsContainer extends Component {
           <p className="subtitle">{subtitle}</p>
         </header>
         <ul className="listContainer">
-          {data.map((coffee, i) => {
+          {data.map((coffee, index) => {
             return (
               <CoffeeCard
                 key={coffee.id}
                 coffee={coffee}
-                i={i}
                 dataName={dataName}
-                handleLike={handleLike}
+                index={index}
+                toggleLike={toggleLike}
               />
             );
           })}

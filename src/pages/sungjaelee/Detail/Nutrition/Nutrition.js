@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-
 import NutritionLabel from './NutritionLabel/NutritionLabel';
-
 import './Nutrition.scss';
 
 class Nutrition extends Component {
   render() {
-    const { coffee } = this.props;
-    const { nutritionInfo, allergen } = coffee;
+    const { labels, allergen } = this.props;
 
     return (
       <div className="Nutrition">
@@ -17,7 +14,7 @@ class Nutrition extends Component {
         </div>
 
         <dl className="nutritionInfoContainer">
-          {nutritionInfo.map((label, i) => {
+          {labels.map((label, i) => {
             const { name, amount } = label;
             return <NutritionLabel key={i} name={name} amount={amount} />;
           })}
