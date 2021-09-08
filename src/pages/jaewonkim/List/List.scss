@@ -1,0 +1,44 @@
+.List {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+
+  .TopNav {
+    .menuGroup.left img {
+      margin: 8px auto auto 4px;
+    }
+
+    a {
+      color: #333;
+      font-family: Avenir, Arial, georgia;
+      font-size: 16px;
+      font-weight: 400;
+      text-decoration: none;
+    }
+  }
+
+  section {
+    position: relative;
+    top: -32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1080px;
+
+    .section-cards {
+      position: relative;
+      top: 15px;
+      left: 10px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 1080px;
+    }
+  }
+}

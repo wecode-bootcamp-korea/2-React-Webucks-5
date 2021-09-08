@@ -1,0 +1,41 @@
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import './TopNav.scss';
+
+class TopNav extends Component {
+  render() {
+    return (
+      <div className="TopNav">
+        <header className="section">
+          <div className="menuGroup left">
+            <Link to="/login-jaewonkim">
+              <img src="/images/jaewonkim/WeBucks-logo.svg" alt="logo" />
+            </Link>
+          </div>
+          <div className="menuGroup right toggle">
+            <ul>
+              <li>
+                <Link to="#">COFFEE</Link>
+              </li>
+              <li>
+                <Link to="/list-jaewonkim">MENU</Link>
+              </li>
+              <li>
+                <Link to="#">STORE</Link>
+              </li>
+              <li>
+                <Link to="#">WHAT'S NEW</Link>
+              </li>
+              <li>
+                <Link to="/login-jaewonkim">SIGN-IN</Link>
+              </li>
+            </ul>
+          </div>
+          <i className="fas fa-bars" id="toggleBar"></i>
+        </header>
+      </div>
+    );
+  }
+}
+
+export default TopNav;
