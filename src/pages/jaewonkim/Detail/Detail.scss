@@ -222,32 +222,6 @@
           font-weight: bold;
         }
 
-        dl {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: flex-start;
-
-          margin-top: 4px;
-
-          color: #222;
-          font-family: 'nbg', '맑은 고딕', HelveticaNeue, DroidSans, Sans-serif,
-            Helvetica;
-          font-size: 14px;
-        }
-
-        dt {
-          flex: 1;
-
-          font-weight: bold;
-        }
-
-        dd {
-          flex: 5;
-
-          margin: 1px auto 0 4px;
-        }
-
         input {
           margin: 15px 0 60px 0;
           border: 0;

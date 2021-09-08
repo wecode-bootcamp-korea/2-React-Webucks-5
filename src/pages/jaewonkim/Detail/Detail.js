@@ -7,6 +7,7 @@ import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 
 import TopNav from '../../../components/TopNav/TopNav';
 import MidNav from './MidNav/MidNav';
+import Review from './Review/Review';
 import Footer from '../../../components/Footer/Footer';
 import './Detail.scss';
 
@@ -17,7 +18,20 @@ class DetailJaeWonKim extends Component {
     super();
     this.state = {
       isLikedHeart: false,
+      myReviews: [],
+      newUserName: '(Unknown)',
+      newReviewContent: '',
     };
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3000/data/myReviews.json')
+      .then(res => res.json())
+      .then(data => {
+        this.setState({
+          myReviews: data.myReviews,
+        });
+      });
   }
 
   toggleHeart = () => {
@@ -120,26 +134,20 @@ class DetailJaeWonKim extends Component {
                 <h5>리뷰</h5>
               </div>
               <div className="section-review">
-                <dl>
-                  <dt>coffe_lover</dt>
-                  <dd>너무 맛있어요!</dd>
-                </dl>
-                <dl className="section-review">
-                  <dt>CHOCO7</dt>
-                  <dd>오늘도 제주 비자림 콜드 브루를 마시러 갑니다.</dd>
-                </dl>
-                <dl className="section-review">
-                  <dt>legend_dev</dt>
-                  <dd>
-                    진짜 제주 비자림 콜드 브루는 전설이다. 진짜 제주 비자림 콜드
-                    브루는 전설이다. 진짜 제주 비자림 콜드 브루는 전설이다.
-                  </dd>
-                </dl>
+                {this.state.myReviews.map(data => {
+                  return (
+                    <Review
+                      key={data.id}
+                      userName={data.userName}
+                      reviewContent={data.reviewContent}
+                    />
+                  );
+                })}
               </div>
 
-              <div className="section-review">
+              <form className="section-review">
                 <input type="text" placeholder="리뷰를 입력해주세요." />
-              </div>
+              </form>
             </div>
           </section>
         </main>
