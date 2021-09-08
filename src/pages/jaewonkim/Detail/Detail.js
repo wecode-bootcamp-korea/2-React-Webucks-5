@@ -18,9 +18,14 @@ class DetailJaeWonKim extends Component {
       isLikedHeart: false,
       myReviews: [],
       newUserName: '(Unknown)',
-      newReviewContent: '',
+      newUserReview: '',
     };
   }
+
+  toggleHeart = () => {
+    const { isLikedHeart } = this.state;
+    this.setState({ isLikedHeart: !isLikedHeart });
+  };
 
   componentDidMount() {
     fetch('http://localhost:3000/data/myReviews.json')
@@ -32,14 +37,32 @@ class DetailJaeWonKim extends Component {
       });
   }
 
-  toggleHeart = () => {
-    const { isLikedHeart } = this.state;
-    this.setState({ isLikedHeart: !isLikedHeart });
+  handleReview = event => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
+
+  addReview = event => {
+    const { myReviews, newUserName, newUserReview } = this.state;
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      event.target.value = '';
+      if (newUserReview !== '') {
+        const newReview = {
+          id: myReviews.length + 1,
+          userName: newUserName,
+          userReview: newUserReview,
+        };
+        this.setState({
+          myReviews: [...myReviews, newReview],
+        });
+      }
+    }
   };
 
   render() {
     const { isLikedHeart, myReviews } = this.state;
-    const { toggleHeart } = this;
+    const { toggleHeart, handleReview, addReview } = this;
     return (
       <div className="Detail">
         <TopNav />
@@ -131,13 +154,18 @@ class DetailJaeWonKim extends Component {
                     <Review
                       key={data.id}
                       userName={data.userName}
-                      reviewContent={data.reviewContent}
+                      reviewContent={data.userReview}
                     />
                   );
                 })}
               </div>
-              <form className="section-review">
-                <input type="text" placeholder="리뷰를 입력해주세요." />
+              <form className="section-review" onKeyPress={addReview}>
+                <input
+                  onChange={handleReview}
+                  type="text"
+                  name="newUserReview"
+                  placeholder="리뷰를 입력해주세요."
+                />
               </form>
             </div>
           </section>
