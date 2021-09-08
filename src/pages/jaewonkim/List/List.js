@@ -32,13 +32,14 @@ class ListJaeWonKim extends Component {
   }
 
   render() {
+    const { coldBrewCoffeeData, brewedCoffeeData } = this.state;
     return (
       <div className="List">
         <TopNav />
         <section>
           <CoffeeType title={'콜드 브루 커피'} />
           <dl className="section-cards">
-            {this.state.coldBrewCoffeeData.map(data => {
+            {coldBrewCoffeeData.map(data => {
               return (
                 <CoffeeCard
                   key={data.id}
@@ -52,7 +53,7 @@ class ListJaeWonKim extends Component {
           </dl>
           <CoffeeType title={'브루드 커피'} />
           <dl className="section-cards">
-            {this.state.brewedCoffeeData.map(data => {
+            {brewedCoffeeData.map(data => {
               return (
                 <CoffeeCard
                   key={data.id}

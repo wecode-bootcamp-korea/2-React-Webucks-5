@@ -8,29 +8,21 @@ class LoginJaeWonKim extends Component {
     this.state = {
       inputUserName: '',
       inputPassword: '',
-      isValidInput: false,
     };
   }
 
   handleInput = event => {
     const { name, value } = event.target;
-    this.setState({ [name]: value }, this.verifyInput);
+    this.setState({ [name]: value });
   };
 
-  verifyInput = () => {
-    this.state.inputUserName.includes('@') &&
-    this.state.inputPassword.length >= 8
-      ? this.setState({ isValidInput: true })
-      : this.setState({ isValidInput: false });
-  };
-
-  activateButton = () => {
-    this.state.isValidInput
-      ? this.setState({ buttonClassName: 'form-input active' })
-      : this.setState({ buttonClassName: 'form-input' });
+  isValidInput = () => {
+    const { inputUserName, inputPassword } = this.state;
+    return inputUserName.includes('@') && inputPassword.length >= 8;
   };
 
   render() {
+    const { handleInput, isValidInput } = this;
     return (
       <div className="Login">
         <header>
@@ -42,29 +34,25 @@ class LoginJaeWonKim extends Component {
             alt="WeBucks Logo"
             src="/images/jaewonkim/WeBucks-logo.svg"
           />
-          <form
-            id="form"
-            onKeyUp={this.activateButton}
-            action="/list-jaewonkim"
-          >
+          <form id="form" onKeyUp={isValidInput} action="/list-jaewonkim">
             <input
               className="form-input"
-              onChange={this.handleInput}
+              onChange={handleInput}
               type="text"
               name="inputUserName"
               placeholder="전화번호, 사용자 이름 또는 이메일"
             />
             <input
               className="form-input"
-              onChange={this.handleInput}
+              onChange={handleInput}
               type="password"
               name="inputPassword"
               placeholder="비밀번호"
             />
             <button
-              className={this.state.buttonClassName}
+              className={isValidInput() ? 'form-input active' : 'form-input'}
               type="submit"
-              disabled={!this.state.isValidInput}
+              disabled={!isValidInput()}
             >
               로그인
             </button>
