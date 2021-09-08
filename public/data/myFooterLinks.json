@@ -1,0 +1,61 @@
+{
+  "myFooterLinks": [
+    {
+      "id": 1,
+      "footerTitle": "COMPANY",
+      "footerPages": [
+        { "id": 1, "pageName": "한눈에 보기", "pageLink": "#" },
+        { "id": 2, "pageName": "스타벅스 사명", "pageLink": "#" },
+        { "id": 3, "pageName": "스타벅스 소개", "pageLink": "#" },
+        { "id": 4, "pageName": "국내 뉴스룸", "pageLink": "#" },
+        { "id": 5, "pageName": "세계의 스타벅스", "pageLink": "#" },
+        { "id": 6, "pageName": "글로벌 뉴스룸", "pageLink": "#" }
+      ],
+      "titleLink": "#"
+    },
+    {
+      "id": 2,
+      "footerTitle": "CORPORATE SALES",
+      "footerPages": [
+        { "id": 1, "pageName": "단체 및 기업 구매 안내", "pageLink": "#" }
+      ],
+      "titleLink": "#"
+    },
+    {
+      "id": 3,
+      "footerTitle": "PARTNERSHIP",
+      "footerPages": [
+        { "id": 1, "pageName": "신규 입점 제의", "pageLink": "#" },
+        { "id": 2, "pageName": "협력 고객사 등록 신청", "pageLink": "#" }
+      ],
+      "titleLink": "#"
+    },
+    {
+      "id": 4,
+      "footerTitle": "ONLINE COMMUNITY",
+      "footerPages": [
+        { "id": 1, "pageName": "페이스북", "pageLink": "#" },
+        { "id": 2, "pageName": "트위터", "pageLink": "#" },
+        { "id": 3, "pageName": "유튜브", "pageLink": "#" },
+        { "id": 4, "pageName": "블로그", "pageLink": "#" },
+        { "id": 5, "pageName": "인스타그램", "pageLink": "#" }
+      ],
+      "titleLink": "#"
+    },
+    {
+      "id": 4,
+      "footerTitle": "RECRUIT",
+      "footerPages": [
+        { "id": 1, "pageName": "채용 소개", "pageLink": "#" },
+        { "id": 2, "pageName": "채용 지원하기", "pageLink": "#" }
+      ],
+      "titleLink": "#"
+    },
+    {
+      "id": 4,
+      "footerTitle": "WEBUCKS",
+      "footerPages": [],
+      "titleLink": "/login-jaewonkim"
+    }
+  ]
+}
