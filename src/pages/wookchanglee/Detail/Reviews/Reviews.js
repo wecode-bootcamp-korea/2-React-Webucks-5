@@ -48,13 +48,13 @@ class Reviews extends React.Component {
           reviewContent: this.state.tempReviewContent,
           id: newId,
         });
-        this.setState({ review: reviewArr });
-        this.usernameRef.current.value = '';
-        this.contentRef.current.value = '';
         this.setState({
+          review: reviewArr,
           tempReviewContent: '',
           tempUsername: '',
         });
+        this.usernameRef.current.value = '';
+        this.contentRef.current.value = '';
       } else {
         alert('빈칸은 입력할 수 없습니다🥲');
       }
