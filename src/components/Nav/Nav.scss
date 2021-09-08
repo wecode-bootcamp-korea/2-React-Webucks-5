@@ -6,42 +6,35 @@ $wookwidth: 1100px;
 
 .TopNav {
   .section {
-    max-width: $kimwidth;
-    height: 55px;
-    padding: 10px 20px;
-  }
-
-  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
+    max-width: 100%;
+    height: 55px;
+    padding: 10px 20px;
     margin-bottom: 20px;
     background-color: #f4f4f2;
-  }
+    overflow: visible;
 
-  .menuGroup.right img {
-    width: 100px;
-  }
+    .menuGroup.right img {
+      width: 100px;
+    }
+    .menuGroup.left ul {
+      display: flex;
+      justify-content: space-around;
 
-  .menuGroup.left ul {
-    display: flex;
-    justify-content: space-around;
-  }
+      li {
+        padding: 5px;
+        word-wrap: break-word;
 
-  .menuGroup.left li {
-    padding: 5px;
-  }
+        a {
+          color: rgb(146, 135, 120);
 
-  .menuGroup.left a {
-    color: rgb(146, 135, 120);
-  }
-
-  .menuGroup.left a:hover {
-    color: rgb(171, 89, 17);
-  }
-
-  #toggleBar {
-    display: none;
+          &:hover {
+            color: rgb(171, 89, 17);
+          }
+        }
+      }
+    }
   }
 }

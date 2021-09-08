@@ -4,11 +4,11 @@ import { faBackspace } from "@fortawesome/free-solid-svg-icons";
 
 class DeleteBtn extends Component {
   render() {
-    const { deleteCommentBox, commentList } = this.props;
+    const { onDeleteBtn, commentList } = this.props;
     return (
       <button
         className="deleteBtn"
-        onClick={() => deleteCommentBox(commentList.id)}
+        onClick={() => onDeleteBtn(commentList.id)}
         id={commentList.id}
       >
         <FontAwesomeIcon icon={faBackspace} />

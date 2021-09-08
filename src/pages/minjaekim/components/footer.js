@@ -4,14 +4,6 @@ import FOOTER_INFO_DATA from "../Detail/footerData";
 import "../../minjaekim/components/footer.scss";
 
 class Footer extends Component {
-  state = {
-    commpanyMenu: [],
-    corporateSales: [],
-    onlineCommunityMenu: [],
-    recuitMenu: [],
-    webuckMenu: [],
-  };
-
   render() {
     return (
       <footer className="Footer">

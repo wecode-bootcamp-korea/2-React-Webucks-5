@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Login.scss";
 
@@ -11,13 +12,20 @@ class Login extends Component {
     };
   }
 
+  /* 다음 페이지로 넘어가는 구현 방법 2번 - Link 없이 HOC 활용하여 메소드 적용 
+  // goToListPage = () => {
+  //   this.props.history.push("/list-minjaekim");
+  };
+  */
+
   isValidInput = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
   render() {
     const { id, psw } = this.state;
-    const isVaild = id.includes("@") && psw.length > 4;
+    const isValidId = id.includes("@");
+    const isValidPsw = psw.length > 4;
     return (
       <div className="Login">
         <div className="loginWindow">
@@ -40,22 +48,31 @@ class Login extends Component {
               value={this.state.psw}
               onChange={this.isValidInput}
             />
-            <button
-              type="submit"
-              className={isVaild ? "loginUserBtn changeColor" : "loginUserBtn"}
+            {/* 다음 페이지로 넘어가는 구현 방법 1번 - Link의 to 프로퍼티 이용 */}
+            <Link
+              to={
+                isValidId && isValidPsw ? "/list-minjaekim" : "login-minjaekim"
+              }
             >
-              {isVaild ? (
-                <Link to="/list-minjaekim" className="ButtonWrapper">
-                  로그인
-                </Link>
-              ) : (
-                <Link to="/login-minjaekim" className="ButtonWrapper">
-                  로그인
-                </Link>
-              )}
-            </button>
+              <button
+                type="submit"
+                className={
+                  isValidId && isValidPsw
+                    ? "loginUserBtn changeColor"
+                    : "loginUserBtn"
+                }
+                disabled={isValidId && isValidPsw ? false : "disabled"}
+                /* 다음 페이지로 넘어가는 구현 방법 2번 - Link 없이 HOC 활용하여 메소드 적용 
+                onClick={this.goToListPage}*/
+              >
+                로그인
+              </button>
+            </Link>
           </form>
-          <Link to="#" className="loginWindowFindUserPsw">
+          <Link
+            to={isValidPsw ? "/login-minjaekim" : "/findPsw-minjaekim"}
+            className="loginWindowFindUserPsw"
+          >
             비밀번호를 잊으셨나요?
           </Link>
         </div>
@@ -64,4 +81,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default withRouter(Login);

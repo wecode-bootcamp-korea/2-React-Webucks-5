@@ -3,18 +3,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 
 class LikeBtn extends Component {
-  state = {
-    toggleLikeBtn: false,
-  };
-  isChangeThumbsUpBtnColor = () => {
-    const { toggleLikeBtn } = this.state;
-    this.setState({ toggleLikeBtn: !toggleLikeBtn });
-  };
   render() {
+    console.log(this.props);
+    const { isHeartColorRed, changeHeartBtnColor, commentList } = this.props;
     return (
       <button
-        onClick={this.isChangeThumbsUpBtnColor}
-        className={this.state.toggleLikeBtn ? "LikeBtn beRedColor" : "LikeBtn"}
+        className="likeBtn"
+        onClick={() => changeHeartBtnColor(commentList.id)}
+        className={isHeartColorRed ? "LikeBtn beRedColor" : "LikeBtn"}
       >
         <FontAwesomeIcon icon={faThumbsUp} />
       </button>

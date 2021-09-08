@@ -1,7 +1,7 @@
 import React from "react";
 import TopNav from "../../../components/Nav/Nav";
 import Footer from "../components/footer";
-import CommentBox from "./CommentBox";
+import CommentSection from "./CommentSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import "./Detail.scss";
@@ -104,15 +104,10 @@ class Detail extends React.Component {
                 </article>
                 <div id="coffeeAllergyStatus">알레르기 유발 요인 : 우유</div>
               </section>
-              <section id="coffeeReviewWrapper">
-                <header id="coffeeReviewHeader">
-                  <h4 id="reviewTitle">리뷰</h4>
-                </header>
-                <CommentBox
-                  changeHeartBtnColor={this.changeHeartBtnColor}
-                  isHeartColorRed={this.state.isHeartColorRed}
-                />
-              </section>
+              <CommentSection
+                isHeartColorRed={this.state.isHeartColorRed}
+                changeHeartBtnColor={this.changeHeartBtnColor}
+              />
             </aside>
           </main>
         </div>

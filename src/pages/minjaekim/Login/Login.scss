@@ -2,13 +2,13 @@
 @import "../../../styles/mixin.scss";
 
 .Login {
-  margin: 0 auto;
-  padding: 20px 0;
+  display: flex;
+  justify-content: center;
   background-color: #eeefef;
 
   .loginWindow {
     @include flex-column-center;
-    height: 75vh;
+    height: 670px;
     margin: 80px 450px;
     padding: 30px 60px;
     @include background-border-Color(
@@ -19,18 +19,20 @@
     border-radius: 10px;
 
     &Title {
-      flex: 0.28 1 0;
+      flex: 1 1 200px;
       @include flex-row;
       @include logo-style;
     }
 
     &InputBox {
-      flex: 0.35 1 0;
+      flex: 1 1 300px;
+      padding: 10px 30px;
       @include flex-column-space-around;
-      width: 100%;
 
       .loginUserId,
       .loginUserPsw {
+        height: 45x;
+        width: 400px;
         padding: $input-padding;
         @include background-border-Color(
           $windowAndInput-border-color,
@@ -53,6 +55,8 @@
       }
 
       .loginUserBtn {
+        height: 45x;
+        width: 400px;
         padding: $input-padding;
         @include background-border-Color(lightsteelblue, 3px, lightsteelblue);
         border-radius: 10px;
@@ -79,7 +83,7 @@
     }
 
     &FindUserPsw {
-      flex: 0.3 1 0;
+      flex: 1 1 300px;
       @include flex-column-end;
       @include font-size-bold-color(
         rgb(75, 124, 160),

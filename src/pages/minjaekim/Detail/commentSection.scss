@@ -1,0 +1,79 @@
+@import "../../../styles/mixin.scss";
+
+.Detail {
+  .CommentSection {
+    @include flex-column;
+    width: 100%;
+    padding-top: 45px;
+
+    .coffeeCommentHeader {
+      border-bottom: 2px solid rgb(207, 207, 207);
+
+      .commentTitle {
+        padding-bottom: 7px;
+        font-size: 18px;
+      }
+    }
+  }
+  .CommentBox {
+    @include flex-column;
+    padding: 25px 0;
+
+    .commentStatus {
+      @include flex-column;
+      padding-bottom: 25px;
+
+      .commentList {
+        position: relative;
+
+        .userId {
+          display: inline-block;
+          padding-right: 10px;
+          font-weight: 800;
+        }
+
+        .contents {
+          display: inline-block;
+          width: 480px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        .LikeBtn {
+          position: absolute;
+          right: 20px;
+          border: none;
+          background-color: white;
+          cursor: pointer;
+
+          &.beRedColor {
+            background-color: white;
+            color: tomato;
+          }
+        }
+        .deleteBtn {
+          @extend .LikeBtn;
+          right: 0;
+        }
+      }
+    }
+    .commentInputBox {
+      @include flex-row-space-around;
+
+      .userInputId {
+        flex: 1 1 100px;
+        margin-right: 10px;
+        padding: 10px 0 5px 5px;
+        border: none;
+        background-color: rgb(239, 239, 239);
+      }
+
+      .contentsInput {
+        @extend .userInputId;
+        flex: 1 1 500px;
+        margin: 0;
+      }
+    }
+  }
+}

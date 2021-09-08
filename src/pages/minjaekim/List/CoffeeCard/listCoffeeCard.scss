@@ -9,7 +9,7 @@
 
     .sectionContents {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(250px, auto));
       grid-gap: 15px;
       margin: 20px 0px;
       text-align: center;
@@ -25,7 +25,7 @@
           overflow: hidden;
 
           .coffeeImg {
-            width: 255px;
+            width: 270px;
             transform: scale(1);
             transition: all 0.8s ease-in-out;
 

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../../../public/images/minjaekim/WeBucks-logo-1.svg";
 import "./Nav.scss";
 
 class TopNav extends Component {
