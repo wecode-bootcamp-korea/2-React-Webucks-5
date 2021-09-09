@@ -57,6 +57,33 @@ class Detail extends React.Component {
     const reviewArr = [...this.state.coffeeReviews].filter(el => el.id !== id);
     this.setState({ coffeeReviews: reviewArr });
   };
+
+  submitReview = e => {
+    if (
+      this.state.tempUsername.trim() !== '' &&
+      this.state.tempReviewContent.trim() !== ''
+    ) {
+      const { coffeeReviews } = this.state;
+      const newReview = {
+        username: this.state.tempUsername,
+        reviewContent: this.state.tempReviewContent,
+        id:
+          coffeeReviews.length > 0
+            ? coffeeReviews[coffeeReviews.length - 1].id + 1
+            : 1,
+        like: false,
+      };
+      this.setState({
+        coffeeReviews: [...coffeeReviews, newReview],
+        tempReviewContent: '',
+        tempUsername: '',
+      });
+    } else {
+      alert('빈칸은 입력할 수 없습니다🥲');
+    }
+    e.preventDefault();
+  };
+
   toggleHeart = () => {
     this.setState({ coffeeLike: !this.state.coffeeLike });
   };

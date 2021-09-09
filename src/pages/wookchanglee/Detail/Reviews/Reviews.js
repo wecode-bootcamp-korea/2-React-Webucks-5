@@ -30,25 +30,24 @@ class Reviews extends React.Component {
             );
           })}
         </div>
-        <form className="inputBox">
+        <form className="inputBox" onSubmit={submitReview}>
           <input
             className="id"
             name="tempUsername"
             type="text"
-            ref={this.usernameRef}
             placeholder="아이디"
-            onInput={this.writeReview}
-            onKeyPress={this.submitReview}
+            value={tempUsername}
+            onInput={writeReview}
           />
           <input
             className="content"
             name="tempReviewContent"
             type="text"
-            ref={this.contentRef}
             placeholder="리뷰를 입력해주세요."
-            onInput={this.writeReview}
-            onKeyPress={this.submitReview}
+            value={tempReviewContent}
+            onInput={writeReview}
           />
+          <input id="submitInput" type="submit" value="전송" />
         </form>
       </div>
     );
