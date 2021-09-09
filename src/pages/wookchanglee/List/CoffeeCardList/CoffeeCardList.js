@@ -4,10 +4,11 @@ import './CoffeeCardList.scss';
 
 class CoffeeCardList extends React.Component {
   render() {
+    const { coffeeCardsName, COFFEELIST_DATA, toggleHeart } = this.props;
     return (
       <section className="CoffeeCardList">
         <div className="coffeeListHeader">
-          <h2 className="title">{this.props.coffeeCardsName}</h2>
+          <h2 className="title">{coffeeCardsName}</h2>
           <img
             className="coffeeLogoImg"
             src="//image.istarbucks.co.kr/common/img/menu/logo_decaf.png"
@@ -19,7 +20,7 @@ class CoffeeCardList extends React.Component {
         </div>
 
         <div className="coffeeListBody">
-          {this.props.COFFEELIST_DATA.map(coffee => {
+          {COFFEELIST_DATA.map(coffee => {
             return (
               <CoffeeCard
                 img={coffee.img}
@@ -27,7 +28,7 @@ class CoffeeCardList extends React.Component {
                 key={coffee.id}
                 id={coffee.id}
                 like={coffee.like}
-                toggleHeart={this.props.toggleHeart}
+                toggleHeart={toggleHeart}
               />
             );
           })}

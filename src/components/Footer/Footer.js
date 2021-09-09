@@ -10,11 +10,12 @@ class Footer extends React.Component {
   }
 
   render() {
+    const { footerListData } = this.state;
     return (
       <footer className="Footer">
         <div className="footerInner">
           <div className="footerList">
-            {this.state.footerListData.map(el => {
+            {footerListData.map(el => {
               return <FooterList title={el.title} list={el.list} key={el.id} />;
             })}
           </div>

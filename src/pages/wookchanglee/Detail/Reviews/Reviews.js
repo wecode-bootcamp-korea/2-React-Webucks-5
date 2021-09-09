@@ -5,6 +5,7 @@ import './Reviews.scss';
 class Reviews extends React.Component {
   render() {
     const {
+      coffeeReviews,
       writeReview,
       submitReview,
       deleteReview,
@@ -16,7 +17,7 @@ class Reviews extends React.Component {
       <div className="Reviews">
         <h2>리뷰</h2>
         <div className="reviewList">
-          {this.props.coffeeReviews.map(review => {
+          {coffeeReviews.map(review => {
             return (
               <Review
                 id={review.id}

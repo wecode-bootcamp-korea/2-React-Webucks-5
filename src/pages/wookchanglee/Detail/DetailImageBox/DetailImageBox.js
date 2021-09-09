@@ -3,13 +3,10 @@ import './DetailImageBox.scss';
 
 class DetailImageBox extends React.Component {
   render() {
+    const { coffeeImg, coffeeTitle } = this.props;
     return (
       <div className="DetailImageBox">
-        <img
-          src={this.props.coffeeImg}
-          alt={this.props.coffeeTitle}
-          className="coffeeImage"
-        />
+        <img src={coffeeImg} alt={coffeeTitle} className="coffeeImage" />
       </div>
     );
   }

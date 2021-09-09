@@ -49,19 +49,25 @@ class List extends Component {
   };
 
   render() {
+    const {
+      coldBrewCoffeeCards,
+      coldBrewTitle,
+      brewedCoffeeCards,
+      brewedTitle,
+    } = this.state;
     return (
       <div className="List">
         <Nav />
         {this.state.coldBrewCoffeeCards ? (
           <>
             <CoffeeCardList
-              COFFEELIST_DATA={this.state.coldBrewCoffeeCards}
-              coffeeCardsName={this.state.coldBrewTitle}
+              COFFEELIST_DATA={coldBrewCoffeeCards}
+              coffeeCardsName={coldBrewTitle}
               toggleHeart={this.toggleHeart}
             />
             <CoffeeCardList
-              COFFEELIST_DATA={this.state.brewedCoffeeCards}
-              coffeeCardsName={this.state.brewedTitle}
+              COFFEELIST_DATA={brewedCoffeeCards}
+              coffeeCardsName={brewedTitle}
               toggleHeart={this.toggleHeart}
             />
           </>
