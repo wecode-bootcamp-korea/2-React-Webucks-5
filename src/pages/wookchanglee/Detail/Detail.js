@@ -1,9 +1,12 @@
 import React from 'react';
 import DetailHeader from './DetailHeader/DetailHeader';
-import DetailContent from './DetailContent/DetailContent';
+import DetailImageBox from './DetailImageBox/DetailImageBox';
+import CoffeeDescription from './CoffeeDescription/CoffeeDescription';
+import NutritionFacts from './NutritionFacts/NutritionFacts';
+import Reviews from './Reviews/Reviews';
 import Nav from '../../../components/Nav/Nav';
 import Footer from '../../../components/Footer/Footer';
-import './detail.scss';
+import './Detail.scss';
 
 class Detail extends React.Component {
   constructor() {

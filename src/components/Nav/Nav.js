@@ -6,8 +6,13 @@ import './Nav.scss';
 class Nav extends Component {
   constructor() {
     super();
-    this.state = { isMenuClicked: false };
+    this.state = { showMenu: false };
   }
+
+  toggleMenu = () => {
+    this.setState({ showMenu: !this.state.showMenu });
+  };
+
   render() {
     return (
       <div className="Nav">
@@ -19,7 +24,7 @@ class Nav extends Component {
           </div>
           <div
             className={
-              this.state.isMenuClicked
+              this.state.showMenu
                 ? 'menuGroup left toggle on'
                 : 'menuGroup left toggle'
             }
@@ -45,9 +50,7 @@ class Nav extends Component {
           <i
             className="fas fa-bars"
             id="toggleBar"
-            onClick={() => {
-              this.setState({ isMenuClicked: !this.state.isMenuClicked });
-            }}
+            onClick={this.toggleMenu}
           ></i>
         </header>
       </div>

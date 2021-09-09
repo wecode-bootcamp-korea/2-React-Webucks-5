@@ -4,7 +4,7 @@
   max-width: $mainWidth;
   width: 100%;
 
-  .header {
+  .coffeeListHeader {
     display: flex;
     max-width: $mainWidth;
     height: 55px;
@@ -26,7 +26,7 @@
     }
   }
 
-  .body {
+  .coffeeListBody {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;

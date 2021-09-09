@@ -6,7 +6,7 @@ class CoffeeCardList extends React.Component {
   render() {
     return (
       <section className="CoffeeCardList">
-        <div className="header">
+        <div className="coffeeListHeader">
           <h2 className="title">{this.props.coffeeCardsName}</h2>
           <img
             className="coffeeLogoImg"
@@ -18,8 +18,8 @@ class CoffeeCardList extends React.Component {
           </p>
         </div>
 
-        <div className="body">
-          {this.props.COFFEELIST_DATA.map((coffee, idx) => {
+        <div className="coffeeListBody">
+          {this.props.COFFEELIST_DATA.map(coffee => {
             return (
               <CoffeeCard
                 img={coffee.img}

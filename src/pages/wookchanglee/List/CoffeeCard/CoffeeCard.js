@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './coffeeCard.scss';
+import './CoffeeCard.scss';
 
 class CoffeeCard extends React.Component {
   state = { isHeartFilled: false };
