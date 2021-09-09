@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faHeart as faHeartRegular } from '@fortawesome/free-regular-svg-icons';
-import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
 import TopNav from '../../../components/TopNav/TopNav';
 import CoffeeType from './CoffeeType/CoffeeType';
 import CoffeeCard from './CoffeCard/CoffeeCard';
 import './List.scss';
-
-library.add(faHeartRegular, faHeartSolid);
 
 class ListJaeWonKim extends Component {
   constructor() {

@@ -60,9 +60,18 @@ class DetailJaeWonKim extends Component {
     }
   };
 
+  deleteReview = index => {
+    const { myReviews } = this.state;
+    const newReviews = [...myReviews];
+    newReviews.splice(index, 1);
+    this.setState({
+      myReviews: newReviews,
+    });
+  };
+
   render() {
     const { isLikedHeart, myReviews } = this.state;
-    const { toggleHeart, handleReview, addReview } = this;
+    const { toggleHeart, handleReview, addReview, deleteReview } = this;
     return (
       <div className="Detail">
         <TopNav />
@@ -149,12 +158,15 @@ class DetailJaeWonKim extends Component {
                 <h5>리뷰</h5>
               </div>
               <div className="section-review">
-                {myReviews.map(data => {
+                {myReviews.map((review, index) => {
                   return (
                     <Review
-                      key={data.id}
-                      userName={data.userName}
-                      reviewContent={data.userReview}
+                      key={review.id}
+                      userName={review.userName}
+                      userReview={review.userReview}
+                      deleteReview={() => {
+                        deleteReview(index);
+                      }}
                     />
                   );
                 })}

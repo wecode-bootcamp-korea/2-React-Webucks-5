@@ -10,14 +10,20 @@
   font-size: 14px;
 
   dt {
-    flex: 1;
+    flex: 2;
     margin-top: 2px;
     font-weight: bold;
   }
 
   dd {
-    flex: 5;
+    flex: 9;
     margin: 2px auto 0 4px;
     line-height: 1.2;
+  }
+
+  svg {
+    flex: 1;
+    margin-right: -10px;
+    cursor: pointer;
   }
 }
