@@ -16,7 +16,28 @@
           "sugars": 53,
           "caffeine": 210,
           "allergy": "우유 / 대두"
-        }
+        },
+        "reviews": [
+          {
+            "id": 1,
+            "username": "coffee_lover",
+            "reviewContent": "진짜 진자 너무 너무 맛있어요!",
+            "like": false
+          },
+          {
+            "id": 2,
+            "username": "myloveIstCoffee",
+            "reviewContent": "오늘도 내일도 모레도 먹을거에요",
+            "like": false
+          },
+          {
+            "id": 3,
+            "username": "legend_dev",
+            "reviewContent": "전설이라는 말은 이때를 위해 존재한것",
+            "like": false
+          }
+        ],
+        "like": false
       },
       {
         "id": "coldBrewCoffeeNum2",
@@ -32,7 +53,28 @@
           "sugars": 10,
           "caffeine": 245,
           "allergy": "우유"
-        }
+        },
+        "reviews": [
+          {
+            "id": 1,
+            "username": "coffee_lover",
+            "reviewContent": "진짜 진자 너무 너무 맛있어요!",
+            "like": false
+          },
+          {
+            "id": 2,
+            "username": "myloveIstCoffee",
+            "reviewContent": "오늘도 내일도 모레도 먹을거에요",
+            "like": false
+          },
+          {
+            "id": 3,
+            "username": "legend_dev",
+            "reviewContent": "전설이라는 말은 이때를 위해 존재한것",
+            "like": false
+          }
+        ],
+        "like": false
       },
       {
         "id": "coldBrewCoffeeNum3",
@@ -48,7 +90,28 @@
           "sugars": 0,
           "caffeine": 245,
           "allergy": null
-        }
+        },
+        "reviews": [
+          {
+            "id": 1,
+            "username": "coffee_lover",
+            "reviewContent": "진짜 진자 너무 너무 맛있어요!",
+            "like": false
+          },
+          {
+            "id": 2,
+            "username": "myloveIstCoffee",
+            "reviewContent": "오늘도 내일도 모레도 먹을거에요",
+            "like": false
+          },
+          {
+            "id": 3,
+            "username": "legend_dev",
+            "reviewContent": "전설이라는 말은 이때를 위해 존재한것",
+            "like": false
+          }
+        ],
+        "like": false
       },
       {
         "id": "coldBrewCoffeeNum4",
@@ -64,7 +127,28 @@
           "sugars": 29,
           "caffeine": 150,
           "allergy": "우유"
-        }
+        },
+        "reviews": [
+          {
+            "id": 1,
+            "username": "coffee_lover",
+            "reviewContent": "진짜 진자 너무 너무 맛있어요!",
+            "like": false
+          },
+          {
+            "id": 2,
+            "username": "myloveIstCoffee",
+            "reviewContent": "오늘도 내일도 모레도 먹을거에요",
+            "like": false
+          },
+          {
+            "id": 3,
+            "username": "legend_dev",
+            "reviewContent": "전설이라는 말은 이때를 위해 존재한것",
+            "like": false
+          }
+        ],
+        "like": false
       },
       {
         "id": "coldBrewCoffeeNum5",
@@ -80,7 +164,28 @@
           "sugars": 17,
           "caffeine": 160,
           "allergy": "우유"
-        }
+        },
+        "reviews": [
+          {
+            "id": 1,
+            "username": "coffee_lover",
+            "reviewContent": "진짜 진자 너무 너무 맛있어요!",
+            "like": false
+          },
+          {
+            "id": 2,
+            "username": "myloveIstCoffee",
+            "reviewContent": "오늘도 내일도 모레도 먹을거에요",
+            "like": false
+          },
+          {
+            "id": 3,
+            "username": "legend_dev",
+            "reviewContent": "전설이라는 말은 이때를 위해 존재한것",
+            "like": false
+          }
+        ],
+        "like": false
       },
       {
         "id": "coldBrewCoffeeNum6",
@@ -96,7 +201,28 @@
           "sugars": 11,
           "caffeine": 150,
           "allergy": "우유"
-        }
+        },
+        "reviews": [
+          {
+            "id": 1,
+            "username": "coffee_lover",
+            "reviewContent": "진짜 진자 너무 너무 맛있어요!",
+            "like": false
+          },
+          {
+            "id": 2,
+            "username": "myloveIstCoffee",
+            "reviewContent": "오늘도 내일도 모레도 먹을거에요",
+            "like": false
+          },
+          {
+            "id": 3,
+            "username": "legend_dev",
+            "reviewContent": "전설이라는 말은 이때를 위해 존재한것",
+            "like": false
+          }
+        ],
+        "like": false
       },
       {
         "id": "coldBrewCoffeeNum7",
@@ -112,7 +238,28 @@
           "sugars": 44,
           "caffeine": 105,
           "allergy": null
-        }
+        },
+        "reviews": [
+          {
+            "id": 1,
+            "username": "coffee_lover",
+            "reviewContent": "진짜 진자 너무 너무 맛있어요!",
+            "like": false
+          },
+          {
+            "id": 2,
+            "username": "myloveIstCoffee",
+            "reviewContent": "오늘도 내일도 모레도 먹을거에요",
+            "like": false
+          },
+          {
+            "id": 3,
+            "username": "legend_dev",
+            "reviewContent": "전설이라는 말은 이때를 위해 존재한것",
+            "like": false
+          }
+        ],
+        "like": false
       },
       {
         "id": "coldBrewCoffeeNum8",
@@ -128,7 +275,28 @@
           "sugars": 0,
           "caffeine": 150,
           "allergy": null
-        }
+        },
+        "reviews": [
+          {
+            "id": 1,
+            "username": "coffee_lover",
+            "reviewContent": "진짜 진자 너무 너무 맛있어요!",
+            "like": false
+          },
+          {
+            "id": 2,
+            "username": "myloveIstCoffee",
+            "reviewContent": "오늘도 내일도 모레도 먹을거에요",
+            "like": false
+          },
+          {
+            "id": 3,
+            "username": "legend_dev",
+            "reviewContent": "전설이라는 말은 이때를 위해 존재한것",
+            "like": false
+          }
+        ],
+        "like": false
       },
       {
         "id": "coldBrewCoffeeNum9",
@@ -144,7 +312,28 @@
           "sugars": 40,
           "caffeine": 150,
           "allergy": "우유 / 대두"
-        }
+        },
+        "reviews": [
+          {
+            "id": 1,
+            "username": "coffee_lover",
+            "reviewContent": "진짜 진자 너무 너무 맛있어요!",
+            "like": false
+          },
+          {
+            "id": 2,
+            "username": "myloveIstCoffee",
+            "reviewContent": "오늘도 내일도 모레도 먹을거에요",
+            "like": false
+          },
+          {
+            "id": 3,
+            "username": "legend_dev",
+            "reviewContent": "전설이라는 말은 이때를 위해 존재한것",
+            "like": false
+          }
+        ],
+        "like": false
       },
       {
         "id": "coldBrewCoffeeNum10",
@@ -160,7 +349,28 @@
           "sugars": 11,
           "caffeine": 65,
           "allergy": null
-        }
+        },
+        "reviews": [
+          {
+            "id": 1,
+            "username": "coffee_lover",
+            "reviewContent": "진짜 진자 너무 너무 맛있어요!",
+            "like": false
+          },
+          {
+            "id": 2,
+            "username": "myloveIstCoffee",
+            "reviewContent": "오늘도 내일도 모레도 먹을거에요",
+            "like": false
+          },
+          {
+            "id": 3,
+            "username": "legend_dev",
+            "reviewContent": "전설이라는 말은 이때를 위해 존재한것",
+            "like": false
+          }
+        ],
+        "like": false
       }
     ]
   },
@@ -181,7 +391,28 @@
           "sugars": 0,
           "caffeine": 140,
           "allergy": null
-        }
+        },
+        "reviews": [
+          {
+            "id": 1,
+            "username": "coffee_lover",
+            "reviewContent": "진짜 진자 너무 너무 맛있어요!",
+            "like": false
+          },
+          {
+            "id": 2,
+            "username": "myloveIstCoffee",
+            "reviewContent": "오늘도 내일도 모레도 먹을거에요",
+            "like": false
+          },
+          {
+            "id": 3,
+            "username": "legend_dev",
+            "reviewContent": "전설이라는 말은 이때를 위해 존재한것",
+            "like": false
+          }
+        ],
+        "like": false
       },
       {
         "id": "BrewCoffeeNum2",
@@ -197,7 +428,28 @@
           "sugars": 0,
           "caffeine": 260,
           "allergy": null
-        }
+        },
+        "reviews": [
+          {
+            "id": 1,
+            "username": "coffee_lover",
+            "reviewContent": "진짜 진자 너무 너무 맛있어요!",
+            "like": false
+          },
+          {
+            "id": 2,
+            "username": "myloveIstCoffee",
+            "reviewContent": "오늘도 내일도 모레도 먹을거에요",
+            "like": false
+          },
+          {
+            "id": 3,
+            "username": "legend_dev",
+            "reviewContent": "전설이라는 말은 이때를 위해 존재한것",
+            "like": false
+          }
+        ],
+        "like": false
       }
     ]
   }

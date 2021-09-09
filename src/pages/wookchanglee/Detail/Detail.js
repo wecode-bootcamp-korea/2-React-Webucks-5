@@ -12,7 +12,16 @@ class Detail extends React.Component {
   constructor() {
     super();
     this.state = {
-      coffeeData: null,
+      coffeeType: null,
+      coffeeTitle: null,
+      coffeeEnglishTitle: null,
+      coffeeDescription: null,
+      coffeeLike: null,
+      coffeeImg: null,
+      coffeeNutrition: null,
+      coffeeReviews: null,
+      tempUsername: '',
+      tempReviewContent: '',
     };
   }
 
@@ -23,23 +32,93 @@ class Detail extends React.Component {
         for (const coffeeCards in res) {
           for (const coffeeCard of res[coffeeCards].coffees) {
             if (coffeeCard.id === this.props.match.params.id) {
-              this.setState({ coffeeData: coffeeCard });
+              this.setState({
+                coffeeType: res[coffeeCards].title,
+                coffeeTitle: coffeeCard.title,
+                coffeeEnglishTitle: coffeeCard.englishTitle,
+                coffeeDescription: coffeeCard.description,
+                coffeeLike: coffeeCard.like,
+                coffeeImg: coffeeCard.img,
+                coffeeNutrition: coffeeCard.nutrition,
+                coffeeReviews: coffeeCard.reviews,
+              });
             }
           }
         }
       });
   }
 
+  writeReview = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
+
+  deleteReview = id => {
+    const reviewArr = [...this.state.coffeeReviews].filter(el => el.id !== id);
+    this.setState({ coffeeReviews: reviewArr });
+  };
+  toggleHeart = () => {
+    this.setState({ coffeeLike: !this.state.coffeeLike });
+  };
+
+  toggleHeartInReview = reviewId => {
+    const reviewArr = [...this.state.coffeeReviews].map(review => {
+      if (review.id === reviewId) {
+        review.like = !review.like;
+      }
+      return review;
+    });
+    this.setState({ coffeeReviews: reviewArr });
+  };
+
   render() {
+    const {
+      coffeeType,
+      coffeeTitle,
+      coffeeEnglishTitle,
+      coffeeDescription,
+      coffeeLike,
+      coffeeImg,
+      coffeeNutrition,
+      coffeeReviews,
+      tempUsername,
+      tempReviewContent,
+    } = this.state;
     return (
       <div className="Detail">
         <Nav />
-        <section className="detailInner">
-          <DetailHeader />
-          <DetailContent
-            coffeeData={this.state.coffeeData ? this.state.coffeeData : {}}
-          />
-        </section>
+        {coffeeReviews && (
+          <section className="detailInner">
+            <DetailHeader coffeeType={coffeeType} coffeeTitle={coffeeTitle} />
+            <div className="detailContent">
+              <div className="left">
+                <DetailImageBox
+                  coffeeImg={coffeeImg}
+                  coffeeTitle={coffeeTitle}
+                />
+              </div>
+              <div className="right">
+                <CoffeeDescription
+                  coffeeTitle={coffeeTitle}
+                  coffeeEnglishTitle={coffeeEnglishTitle}
+                  coffeeDescription={coffeeDescription}
+                  coffeeLike={coffeeLike}
+                  toggleHeart={this.toggleHeart}
+                />
+                <NutritionFacts coffeeNutrition={coffeeNutrition} />
+                <Reviews
+                  coffeeReviews={coffeeReviews}
+                  writeReview={this.writeReview}
+                  deleteReview={this.deleteReview}
+                  submitReview={this.submitReview}
+                  tempUsername={tempUsername}
+                  tempReviewContent={tempReviewContent}
+                  toggleHeartInReview={this.toggleHeartInReview}
+                />
+              </div>
+            </div>
+          </section>
+        )}
         <Footer />
       </div>
     );

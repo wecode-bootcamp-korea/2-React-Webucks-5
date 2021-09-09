@@ -2,31 +2,31 @@ import React from 'react';
 import './Review.scss';
 
 class Review extends React.Component {
-  state = { isHeartFilled: false };
   render() {
+    const {
+      username,
+      reviewContent,
+      deleteReview,
+      id,
+      toggleHeartInReview,
+      like,
+    } = this.props;
     return (
       <div className="Review">
         <div className="content">
-          <p className="username">{this.props.username}</p>
-          <p className="comment">{this.props.reviewContent}</p>
+          <p className="username">{username}</p>
+          <p className="comment">{reviewContent}</p>
         </div>
         <div className="option">
           <div className="like">
             <i
-              className={
-                this.state.isHeartFilled ? 'fas fa-heart' : 'far fa-heart'
-              }
-              onClick={() =>
-                this.setState({
-                  isHeartFilled: !this.state.isHeartFilled,
-                })
-              }
-            ></i>
+              className={like ? 'fas fa-heart' : 'far fa-heart'}
+              onClick={() => {
+                toggleHeartInReview(id);
+              }}
+            />
           </div>
-          <div
-            className="delete"
-            onClick={() => this.props.deleteReview(this.props.id)}
-          >
+          <div className="delete" onClick={() => deleteReview(id)}>
             ❌
           </div>
         </div>

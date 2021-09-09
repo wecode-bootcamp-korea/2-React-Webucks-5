@@ -3,11 +3,12 @@ import './DetailHeader.scss';
 
 class DetailHeader extends React.Component {
   render() {
+    const { coffeeType, coffeeTitle } = this.props;
     return (
       <div className="DetailHeader">
-        <h1>콜드 브루</h1>
+        <h1>{coffeeType}</h1>
         <p className="menuHistory">
-          홈 &gt; MENU &gt; 음료 &gt; 콜드 브루 &gt; 아이스크림 블렌딩 콜드브루
+          홈 &gt; MENU &gt; 음료 &gt; {coffeeType} &gt; {coffeeTitle}
         </p>
       </div>
     );
