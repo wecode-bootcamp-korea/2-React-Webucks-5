@@ -26,7 +26,7 @@ class Footer extends Component {
       <footer className="Footer">
         {myFooterLinks.map(data => {
           return (
-            <dl>
+            <dl key={data.id}>
               <dt className="footer-menu">
                 <Link to={data.titleLink}>{data.footerTitle}</Link>
               </dt>

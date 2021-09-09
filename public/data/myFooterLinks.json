@@ -43,7 +43,7 @@
       "titleLink": "#"
     },
     {
-      "id": 4,
+      "id": 5,
       "footerTitle": "RECRUIT",
       "footerPages": [
         { "id": 1, "pageName": "채용 소개", "pageLink": "#" },
@@ -52,7 +52,7 @@
       "titleLink": "#"
     },
     {
-      "id": 4,
+      "id": 6,
       "footerTitle": "WEBUCKS",
       "footerPages": [],
       "titleLink": "/login-jaewonkim"

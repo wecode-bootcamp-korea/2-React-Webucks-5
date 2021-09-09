@@ -22,15 +22,16 @@ class CoffeeCard extends Component {
   };
 
   render() {
+    const { alt, src, name, link } = this.props;
     const { isLikedHeart } = this.state;
     const { toggleHeart } = this;
     return (
       <dt className="CoffeeCard">
-        <Link to={this.props.link}>
-          <img alt={this.props.alt} src={this.props.src} />
+        <Link to={link}>
+          <img alt={alt} src={src} />
         </Link>
         <h3>
-          {this.props.name}
+          {name}
           <FontAwesomeIcon
             className="far fa-heart"
             onClick={toggleHeart}

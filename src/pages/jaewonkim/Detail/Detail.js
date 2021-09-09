@@ -158,12 +158,12 @@ class DetailJaeWonKim extends Component {
                 <h5>리뷰</h5>
               </div>
               <div className="section-review">
-                {myReviews.map((review, index) => {
+                {myReviews.map((data, index) => {
                   return (
                     <Review
-                      key={review.id}
-                      userName={review.userName}
-                      userReview={review.userReview}
+                      key={data.id}
+                      userName={data.userName}
+                      userReview={data.userReview}
                       deleteReview={() => {
                         deleteReview(index);
                       }}
