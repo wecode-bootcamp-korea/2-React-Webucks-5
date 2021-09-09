@@ -9,7 +9,21 @@ import './CoffeeCard.scss';
 library.add(faHeartRegular, faHeartSolid);
 
 class CoffeeCard extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isLikedHeart: false,
+    };
+  }
+
+  toggleHeart = () => {
+    const { isLikedHeart } = this.state;
+    this.setState({ isLikedHeart: !isLikedHeart });
+  };
+
   render() {
+    const { isLikedHeart } = this.state;
+    const { toggleHeart } = this;
     return (
       <dt className="CoffeeCard">
         <Link to={this.props.link}>
@@ -17,7 +31,16 @@ class CoffeeCard extends Component {
         </Link>
         <h3>
           {this.props.name}
-          <FontAwesomeIcon className="far fa-heart" icon={faHeartRegular} />
+          <FontAwesomeIcon
+            className="far fa-heart"
+            onClick={toggleHeart}
+            icon={faHeartRegular}
+          />
+          <FontAwesomeIcon
+            className={isLikedHeart ? 'fas fa-heart active' : 'fas fa-heart'}
+            onClick={toggleHeart}
+            icon={faHeartSolid}
+          />
         </h3>
       </dt>
     );

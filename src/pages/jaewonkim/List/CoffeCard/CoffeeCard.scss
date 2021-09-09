@@ -11,6 +11,9 @@
   }
 
   h3 {
+    position: relative;
+    top: 1px;
+    left: -8px;
     margin: 8px 0 20px 0;
     color: #333;
     font-family: Avenir, Arial, georgia;
@@ -18,10 +21,26 @@
     font-weight: 450;
     text-align: center;
     text-decoration: none;
-  }
 
-  .fa-heart.far {
-    margin-left: 6px;
-    cursor: pointer;
+    .fa-heart {
+      position: absolute;
+      top: -1px;
+      margin-left: 6px;
+      cursor: pointer;
+
+      &.far {
+        z-index: 1;
+      }
+
+      &.fas {
+        display: none;
+
+        &.active {
+          display: inline;
+          z-index: 2;
+          color: red;
+        }
+      }
+    }
   }
 }
