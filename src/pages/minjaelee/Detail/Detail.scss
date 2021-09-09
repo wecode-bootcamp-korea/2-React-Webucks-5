@@ -1,0 +1,139 @@
+.detailContainer {
+  margin: 35px 150px;
+  background-color: #ffffff;
+
+  .detailPageTop {
+    margin-top: -15px;
+
+    h1 {
+      margin-bottom: 15px;
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    span {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 25px;
+      opacity: 0.5;
+      font-size: 15px;
+    }
+  }
+
+  .detailListPage {
+    height: 570px;
+    display: flex;
+
+    .detailPageLeft {
+      margin-right: 40px;
+
+      img {
+        width: 400px;
+        height: 450px;
+      }
+    }
+    .detailPageRight {
+      width: 780px;
+
+      .detailTitle {
+        display: flex;
+        justify-content: space-between;
+        width: 780px;
+        border-bottom: 3px solid black;
+        font-weight: 800;
+
+        .detailTitleName {
+          font-size: 26px;
+        }
+
+        p {
+          margin-top: 5px;
+          margin-bottom: 15px;
+          font-size: 17px;
+        }
+
+        .redHeart {
+          color: red;
+        }
+      }
+
+      .detailSubTitle {
+        padding: 15px 0;
+        border-bottom: 0.8px solid black;
+
+        p {
+          font-size: 18px;
+          opacity: 0.8;
+
+          span {
+            display: block;
+            margin-bottom: 8px;
+          }
+        }
+      }
+
+      .detailNutritionTitle {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 0.8px solid black;
+        font-size: 20px;
+        font-weight: 800;
+      }
+
+      .detailNutritionContent {
+        display: flex;
+
+        .nutritionLeft {
+          padding: 20px 10px;
+          width: 400px;
+          border-right: 0.8px solid black;
+
+          div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+          }
+        }
+
+        .nutritionRight {
+          padding: 20px 10px;
+          width: 400px;
+
+          div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .allergyInfo {
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      margin-bottom: 20px;
+      height: 50px;
+      background-color: #efefef;
+      font-weight: 800;
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 45px 0px;
+    background-color: #333333;
+    color: white;
+    font-size: 15px;
+
+    .listTitle {
+      padding: 13px 0px;
+    }
+
+    .listName {
+      padding: 6px 0px;
+    }
+  }
+}

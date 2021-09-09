@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+.listContainer {
+  margin: 35px 150px;
+  background-color: #ffffff;
+
+  main {
+    margin-top: 30px;
+
+    .secondBar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      margin-bottom: 30px;
+      height: 55px;
+      background-color: #f4f4f2;
+
+      h2 {
+        font-size: 18px;
+        font-weight: 900;
+        opacity: 0.75;
+      }
+
+      span {
+        display: flex;
+        width: 80%;
+        margin: 10px 17px;
+        opacity: 0.73;
+      }
+
+      img {
+        height: 25px;
+      }
+    }
+
+    .thirdBar {
+      @extend .secondBar;
+
+      h2 {
+        @extend h2;
+      }
+
+      span {
+        @extend span;
+      }
+
+      img {
+        @extend img;
+      }
+    }
+
+    .coldbrew {
+      width: 100%;
+      transition: transform 0.5s;
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      p {
+        padding-top: 5px;
+        margin-bottom: 15px;
+      }
+
+      img {
+        width: 90%;
+        transition: transform 0.5s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .brewed {
+      img {
+        width: 90%;
+        transition: transform 0.5s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
+      .brewedList {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        left: 10px;
+        text-align: center;
+      }
+    }
+  }
+}

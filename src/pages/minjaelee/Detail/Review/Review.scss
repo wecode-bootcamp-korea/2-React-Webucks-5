@@ -1,0 +1,43 @@
+.commentReview {
+  .commentTitle {
+    font-size: 20px;
+  }
+
+  ul {
+    height: 60px;
+
+    .allCommentsBtn {
+      position: relative;
+      margin-left: 20px;
+      width: 40px;
+      height: 20px;
+      top: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      background-color: red;
+    }
+  }
+
+  .allCommentsId {
+    font-weight: 900;
+  }
+
+  .commentForm {
+    .reviewInputId {
+      width: 200px;
+      height: 30px;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      background-color: #efefef;
+    }
+    .reviewInputComment {
+      width: 400px;
+      height: 30px;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      background-color: #efefef;
+    }
+  }
+}
+
+/* .deleteReviewName {
+  height: 30px;
+  background-color: brown;
+} */
