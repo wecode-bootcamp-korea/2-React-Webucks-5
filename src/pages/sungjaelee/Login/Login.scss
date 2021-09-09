@@ -1,0 +1,66 @@
+.Login {
+  height: 100vh;
+  padding-top: 15vh;
+  background-color: #eeefef;
+
+  .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 370px;
+    width: 300px;
+    margin: 0 auto;
+    padding: 37px;
+    border: 2px solid #dddddd;
+    border-radius: 4px;
+    background-color: #fff;
+
+    .logo {
+      width: 150px;
+    }
+
+    #loginForm {
+      width: 100%;
+      padding-top: 30px;
+
+      .pwInputWrap {
+        position: relative;
+
+        #showHideText {
+          position: absolute;
+          top: 12px;
+          right: 10px;
+          color: #757575;
+          cursor: pointer;
+        }
+
+        #showHideText.invisible {
+          display: none;
+        }
+      }
+
+      .loginBtn {
+        width: 100%;
+        padding: 7px 0;
+        border: none;
+        border-radius: 7px;
+        background-color: #aed3ea;
+        color: #ecf5fa;
+
+        &.active {
+          background-color: #62adec;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .forgotPw {
+      position: absolute;
+      bottom: 45px;
+      align-self: center;
+      color: #8dadc2;
+      cursor: pointer;
+    }
+  }
+}

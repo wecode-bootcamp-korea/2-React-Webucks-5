@@ -1,0 +1,42 @@
+.Review {
+  display: flex;
+  align-items: center;
+  padding: 3px 0;
+
+  .reviewerId {
+    margin-right: 5px;
+    font-weight: bold;
+  }
+
+  .review {
+    display: block;
+    line-height: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .commentLikeBtn {
+    margin-left: 10px;
+    color: #dddddd;
+
+    &:hover {
+      color: grey;
+      cursor: pointer;
+    }
+
+    &.fas {
+      color: red;
+    }
+  }
+
+  .commentDeleteBtn {
+    margin-left: 10px;
+    color: #dddddd;
+
+    &:hover {
+      color: grey;
+      cursor: pointer;
+    }
+  }
+}

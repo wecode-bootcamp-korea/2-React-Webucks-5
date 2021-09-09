@@ -1,0 +1,12 @@
+.NutritionLabel {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  padding: 0 10px;
+
+  &:first-child,
+  &:nth-child(2),
+  &:nth-child(3) {
+    border-right: 0.5px dotted #efefef;
+  }
+}

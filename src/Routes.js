@@ -1,27 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
-
 // 김민재님 컴포넌트
 import LoginMinjaeKim from './pages/minjaekim/Login/Login';
 import ListMinjaeKim from './pages/minjaekim/List/List';
 import DetailMinjaeKim from './pages/minjaekim/Detail/Detail';
-
 // 이민재님 컴포넌트
 import LoginMinjaeLee from './pages/minjaelee/Login/Login';
 import ListMinjaeLee from './pages/minjaelee/List/List';
 import DetailMinjaeLee from './pages/minjaelee/Detail/Detail';
-
 // 이욱창님 컴포넌트
 import LoginWookChangLee from './pages/wookchanglee/Login/Login';
 import ListWookChangLee from './pages/wookchanglee/List/List';
 import DetailWookChangLee from './pages/wookchanglee/Detail/Detail';
-
 // 이성재님 컴포넌트
 import LoginSungJaeLee from './pages/sungjaelee/Login/Login';
 import ListSungJaeLee from './pages/sungjaelee/List/List';
 import DetailSungJaeLee from './pages/sungjaelee/Detail/Detail';
-
 // 김재원님 컴포넌트
 import LoginJaeWonKim from './pages/jaewonkim/Login/Login';
 import ListJaeWonKim from './pages/jaewonkim/List/List';
