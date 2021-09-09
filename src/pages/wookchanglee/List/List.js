@@ -29,23 +29,16 @@ class List extends Component {
   }
 
   toggleHeart = id => {
-    if (id.includes('coldBrew')) {
-      const coffeeArr = [...this.state.coldBrewCoffeeCards].map(coffee => {
-        if (id === coffee.id) {
-          coffee.like = !coffee.like;
-        }
-        return coffee;
-      });
-      this.setState({ coldBrewCoffeeCards: coffeeArr });
-    } else {
-      const coffeeArr = [...this.state.brewedCoffeeCards].map(coffee => {
-        if (id === coffee.id) {
-          coffee.like = !coffee.like;
-        }
-        return coffee;
-      });
-      this.setState({ brewedCoffeeCards: coffeeArr });
-    }
+    let coffeeKinds = 'coldBrewCoffeeCards';
+    if (!id.includes('coldBrew')) coffeeKinds = 'brewedCoffeeCards';
+
+    const coffeeArr = [...this.state[coffeeKinds]].map(coffee => {
+      if (id === coffee.id) {
+        coffee.like = !coffee.like;
+      }
+      return coffee;
+    });
+    this.setState({ [coffeeKinds]: coffeeArr });
   };
 
   render() {
