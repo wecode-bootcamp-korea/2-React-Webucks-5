@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as faRedHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './CoffeeCard.scss';
 
@@ -10,15 +10,12 @@ class CoffeeCard extends Component {
     super();
     this.state = {
       isLike: false,
-      heartIcon: faHeart,
     };
   }
 
-  handleClickAndChangeHeartColor = () => {
-    this.setState({ isLike: !this.state.isLike });
-    this.state.isLike
-      ? this.setState({ heartIcon: faHeart })
-      : this.setState({ heartIcon: fasHeart });
+  handleClick = () => {
+    const { isLike } = this.state;
+    this.setState({ isLike: !isLike });
   };
 
   render() {
@@ -30,9 +27,9 @@ class CoffeeCard extends Component {
         <span>
           <p>{this.props.name}</p>
           <FontAwesomeIcon
-            icon={this.state.heartIcon}
+            icon={this.state.isLike ? faRedHeart : faHeart}
             className={this.state.isLike ? 'redHeart' : 'blackHeart'}
-            onClick={this.handleClickAndChangeHeartColor}
+            onClick={this.handleClick}
           />
         </span>
       </li>

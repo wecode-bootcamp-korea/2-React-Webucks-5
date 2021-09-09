@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as faRedHeart } from '@fortawesome/free-solid-svg-icons';
-import Review from './Review';
-import Footer from './Footer';
+import Review from './Review/Review';
+import Footer from './Footer/Footer';
 import TopNav from '../../../components/Nav/Nav';
 import './Detail.scss';
 
@@ -15,13 +15,13 @@ class Detail extends Component {
     };
   }
 
-  handleClickAndChangeHeartColor = () => {
+  handleClick = () => {
     const { isLike } = this.state;
     this.setState({ isLike: !isLike });
-    isLike ? this.setState({ faRedHeart }) : this.setState({ faHeart });
   };
 
   render() {
+    const { isLike } = this.state;
     return (
       <div className="detailContainer">
         <TopNav />
@@ -41,9 +41,9 @@ class Detail extends Component {
                   <p>Jeju Forest Cold Brew</p>
                 </span>
                 <FontAwesomeIcon
-                  icon={this.state.isLike ? faRedHeart : faHeart}
-                  className={this.state.isLike ? 'redHeart' : 'blackHeart'}
-                  onClick={this.handleClickAndChangeHeartColor}
+                  icon={isLike ? faRedHeart : faHeart}
+                  className={isLike ? 'redHeart' : 'blackHeart'}
+                  onClick={this.handleClick}
                 />
               </section>
               <div className="detailSubTitle">

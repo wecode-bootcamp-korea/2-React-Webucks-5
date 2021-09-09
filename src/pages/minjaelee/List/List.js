@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CoffeeCard from './CoffeeCard/CoffeeCard';
 import TopNav from '../../../components/Nav/Nav';
+import SECOND_BAR from './BarData/SecondBar';
+import THIRD_BAR from './BarData/SecondBar';
 import './List.scss';
 
 class List extends Component {
@@ -13,13 +15,11 @@ class List extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/data/CoffeeListData.json', {
-      method: 'GET',
-    })
+    fetch('http://localhost:3000/data/CoffeeListData.json')
       .then(res => res.json())
-      .then(result => {
-        this.setState({ coldbrewProducts: result.coldbrewData });
-        this.setState({ brewedProducts: result.brewData });
+      .then(res => {
+        this.setState({ coldbrewProducts: res.coldbrewData });
+        this.setState({ brewedProducts: res.brewData });
       });
   }
 
@@ -28,49 +28,43 @@ class List extends Component {
       <div className="listContainer">
         <TopNav />
         <main>
-          <div className="secondBar">
-            <h2>콜드 브루 커피</h2>
-            <span>
-              <img
-                src="https://image.istarbucks.co.kr/common/img/menu/logo_decaf.png"
-                alt="coffee"
-              />
-              디카페인 에스프레소 샷 추가 기능 (일부 음료 제외)
-            </span>
-          </div>
+          {SECOND_BAR.map(info => {
+            const { id, name, img, alt, content } = info;
+            return (
+              <div className="secondBar" key={id}>
+                <h2>{name}</h2>
+                <span>
+                  <img src={img} alt={alt} />
+                  {content}
+                </span>
+              </div>
+            );
+          })}
           <div className="coldbrew">
             <ul className="coldbrewList">
               {this.state.coldbrewProducts.map(product => {
-                return (
-                  <CoffeeCard
-                    key={product.name}
-                    img={product.img}
-                    name={product.name}
-                  />
-                );
+                const { id, img, name } = product;
+                return <CoffeeCard key={id} img={img} name={name} />;
               })}
             </ul>
           </div>
-          <div className="thirdBar">
-            <h2>브루드 커피</h2>
-            <span>
-              <img
-                src="https://image.istarbucks.co.kr/common/img/menu/logo_decaf.png"
-                alt="coffee"
-              />
-              디카페인 에스프레소 샷 추가 기능 (일부 음료 제외)
-            </span>
-          </div>
+          {THIRD_BAR.map(info => {
+            const { id, name, img, alt, content } = info;
+            return (
+              <div className="thirdBar" key={id}>
+                <h2>{name}</h2>
+                <span>
+                  <img src={img} alt={alt} />
+                  {content}
+                </span>
+              </div>
+            );
+          })}
           <div className="brewed">
             <ul className="brewedList">
               {this.state.brewedProducts.map(product => {
-                return (
-                  <CoffeeCard
-                    key={product.name}
-                    img={product.img}
-                    name={product.name}
-                  />
-                );
+                const { id, img, name } = product;
+                return <CoffeeCard key={id} img={img} name={name} />;
               })}
             </ul>
           </div>
