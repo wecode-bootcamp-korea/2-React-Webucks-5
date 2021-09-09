@@ -1,0 +1,17 @@
+.DetailHeader {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin: 10px 10px 10px 0;
+    font-size: 34px;
+    font-weight: bold;
+  }
+
+  .menuHistory {
+    align-self: flex-end;
+    margin: 5px 0 20px 0;
+    color: #999;
+    font-size: 14px;
+  }
+}

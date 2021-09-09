@@ -1,0 +1,17 @@
+.FooterList {
+  margin: 60px 0;
+
+  .title {
+    margin: 20px 16px;
+  }
+
+  .footerItem {
+    margin: 16px;
+  }
+
+  @media (max-width: 1200px) {
+    .footerItem {
+      width: 200px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import '../../../styles/variable';
+
+.Detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .detailInner {
+    max-width: $mainWidth;
+    width: 100%;
+
+    .detailContent {
+      display: flex;
+      justify-content: space-between;
+
+      .right {
+        width: 600px;
+        padding: 0 10px;
+      }
+    }
+  }
+}

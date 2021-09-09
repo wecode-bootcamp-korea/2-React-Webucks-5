@@ -49,8 +49,7 @@ class Routes extends React.Component {
           />
           <Route exact path="/list-wookchanglee" component={ListWookChangLee} />
           <Route
-            exact
-            path="/detail-wookchanglee"
+            path="/detail-wookchanglee/:id"
             component={DetailWookChangLee}
           />
 

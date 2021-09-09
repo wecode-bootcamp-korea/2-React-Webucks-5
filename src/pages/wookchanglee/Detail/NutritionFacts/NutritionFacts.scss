@@ -1,0 +1,45 @@
+.NutritionFacts {
+  .nutritionHeader,
+  .nutritionContent {
+    padding: 0 5px;
+  }
+
+  .nutritionHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 18.5px;
+  }
+
+  .nutritionContent {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    div:first-child.nutritionRow {
+      border-right: 2px dashed #ccc;
+      margin-right: 10px;
+      padding-right: 10px;
+    }
+
+    .nutritionRow {
+      width: 100%;
+
+      .nutritionCol {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+
+  .allergy {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #efefef;
+  }
+}
