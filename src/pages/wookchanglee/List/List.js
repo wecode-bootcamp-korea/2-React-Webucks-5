@@ -10,6 +10,8 @@ class List extends Component {
     this.state = {
       coldBrewCoffeeCards: null,
       brewedCoffeeCards: null,
+      coldBrewTitle: '',
+      brewedTitle: '',
     };
   }
 
@@ -18,40 +20,53 @@ class List extends Component {
       .then(res => res.json())
       .then(res => {
         this.setState({
-          coldBrewCoffeeCards: res.coldBrewCoffeeCards,
-          brewedCoffeeCards: res.brewedCoffeeCards,
+          coldBrewCoffeeCards: res.coldBrewCoffeeCards.coffees,
+          brewedCoffeeCards: res.brewedCoffeeCards.coffees,
+          coldBrewTitle: res.coldBrewCoffeeCards.title,
+          brewedTitle: res.brewedCoffeeCards.title,
         });
       });
   }
+
+  toggleHeart = id => {
+    if (id.includes('coldBrew')) {
+      const coffeeArr = [...this.state.coldBrewCoffeeCards].map(coffee => {
+        if (id === coffee.id) {
+          coffee.like = !coffee.like;
+        }
+        return coffee;
+      });
+      this.setState({ coldBrewCoffeeCards: coffeeArr });
+    } else {
+      const coffeeArr = [...this.state.brewedCoffeeCards].map(coffee => {
+        if (id === coffee.id) {
+          coffee.like = !coffee.like;
+        }
+        return coffee;
+      });
+      this.setState({ brewedCoffeeCards: coffeeArr });
+    }
+  };
 
   render() {
     return (
       <div className="List">
         <Nav />
-        <CoffeeCardList
-          COFFEELIST_DATA={
-            this.state.coldBrewCoffeeCards
-              ? this.state.coldBrewCoffeeCards.coffees
-              : []
-          }
-          coffeeCardsName={
-            this.state.coldBrewCoffeeCards
-              ? this.state.coldBrewCoffeeCards.title
-              : ''
-          }
-        />
-        <CoffeeCardList
-          COFFEELIST_DATA={
-            this.state.brewedCoffeeCards
-              ? this.state.brewedCoffeeCards.coffees
-              : []
-          }
-          coffeeCardsName={
-            this.state.brewedCoffeeCards
-              ? this.state.brewedCoffeeCards.title
-              : ''
-          }
-        />
+        {this.state.coldBrewCoffeeCards ? (
+          <>
+            <CoffeeCardList
+              COFFEELIST_DATA={this.state.coldBrewCoffeeCards}
+              coffeeCardsName={this.state.coldBrewTitle}
+              toggleHeart={this.toggleHeart}
+            />
+            <CoffeeCardList
+              COFFEELIST_DATA={this.state.brewedCoffeeCards}
+              coffeeCardsName={this.state.brewedTitle}
+              toggleHeart={this.toggleHeart}
+            />
+          </>
+        ) : null}
+
         <Footer />
       </div>
     );

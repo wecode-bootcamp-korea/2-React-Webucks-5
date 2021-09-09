@@ -26,6 +26,8 @@ class CoffeeCardList extends React.Component {
                 title={coffee.title}
                 key={coffee.id}
                 id={coffee.id}
+                like={coffee.like}
+                toggleHeart={this.props.toggleHeart}
               />
             );
           })}

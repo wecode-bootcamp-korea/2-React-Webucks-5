@@ -3,28 +3,23 @@ import { Link } from 'react-router-dom';
 import './CoffeeCard.scss';
 
 class CoffeeCard extends React.Component {
-  state = { isHeartFilled: false };
-
   render() {
+    const { id, title, img, like, toggleHeart } = this.props;
     return (
       <div className="CoffeeCard">
-        <Link to={'/detail-wookchanglee/' + this.props.id}>
+        <Link to={'/detail-wookchanglee/' + id}>
           <div className="wrapper">
-            <img src={this.props.img} alt={this.props.title} />
+            <img src={img} alt={title} />
           </div>
         </Link>
         <div className="title">
-          <p>{this.props.title}</p>
+          <p>{title}</p>
           <i
-            className={
-              this.state.isHeartFilled ? 'fas fa-heart' : 'far fa-heart'
-            }
+            className={like ? 'fas fa-heart' : 'far fa-heart'}
             onClick={() => {
-              this.setState({
-                isHeartFilled: !this.state.isHeartFilled,
-              });
+              toggleHeart(id);
             }}
-          ></i>
+          />
         </div>
       </div>
     );
