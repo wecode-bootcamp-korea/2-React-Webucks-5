@@ -14,9 +14,9 @@ class Nutrition extends Component {
         </div>
 
         <dl className="nutritionInfoContainer">
-          {labels.map((label, i) => {
+          {labels.map(label => {
             const { name, amount } = label;
-            return <NutritionLabel key={i} name={name} amount={amount} />;
+            return <NutritionLabel key={name} name={name} amount={amount} />;
           })}
         </dl>
 

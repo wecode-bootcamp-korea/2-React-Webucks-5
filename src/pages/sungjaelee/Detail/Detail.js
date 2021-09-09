@@ -12,8 +12,8 @@ class Detail extends Component {
   constructor() {
     super();
     this.state = {
-      nutritionData: {},
-      reviewsData: {},
+      nutritionFacts: {},
+      reviews: {},
     };
   }
 
@@ -28,11 +28,11 @@ class Detail extends Component {
       .then(res => res.json())
       .then(json => {
         this.setState({
-          nutritionData:
+          nutritionFacts:
             dataName === 'coldBrewData'
               ? json.COLD_BREW_DETAIL_DATA[index].nutrition
               : json.BREWED_DETAIL_DATA[index].nutrition,
-          reviewsData:
+          reviews:
             dataName === 'coldBrewData'
               ? json.COLD_BREW_DETAIL_DATA[index].reviews
               : json.BREWED_DETAIL_DATA[index].reviews,
@@ -40,30 +40,28 @@ class Detail extends Component {
       });
   };
 
-  submitReview = newValue => {
-    console.log('newValue', newValue);
-    this.setState({ reviewsData: newValue });
+  submitReview = reviews => {
+    this.setState({ reviews });
   };
 
   likeReview = review => {
-    const reviews = [...this.state.reviewsData];
+    const reviews = [...this.state.reviews];
     const rev = { ...review };
     const index = reviews.indexOf(review); // look into why .indexOf(rev) results to -1
-    console.log('index:', index);
     rev.isLiked = !rev.isLiked;
     reviews[index] = rev;
-    this.setState({ reviewsData: reviews });
+    this.setState({ reviews });
   };
 
   deleteReview = review => {
-    let reviews = [...this.state.reviewsData];
+    let reviews = [...this.state.reviews];
     reviews = reviews.filter(r => r !== review);
-    this.setState({ reviewsData: reviews });
+    this.setState({ reviews });
   };
 
   render() {
-    const { nutritionData, reviewsData } = this.state;
-    const { labels, allergen } = nutritionData;
+    const { nutritionFacts, reviews } = this.state;
+    const { labels, allergen } = nutritionFacts;
     const { coffee, dataName } = this.props.location.state;
     const { isLiked, name, img } = coffee;
 
@@ -105,7 +103,7 @@ class Detail extends Component {
                   <>
                     <Nutrition labels={labels} allergen={allergen} />
                     <Reviews
-                      reviews={reviewsData}
+                      reviews={reviews}
                       submitReview={this.submitReview}
                       likeReview={this.likeReview}
                       deleteReview={this.deleteReview}

@@ -13,15 +13,11 @@ class Reviews extends Component {
   }
 
   handleInputChange = e => {
-    this.setState({ reviewInput: e.target.value }, () =>
-      console.log('reviewInput', this.state.reviewInput)
-    );
+    this.setState({ reviewInput: e.target.value });
   };
 
   resetReviewInput = e => {
-    this.setState({ reviewInput: '' }, () =>
-      console.log('reviewInput', this.state.reviewInput)
-    );
+    this.setState({ reviewInput: '' });
     e.preventDefault();
     this.reviewInputRef.current.blur();
   };

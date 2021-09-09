@@ -12,8 +12,8 @@ class Footer extends Component {
             <section className="footerSection" key={id}>
               <header>{header.toUpperCase()}</header>
               <nav className="navOptions">
-                {options.map((option, i) => {
-                  return <p key={i}>{option.title}</p>;
+                {options.map(option => {
+                  return <p key={option.title}>{option.title}</p>;
                 })}
               </nav>
             </section>
